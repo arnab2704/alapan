@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+/* Base background/text colors are set on <body> in [locale]/layout.tsx via Tailwind classes. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Soft alpona-inspired ground: a warm saffron glow at the top and a faint lotus-dot lattice. */
+body {
+  background-image:
+    radial-gradient(60rem 28rem at 50% -8rem, rgb(229 180 69 / 0.16), transparent 70%),
+    radial-gradient(circle at 1px 1px, rgb(191 47 58 / 0.05) 1px, transparent 0);
+  background-size:
+    auto,
+    28px 28px;
+  background-repeat: no-repeat, repeat;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image:
+      radial-gradient(60rem 28rem at 50% -8rem, rgb(217 160 43 / 0.12), transparent 70%),
+      radial-gradient(circle at 1px 1px, rgb(240 203 100 / 0.05) 1px, transparent 0);
+  }
+}
+
+/* Busy cursor while a page is loading, so a click never seems to have been ignored. */
+html.is-navigating,
+html.is-navigating * {
+  cursor: progress !important;
+}

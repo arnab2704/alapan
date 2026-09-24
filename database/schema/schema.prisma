@@ -1,0 +1,145 @@
+// Alapon V0.1 database foundation.
+//
+// Scope: only the tables needed for the website shell, i18n, design system
+// and ShobdoShakti (see docs/architecture/v0.1-foundation.md). Deliberately
+// excludes posts/comments/reports/businesses/payments/creators - those
+// belong to Theke Adda and later phases and are not part of this pass.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum AccountType {
+  STANDARD
+  MODERATOR
+  ADMIN
+}
+
+/// Minimal user record. No location, no contacts, no unnecessary personal
+/// data - see docs/architecture/v0.1-foundation.md#privacy.
+model User {
+  id             String   @id @default(uuid())
+  authProviderId String   @unique @map("auth_provider_id")
+  username       String   @unique
+  displayName    String   @map("display_name")
+  email          String?  @unique
+  avatarUrl      String?  @map("avatar_url")
+  locale         String   @default("bn")
+  language       String   @default("bn")
+  accountType    AccountType @default(STANDARD) @map("account_type")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  gameSessions GameSession[]
+
+  @@map("users")
+}
+
+enum LicenseStatus {
+  PUBLIC_DOMAIN
+  OPEN_LICENSE
+  CREATIVE_COMMONS
+  COMMERCIAL_LICENSE
+  USER_SUBMITTED
+  INTERNAL
+  UNKNOWN
+}
+
+/// Provenance record for every imported dictionary/cultural asset.
+/// Application code must reject UNKNOWN-licensed sources for production
+/// import jobs (see docs/architecture/v0.1-foundation.md#licensing).
+model ContentSource {
+  id            String   @id @default(uuid())
+  sourceName    String   @map("source_name")
+  sourceUrl     String?  @map("source_url")
+  license       LicenseStatus
+  rightsStatus  String   @map("rights_status")
+  retrievedAt   DateTime @map("retrieved_at")
+  notes         String?
+
+  dictionaryWords DictionaryWord[]
+
+  @@map("content_sources")
+}
+
+enum PartOfSpeech {
+  NOUN
+  PRONOUN
+  VERB
+  ADJECTIVE
+  ADVERB
+  POSTPOSITION
+  CONJUNCTION
+  INTERJECTION
+  UNKNOWN
+}
+
+/// `normalizedWord` is the @alapon/bengali normalizeForDictionary() output -
+/// the dedup key so two Unicode encodings of the same word collapse to one
+/// row. `word` keeps the source's original rendering for display.
+model DictionaryWord {
+  id             String   @id @default(uuid())
+  word           String
+  normalizedWord String   @unique @map("normalized_word")
+  meaningBn      String?  @map("meaning_bn")
+  meaningEn      String?  @map("meaning_en")
+  pronunciation  String?
+  partOfSpeech   PartOfSpeech @default(UNKNOWN) @map("part_of_speech")
+  difficulty     Int      @default(1)
+  frequency      Int      @default(0)
+  validForGame   Boolean  @default(false) @map("valid_for_game")
+  sourceId       String   @map("source_id")
+  source         ContentSource @relation(fields: [sourceId], references: [id])
+  license        LicenseStatus
+  confidence     Float    @default(1.0)
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  @@index([validForGame])
+  @@map("dictionary_words")
+}
+
+enum GameType {
+  WORD_BOARD
+}
+
+enum GameStatus {
+  ACTIVE
+  DRAFT
+  DISABLED
+}
+
+model Game {
+  id     String   @id @default(uuid())
+  slug   String   @unique
+  nameBn String   @map("name_bn")
+  nameEn String   @map("name_en")
+  type   GameType @default(WORD_BOARD)
+  status GameStatus @default(DRAFT)
+
+  sessions GameSession[]
+
+  @@map("games")
+}
+
+/// One row per completed game move/session. `metadata` holds
+/// game-engine-specific detail (formed words, board size) without forcing a
+/// schema change per game type.
+model GameSession {
+  id         String   @id @default(uuid())
+  gameId     String   @map("game_id")
+  game       Game     @relation(fields: [gameId], references: [id])
+  userId     String?  @map("user_id")
+  user       User?    @relation(fields: [userId], references: [id])
+  score      Int
+  durationMs Int      @map("duration_ms")
+  metadata   Json?
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@index([gameId, score])
+  @@map("game_sessions")
+}

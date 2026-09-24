@@ -1,0 +1,13 @@
+node_modules
+.next
+dist
+build
+coverage
+*.json
+package-lock.json
+
+# Compact one-question-per-line authoring data - reformatting would explode 1,000+ rows across thousands of lines.
+packages/game-engine/src/data/quiz-bank/
+
+# Third-party reference project supplied for the shobdojaal mechanic; never modified in place.
+শব্দজাল-(shobdojaal)/
