@@ -53,24 +53,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     explanationEn:
       'Rabindranath Tagore won the 1913 Nobel Prize in Literature for "Gitanjali" - the first Nobel Prize ever awarded to an Asian.'
   },
-  {
-    id: "history-language-movement",
-    category: "history",
-    questionBn: "ভাষা আন্দোলন, যা পরবর্তীতে আন্তর্জাতিক মাতৃভাষা দিবসের সূচনা করে, কোন সালে হয়েছিল?",
-    questionEn:
-      "The Bhasha Andolon (Language Movement), which later led to International Mother Language Day, took place in which year?",
-    options: [
-      { textBn: "১৯৪৭", textEn: "1947" },
-      { textBn: "১৯৫২", textEn: "1952" },
-      { textBn: "১৯৭১", textEn: "1971" },
-      { textBn: "১৯০৫", textEn: "1905" }
-    ],
-    correctIndex: 1,
-    explanationBn:
-      "১৯৫২ সালের ২১শে ফেব্রুয়ারি বাংলা ভাষার মর্যাদার দাবিতে আন্দোলনকারীরা প্রাণ দেন - এই দিনটিই এখন আন্তর্জাতিক মাতৃভাষা দিবস হিসেবে পালিত হয়।",
-    explanationEn:
-      "On 21 February 1952, protestors gave their lives demanding recognition for the Bengali language - the day is now observed worldwide as International Mother Language Day."
-  },
+
   {
     id: "history-netaji",
     category: "history",
@@ -190,23 +173,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     explanationEn:
       "Football has deep roots in Bengal - Mohun Bagan made history in 1911 by defeating a British team."
   },
-  {
-    id: "literature-two-anthems",
-    category: "literature",
-    questionBn: "রবীন্দ্রনাথ ঠাকুরের লেখা গান দুটি দেশের জাতীয় সংগীত হয়েছে - ভারত ও কোন দেশ?",
-    questionEn: "Rabindranath Tagore wrote the national anthems of India and which other country?",
-    options: [
-      { textBn: "বাংলাদেশ", textEn: "Bangladesh" },
-      { textBn: "নেপাল", textEn: "Nepal" },
-      { textBn: "শ্রীলঙ্কা", textEn: "Sri Lanka" },
-      { textBn: "মায়ানমার", textEn: "Myanmar" }
-    ],
-    correctIndex: 0,
-    explanationBn:
-      'রবীন্দ্রনাথ ঠাকুর ভারতের "জনগণমন" এবং বাংলাদেশের "আমার সোনার বাংলা" - দুটি জাতীয় সংগীতই রচনা করেছিলেন।',
-    explanationEn:
-      'Tagore wrote both India\'s "Jana Gana Mana" and Bangladesh\'s "Amar Shonar Bangla" - the national anthems of two countries.'
-  },
+
   {
     id: "literature-bidrohi-kobi",
     category: "literature",
@@ -358,22 +325,7 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
     explanationBn: '"ধন্যবাদ" মানে "Thank you" - বাংলায় কৃতজ্ঞতা প্রকাশের সবচেয়ে সাধারণ শব্দ।',
     explanationEn: '"Dhonnobad" means "Thank you" - the most common way to express gratitude in Bengali.'
   },
-  {
-    id: "geography-dhaka",
-    category: "geography",
-    questionBn: "বাংলাদেশের রাজধানী কোন শহর?",
-    questionEn: "What is the capital of Bangladesh?",
-    options: [
-      { textBn: "ঢাকা", textEn: "Dhaka" },
-      { textBn: "চট্টগ্রাম", textEn: "Chittagong" },
-      { textBn: "খুলনা", textEn: "Khulna" },
-      { textBn: "সিলেট", textEn: "Sylhet" }
-    ],
-    correctIndex: 0,
-    explanationBn: "ঢাকা বাংলাদেশের রাজধানী ও বৃহত্তম শহর, বুড়িগঙ্গা নদীর তীরে অবস্থিত।",
-    explanationEn:
-      "Dhaka is the capital and largest city of Bangladesh, situated on the banks of the Buriganga River."
-  },
+
   {
     id: "geography-kolkata",
     category: "geography",

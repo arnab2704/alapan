@@ -5,8 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { useAuth } from "@/components/auth/AuthProvider";
 import type { AddaError } from "@/lib/supabase/adda";
 
-export const primaryButton =
-  "inline-flex min-h-11 items-center justify-center rounded-full bg-sindoor-500 px-5 text-sm font-semibold text-white transition-colors hover:bg-sindoor-600 disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
+export const primaryButton = "btn btn-primary";
 export const ghostButton =
   "inline-flex min-h-11 items-center justify-center rounded-full px-3 text-sm font-semibold text-ink-600 hover:bg-ink-100 hover:text-ink-900 disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-400 dark:text-ink-200 dark:hover:bg-ink-700";
 export const fieldClass =

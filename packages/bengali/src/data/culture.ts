@@ -487,18 +487,6 @@ export const CULTURE_PEOPLE: CulturePerson[] = [
 
 export const HISTORY_EVENTS: HistoryEvent[] = [
   {
-    slug: "language-movement",
-    month: 2,
-    day: 21,
-    year: 1952,
-    titleBn: "ভাষা আন্দোলনের শহিদ দিবস",
-    titleEn: "Language Movement Day",
-    detailBn:
-      "ঢাকায় বাংলা ভাষার মর্যাদার দাবিতে মিছিলে প্রাণ হারান বহু তরুণ; এই দিনটি আজ আন্তর্জাতিক মাতৃভাষা দিবস।",
-    detailEn:
-      "Protesters demanding recognition of Bangla were killed in Dhaka; the day is now observed as International Mother Language Day."
-  },
-  {
     slug: "tagore-born",
     month: 5,
     day: 7,
@@ -595,8 +583,8 @@ export const HISTORY_EVENTS: HistoryEvent[] = [
     year: 1858,
     titleBn: "জগদীশচন্দ্র বসুর জন্ম",
     titleEn: "Birth of Jagadish Chandra Bose",
-    detailBn: "ময়মনসিংহে জন্ম; বিজ্ঞানের ইতিহাসে বাঙালির অগ্রণী নাম।",
-    detailEn: "Born in Mymensingh; a pioneering Bengali name in the history of science."
+    detailBn: "অবিভক্ত বাংলায় জন্ম; বিজ্ঞানের ইতিহাসে বাঙালির অগ্রণী নাম।",
+    detailEn: "Born in undivided Bengal; a pioneering Bengali name in the history of science."
   },
   {
     slug: "partition-annulled",
@@ -627,36 +615,5 @@ export const HISTORY_EVENTS: HistoryEvent[] = [
     titleEn: "Birth of Subhas Chandra Bose",
     detailBn: "কটকে জন্ম; স্বাধীনতা আন্দোলনের অন্যতম প্রধান নেতা।",
     detailEn: "Born in Cuttack; a leading figure of the independence movement."
-  },
-  {
-    slug: "historic-7-march",
-    month: 3,
-    day: 7,
-    year: 1971,
-    titleBn: "ঐতিহাসিক ৭ই মার্চের ভাষণ",
-    titleEn: "The 7 March speech",
-    detailBn: "ঢাকার রেসকোর্স ময়দানে শেখ মুজিবুর রহমানের ভাষণ, যা স্বাধীনতা সংগ্রামের প্রেরণা হয়ে ওঠে।",
-    detailEn:
-      "Sheikh Mujibur Rahman's speech at the Dhaka Racecourse became a spur to the independence struggle."
-  },
-  {
-    slug: "independence-day-bd",
-    month: 3,
-    day: 26,
-    year: 1971,
-    titleBn: "বাংলাদেশের স্বাধীনতা ঘোষণা",
-    titleEn: "Declaration of Bangladesh's independence",
-    detailBn: "২৬শে মার্চ বাংলাদেশের স্বাধীনতা দিবস হিসেবে পালিত হয়।",
-    detailEn: "26 March is observed as Independence Day in Bangladesh."
-  },
-  {
-    slug: "victory-day",
-    month: 12,
-    day: 16,
-    year: 1971,
-    titleBn: "বিজয় দিবস",
-    titleEn: "Victory Day",
-    detailBn: "মুক্তিযুদ্ধের অবসান ও বাংলাদেশের বিজয়ের দিন।",
-    detailEn: "The day the Liberation War ended in victory for Bangladesh."
   }
 ];

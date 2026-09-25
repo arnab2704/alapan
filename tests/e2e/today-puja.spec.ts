@@ -1,19 +1,39 @@
 import { expect, test } from "@playwright/test";
 import { gotoWithoutWelcomeBanner } from "./helpers";
 
-test("the Today page shows the Bengali date, word, person and history of the day", async ({ page }) => {
+test("the Today page leads with the date and a Daily 5 that fills in as you take part", async ({ page }) => {
   await gotoWithoutWelcomeBanner(page, "/bn/today");
-  await expect(page.getByRole("heading", { name: "আজকের বাংলা", level: 2 })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "আজকের শব্দ" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "আজকের মানুষ" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "ইতিহাসের এই দিনে" })).toBeVisible();
-  await expect(page.getByRole("link", { name: "কুইজ খেলুন" })).toHaveAttribute("href", "/bn/quiz/daily");
+  await expect(page.getByRole("heading", { name: "আজকের ৫", level: 2 })).toBeVisible();
+  const progress = page.locator("#daily5").getByRole("status");
+  await expect(progress).toHaveAttribute("aria-label", "৫টির মধ্যে ০টি সম্পন্ন");
+
+  // 1. word of the day
+  await page.getByRole("button", { name: "অর্থ দেখুন" }).click();
+  await expect(progress).toHaveAttribute("aria-label", "৫টির মধ্যে ১টি সম্পন্ন");
+  // 3. question
+  await page.locator("#question").getByRole("group").getByRole("button").first().click();
+  await expect(progress).toHaveAttribute("aria-label", "৫টির মধ্যে ২টি সম্পন্ন");
+  // 5. learning
+  await page.locator("#learn").getByRole("group").getByRole("button").first().click();
+  await expect(progress).toHaveAttribute("aria-label", "৫টির মধ্যে ৩টি সম্পন্ন");
+  // 4. discovery
+  await page.getByRole("button", { name: "পড়লাম" }).click();
+  await expect(progress).toHaveAttribute("aria-label", "৫টির মধ্যে ৪টি সম্পন্ন");
+
+  // Progress survives a reload, and the word stays open.
+  await page.reload();
+  await expect(page.locator("#daily5").getByRole("status")).toHaveAttribute(
+    "aria-label",
+    "৫টির মধ্যে ৪টি সম্পন্ন"
+  );
+  await expect(page.getByRole("button", { name: "অর্থ দেখুন" })).toHaveCount(0);
 });
 
 test("the Today page works in English", async ({ page }) => {
   await gotoWithoutWelcomeBanner(page, "/en/today");
-  await expect(page.getByRole("heading", { name: "Word of the day" })).toBeVisible();
-  await expect(page.getByRole("heading", { name: "This day in history" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Today's 5", level: 2 })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Show the meaning" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "One person, one moment from Bengal" })).toBeVisible();
 });
 
 test("the Sharodiya hub lists the six Puja days, and the passport stamps and persists", async ({ page }) => {

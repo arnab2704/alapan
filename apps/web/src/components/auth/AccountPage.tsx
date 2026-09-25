@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Card, Container, SectionHeading } from "@alapon/ui";
 import { Link, useRouter } from "@/i18n/navigation";
 import { getSupabase } from "@/lib/supabase/client";
+import { AccountDataControls } from "./AccountDataControls";
 import { useAuth } from "./AuthProvider";
 
 const inputClass =
@@ -124,12 +125,7 @@ export function AccountPage() {
               {message.text}
             </p>
           ) : null}
-          <button
-            type="submit"
-            disabled={busy}
-            aria-busy={busy}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white hover:bg-sindoor-600 disabled:opacity-60"
-          >
+          <button type="submit" disabled={busy} aria-busy={busy} className="btn btn-primary">
             {busy ? <Spinner /> : null}
             {t("save")}
           </button>
@@ -163,6 +159,7 @@ export function AccountPage() {
           </button>
         </div>
       </Card>
+      <AccountDataControls />
     </Container>
   );
 }

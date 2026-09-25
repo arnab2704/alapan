@@ -1,12 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { SiteHeader } from "@/components/SiteHeader";
+import { SiteHeader } from "@/components/nav/SiteHeader";
+import { BottomNav } from "@/components/nav/BottomNav";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WelcomeBanner } from "@/components/WelcomeBanner";
 import { AuthProvider } from "@/components/auth/AuthProvider";
+import { AnalyticsBoot } from "@/components/AnalyticsBoot";
+import { PwaRegister } from "@/components/PwaRegister";
 import { NavigationProgress } from "@/components/NavigationProgress";
 import { inter, notoSansBengali, notoSerifBengali } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/siteUrl";
@@ -22,8 +25,13 @@ export const metadata: Metadata = {
     default: "Alapon | আলাপন",
     template: "%s | Alapon"
   },
-  description: "Our roots. Always with us. A Bengali-first digital home for culture, play and language."
+  description: "Our roots. Always with us. A Bengali-first digital home for culture, play and language.",
+  applicationName: "Alapon",
+  openGraph: { siteName: "Alapon | আলাপন", type: "website" },
+  twitter: { card: "summary_large_image" }
 };
+
+export const viewport: Viewport = { themeColor: "#bf2f3a", width: "device-width", initialScale: 1 };
 
 export default async function LocaleLayout({
   children,
@@ -48,11 +56,14 @@ export default async function LocaleLayout({
       <body className="font-bengali flex min-h-screen flex-col bg-cream-50 text-ink-900 antialiased dark:bg-ink-900 dark:text-ink-50">
         <NextIntlClientProvider messages={messages}>
           <NavigationProgress />
+          <AnalyticsBoot />
+          <PwaRegister />
           <AuthProvider>
             <WelcomeBanner />
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pb-20 lg:pb-0">{children}</main>
             <SiteFooter />
+            <BottomNav />
           </AuthProvider>
         </NextIntlClientProvider>
       </body>

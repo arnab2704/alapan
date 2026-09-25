@@ -1,6 +1,10 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { Card, Container, SectionHeading } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
+import { metaFor } from "@/lib/pageMetadata";
+
+export const generateMetadata = ({ params: { locale } }: { params: { locale: string } }) =>
+  metaFor("play", locale);
 
 export default async function PlayPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);

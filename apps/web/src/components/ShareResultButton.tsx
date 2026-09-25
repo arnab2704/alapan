@@ -58,11 +58,7 @@ export function ShareResultButton({ score, total, results, dateIso }: ShareResul
 
   return (
     <div className="flex flex-col items-center gap-1">
-      <button
-        type="button"
-        onClick={share}
-        className="inline-flex min-h-11 items-center justify-center rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600"
-      >
+      <button type="button" onClick={share} className="btn btn-primary">
         {t("share")}
       </button>
       <span role="status" className="text-xs text-shapla-700 dark:text-shapla-300">

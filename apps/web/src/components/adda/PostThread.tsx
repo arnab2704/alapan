@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Card, Container } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
+import { recordDiscovery } from "@/lib/passport";
 import {
   blockUser,
   createComment,
@@ -49,6 +50,7 @@ export function PostThread({ postId }: { postId: string }) {
     const commentResult = await fetchComments(postId);
     const list = commentResult.data ?? [];
     setPost(postResult.data);
+    if (postResult.data.category_slug === "editorial") recordDiscovery("stories", postResult.data.id);
     setComments(list);
     const [postLikes, commentLikes] = await Promise.all([
       fetchLikes("post", [postId], userId),
@@ -84,6 +86,16 @@ export function PostThread({ postId }: { postId: string }) {
     if (error) setNotice(errorText(error));
     else {
       setNotice(t("blocked"));
+      await load();
+    }
+  }
+
+  async function mute(authorId: string) {
+    if (!userId) return;
+    const { error } = await blockUser(userId, authorId, true);
+    if (error) setNotice(errorText(error));
+    else {
+      setNotice(t("muted"));
       await load();
     }
   }
@@ -135,9 +147,14 @@ export function PostThread({ postId }: { postId: string }) {
           />
           {!isMine(post.author_id) ? <ReportButton targetType="post" targetId={post.id} /> : null}
           {signedIn && !isMine(post.author_id) ? (
-            <button type="button" onClick={() => block(post.author_id)} className={ghostButton}>
-              {t("blockAuthor")}
-            </button>
+            <>
+              <button type="button" onClick={() => mute(post.author_id)} className={ghostButton}>
+                {t("muteAuthor")}
+              </button>
+              <button type="button" onClick={() => block(post.author_id)} className={ghostButton}>
+                {t("blockAuthor")}
+              </button>
+            </>
           ) : null}
         </div>
       </Card>
@@ -167,9 +184,14 @@ export function PostThread({ postId }: { postId: string }) {
                 />
                 {!isMine(c.author_id) ? <ReportButton targetType="comment" targetId={c.id} /> : null}
                 {signedIn && !isMine(c.author_id) ? (
-                  <button type="button" onClick={() => block(c.author_id)} className={ghostButton}>
-                    {t("blockAuthor")}
-                  </button>
+                  <>
+                    <button type="button" onClick={() => mute(c.author_id)} className={ghostButton}>
+                      {t("muteAuthor")}
+                    </button>
+                    <button type="button" onClick={() => block(c.author_id)} className={ghostButton}>
+                      {t("blockAuthor")}
+                    </button>
+                  </>
                 ) : null}
               </div>
             </Card>

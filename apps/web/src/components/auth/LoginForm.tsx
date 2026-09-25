@@ -12,8 +12,7 @@ type Mode = "signin" | "signup";
 
 const inputClass =
   "mt-1 min-h-11 w-full rounded-lg border border-ink-200 bg-cream-100 px-3 text-base text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sindoor-500 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-50";
-const primaryClass =
-  "inline-flex min-h-11 items-center justify-center rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white transition-colors hover:bg-sindoor-600 disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
+const primaryClass = "btn btn-primary";
 
 export function LoginForm() {
   const t = useTranslations("auth");

@@ -30,7 +30,19 @@
     "descLearn": "From letters to words, through play",
     "myAccount": "My account",
     "welcomeUser": "Welcome, {name}",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "primaryLabel": "Main navigation",
+    "search": "Search",
+    "profile": "My Alapon",
+    "passport": "Bengal Passport",
+    "settings": "Settings",
+    "primary": {
+      "today": "Today",
+      "play": "Play",
+      "learn": "Learn",
+      "discover": "Discover",
+      "adda": "Adda"
+    }
   },
   "welcome": {
     "heading": "Welcome to Alapon",
@@ -281,8 +293,47 @@
     "shareChallenge": "Can you beat me?"
   },
   "discover": {
-    "title": "Discover",
-    "description": "Structured content on Bengali people, literature, music, cinema and history is coming soon."
+    "eyebrow": "Discover",
+    "heading": "Discover Bengal",
+    "description": "People, places, history, literature, food and song - from one to the next, hand in hand with words and play.",
+    "today": "Today's discovery",
+    "open": "Discover",
+    "search": "Search discoveries",
+    "searchPlaceholder": "e.g. Santiniketan, ilish, Tagore...",
+    "filter": "Kind",
+    "all": "All",
+    "none": "Nothing found - try other words.",
+    "categories": {
+      "person": "People",
+      "place": "Places",
+      "history": "History",
+      "literature": "Literature",
+      "food": "Food",
+      "song": "Songs",
+      "cinema": "Cinema",
+      "theatre": "Theatre",
+      "art": "Art",
+      "science": "Science",
+      "tradition": "Traditions",
+      "education": "Education"
+    },
+    "back": "Discover",
+    "source": "Source",
+    "words": "Words of this subject",
+    "related": "Connected to",
+    "more": "Discover more",
+    "share": "Share",
+    "shareCopied": "Copied",
+    "shareText": "I discovered this on Alapon: {title}",
+    "play": {
+      "heading": "Play this subject's words",
+      "next": "Next word",
+      "finish": "Finish",
+      "done": "Lovely!",
+      "doneBody": "You know this subject's words now. Put them to use in ShobdoShakti.",
+      "playGame": "Today's ShobdoShakti",
+      "again": "Play again"
+    }
   },
   "adda": {
     "title": "Theke Adda",
@@ -343,11 +394,17 @@
     "suspendAuthor": "Suspend 7 days",
     "suspended": "The author has been suspended for 7 days.",
     "loadFailed": "Couldn't load the discussions. Check your connection and try again.",
-    "retry": "Try again"
+    "retry": "Try again",
+    "todayPrompt": "Today's Adda",
+    "answerPrompt": "Write your answer",
+    "muteAuthor": "Mute",
+    "muted": "Muted. You will no longer see this person's posts."
   },
   "footer": {
     "rights": "All rights reserved.",
-    "language": "Language"
+    "language": "Language",
+    "alphabet": "Alphabet chart",
+    "promise": "A few minutes with Bengal, every day."
   },
   "today": {
     "heading": "Today in Bengal",
@@ -478,7 +535,37 @@
     "lessonMissing": "That lesson could not be found.",
     "chartTitle": "Alphabet chart",
     "chartDescription": "Every vowel, consonant, vowel sign and digit in one place. Tap to hear it if your device has a Bengali voice.",
-    "noVoice": "No Bengali voice was found on this device, so the listen buttons are off. Use the pronunciation guides instead."
+    "noVoice": "No Bengali voice was found on this device, so the listen buttons are off. Use the pronunciation guides instead.",
+    "lessonWords": "Words from this lesson - tap one for its story",
+    "playPrompt": "Put what you learned to use in a game.",
+    "playNow": "Now play",
+    "categoriesLabel": "Things to learn",
+    "categories": {
+      "alphabet": {
+        "title": "The Bengali alphabet",
+        "hint": "Vowels, consonants, vowel signs"
+      },
+      "vocabulary": {
+        "title": "Vocabulary",
+        "hint": "Words by topic"
+      },
+      "everyday": {
+        "title": "Everyday Bengali",
+        "hint": "Greetings and common words"
+      },
+      "pronunciation": {
+        "title": "Pronunciation",
+        "hint": "The alphabet chart, learn by ear"
+      },
+      "structure": {
+        "title": "How words are built",
+        "hint": "Conjuncts and letter tiles"
+      },
+      "culture": {
+        "title": "Culture through language",
+        "hint": "The story of today's word"
+      }
+    }
   },
   "challenge": {
     "title": "{name} challenged you!",
@@ -508,5 +595,392 @@
     "read": "Read",
     "viewAll": "Read all editorials",
     "goTo": "Go to article {n}"
+  },
+  "search": {
+    "heading": "Search",
+    "description": "Words, people, festivals and lessons - search in Bengali or English.",
+    "label": "Search",
+    "placeholder": "e.g. adda, Tagore, Puja...",
+    "hint": "Type something to start searching.",
+    "none": "Nothing found for \"{query}\". Try another spelling.",
+    "kinds": {
+      "word": "Words",
+      "person": "People",
+      "festival": "Festivals",
+      "lesson": "Lessons",
+      "place": "Places",
+      "story": "Stories, food & songs"
+    }
+  },
+  "daily5": {
+    "eyebrow": "A few small moments, every day",
+    "heading": "Today's 5",
+    "subheading": "A word, a game, a question, a discovery and a little learning.",
+    "progressLabel": "{count} of {total} done",
+    "done": "Done",
+    "discoverTeaser": "Today's person and moment in history",
+    "items": {
+      "word": {
+        "title": "Word of the day",
+        "action": "Learn the word"
+      },
+      "game": {
+        "title": "Today's game",
+        "action": "Play ShobdoShakti"
+      },
+      "question": {
+        "title": "Today's question",
+        "action": "Answer"
+      },
+      "discover": {
+        "title": "Today's discovery",
+        "action": "Discover today"
+      },
+      "learn": {
+        "title": "Today's learning",
+        "action": "Learn a little"
+      }
+    },
+    "seeAll": "See all of today",
+    "completeTitle": "Today's Alapon is complete.",
+    "completeSub": "See you again tomorrow.",
+    "withBengal": "{days} days in a row with Bengal",
+    "keepExploring": "Keep exploring",
+    "share": "Share",
+    "shareCopied": "Copied",
+    "shareText": "Today's Alapon complete ✓ {score}/{total} - {date}\nA few minutes with Bengal, every day."
+  },
+  "todayPage": {
+    "eyebrow": "Today",
+    "festivalToday": "Today: {name}",
+    "festivalIn": "{name} - in {days} days",
+    "more": "More",
+    "calendar": "Bengali calendar",
+    "puja": "Sharodiya",
+    "quiz": "Quiz",
+    "word": {
+      "eyebrow": "Word of the day",
+      "reveal": "Show the meaning",
+      "example": "Example",
+      "dna": "See the word's DNA"
+    },
+    "game": {
+      "eyebrow": "Today's game",
+      "heading": "Today's ShobdoShakti",
+      "description": "The same puzzle for everyone, new every day. Arrange letters to find words.",
+      "play": "Play today's challenge",
+      "playAgain": "View again",
+      "done": "Today's challenge finished"
+    },
+    "question": {
+      "eyebrow": "Today's question",
+      "correct": "Correct!",
+      "incorrect": "Not this time - the right answer is shown in green.",
+      "more": "Play today's other questions"
+    },
+    "discover": {
+      "eyebrow": "Today's discovery",
+      "heading": "One person, one moment from Bengal",
+      "person": "Person of the day",
+      "history": "This day in history",
+      "today": "It happened on this very day",
+      "inDays": "In {days} days",
+      "markRead": "I read it",
+      "read": "Read",
+      "more": "Discover more"
+    },
+    "learn": {
+      "eyebrow": "Today's learning",
+      "question": "How is this pronounced?",
+      "example": "Example",
+      "goLesson": "See the whole lesson",
+      "thenPlay": "Now play"
+    },
+    "adda": {
+      "eyebrow": "Today's Adda",
+      "answer": "Write your answer"
+    }
+  },
+  "homePage": {
+    "promise": "A few minutes with Bengal, every day.",
+    "lines": "One word. One game. One story. One question. A little Bengali, every day.",
+    "ctaToday": "Start today",
+    "ctaPlay": "Play",
+    "today": {
+      "heading": "Today's Alapon",
+      "festivalToday": "Today: {name}",
+      "festivalIn": "{name} - in {days} days"
+    },
+    "continue": {
+      "heading": "Where you left off",
+      "headingNew": "A good place to start",
+      "learn": "Learn",
+      "levels": "ShobdoShakti - level",
+      "levelDetail": "Continue from level {level}",
+      "quiz": "Today's quiz",
+      "quizDetail": "{done} of {total} answered",
+      "startLearn": "Learn",
+      "startLearnDetail": "First lesson: অ আ ই ঈ",
+      "startPlay": "Play",
+      "startPlayDetail": "Today's ShobdoShakti"
+    },
+    "word": {
+      "eyebrow": "Word of the day",
+      "cta": "Learn the word"
+    },
+    "discover": {
+      "eyebrow": "Discover Bengal",
+      "heading": "Whose story, which moment, today?",
+      "person": "Person of the day",
+      "history": "This day in history",
+      "cta": "Discover more"
+    },
+    "play": {
+      "eyebrow": "Play",
+      "heading": "Discover by playing",
+      "description": "Games of Bengali words and culture.",
+      "dailyEyebrow": "Today's challenge",
+      "dailyTitle": "Today's ShobdoShakti",
+      "dailyDescription": "The same puzzle for everyone - arrange letters to find words, then discover the story of a word.",
+      "dailyCta": "Start playing",
+      "modesTitle": "Free play and levels",
+      "modesDescription": "ShobdoShakti at your own pace.",
+      "quizTitle": "Quiz",
+      "quizDescription": "Over a thousand questions on Bengal's history and culture."
+    },
+    "learn": {
+      "eyebrow": "Learn",
+      "heading": "Learn Bengali, through play",
+      "description": "From the alphabet to words, in small lessons. Every lesson leads back to a game.",
+      "cta": "Start learning",
+      "chips": {
+        "alphabet": "Alphabet",
+        "words": "Vocabulary",
+        "conjuncts": "Conjuncts",
+        "numbers": "Numbers"
+      }
+    }
+  },
+  "dailyGame": {
+    "title": "Today's ShobdoShakti",
+    "back": "ShobdoShakti",
+    "score": "Score",
+    "round": "Round {n}/{total}",
+    "howToPlay": "How to play",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "nextRound": "Finish this round",
+    "finishGame": "Finish the game",
+    "loading": "Loading today's challenge...",
+    "error": "Couldn't load today's challenge.",
+    "retry": "Try again"
+  },
+  "gameResult": {
+    "eyebrow": "Today's ShobdoShakti",
+    "tier": {
+      "great": "Wonderful!",
+      "good": "Well played!",
+      "try": "Good try!"
+    },
+    "points": "POINTS",
+    "wordsPlayed": "Words found",
+    "bestWord": "Best word",
+    "learnWord": "Discover your word",
+    "yourWords": "Your words",
+    "tapAWord": "Tap any word to learn its story.",
+    "continueDaily5": "Continue today's 5",
+    "share": "Share",
+    "shareCopied": "Copied",
+    "shareText": "Alapon\nToday's ShobdoShakti - {date}\n{word}\n{score} points\nA few minutes with Bengal, every day.",
+    "playAgain": "Play again (free play)",
+    "seeYouTomorrow": "See you tomorrow with a new challenge.",
+    "missing": "This day's result isn't on this device.",
+    "playToday": "Play today's challenge"
+  },
+  "shobdoHub": {
+    "eyebrow": "Play",
+    "description": "Arrange letters into Bengali words - and discover the story behind each word.",
+    "daily": {
+      "eyebrow": "Today's challenge",
+      "title": "Today's ShobdoShakti",
+      "description": "A three-round puzzle, the same for everyone. New every day.",
+      "play": "Play today's challenge",
+      "viewResult": "View result",
+      "done": "{score} points today"
+    },
+    "free": {
+      "title": "Free play",
+      "description": "Build words on the full board, your way."
+    },
+    "levels": {
+      "title": "Levels",
+      "description": "Easy to hard - ten levels of the word web.",
+      "continue": "Continue from level {level}"
+    },
+    "howToPlay": "How to play",
+    "modes": {
+      "label": "Game mode",
+      "daily": "Daily",
+      "free": "Free play",
+      "levels": "Levels"
+    }
+  },
+  "wordDna": {
+    "eyebrow": "Word DNA",
+    "back": "Discover",
+    "structure": "Structure",
+    "tileCount": "{count} letter tiles",
+    "conjuncts": "{count} conjuncts",
+    "meaning": "Meaning",
+    "pronunciation": "Pronunciation",
+    "difficulty": "Difficulty",
+    "difficultyLabel": "Difficulty: {level} out of 5",
+    "category": "Category",
+    "region": "Variation in use",
+    "example": "Example",
+    "related": "Related words",
+    "story": "The word's story",
+    "unknownTitle": "We do not have this word's meaning yet",
+    "unknownBody": "The word's structure is shown above. We are steadily adding more meanings and stories.",
+    "why": "Why this word?",
+    "whyBody": {
+      "game": "You found this word in today's ShobdoShakti - every word you find has a story behind it.",
+      "today": "This is the word of the day - one word a day, a little more Bengali each time.",
+      "explore": "From one word to another - that is how a language becomes familiar."
+    },
+    "save": "Save this word",
+    "saved": "Saved",
+    "playAgain": "Play again",
+    "learn": "Learn",
+    "share": "Share",
+    "shareCopied": "Copied",
+    "shareText": "A word on Alapon today: {word} - {meaning}",
+    "shareTextPlain": "A word on Alapon today: {word}",
+    "categories": {
+      "mind": "Mind & feeling",
+      "nature": "Nature",
+      "food": "Food",
+      "family": "Family",
+      "festival": "Festival",
+      "learning": "Learning",
+      "arts": "Arts & literature",
+      "time": "Time",
+      "society": "Society & life",
+      "place": "Place",
+      "spirit": "Spirit & thought"
+    },
+    "practice": {
+      "heading": "Practise this word",
+      "prompt": "Arrange the tiles to build the word for \"{meaning}\".",
+      "yourWord": "Your word",
+      "tiles": "Letter tiles",
+      "check": "Check",
+      "reset": "Start again",
+      "solved": "Lovely! You know this word now.",
+      "wrong": "Not quite - try another order."
+    },
+    "quickLook": "Learn this word",
+    "close": "Close",
+    "dnaAndPractice": "Full DNA & practice",
+    "openDna": "See the word DNA",
+    "backToGame": "Back to the game",
+    "learnThisWord": "Learn this word: {word}",
+    "listen": "Listen"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The address you are looking for is not here. It may be mistyped, or the page may have moved.",
+    "today": "Go to Today",
+    "home": "Home"
+  },
+  "passport": {
+    "cover": "Alapon",
+    "heading": "Bengal Passport",
+    "description": "Words, people, festivals and stories - everything you discover collects here.",
+    "discoveries": "discoveries",
+    "stamps": "stamps",
+    "yourStamps": "Your stamps",
+    "categories": {
+      "words": "Words",
+      "places": "Places",
+      "people": "People",
+      "festivals": "Festivals",
+      "stories": "Stories & history",
+      "games": "Games",
+      "lessons": "Lessons"
+    },
+    "toNext": "{count} more to reach {next}",
+    "allStamps": "Every stamp earned",
+    "localNote": "For now your passport is stored on this device only.",
+    "howHeading": "How does the passport fill up?",
+    "how": {
+      "words": "Play ShobdoShakti and find new words",
+      "people": "Meet people and history in today's discovery",
+      "festivals": "Visit a festival page",
+      "lessons": "Finish a lesson"
+    }
+  },
+  "profile": {
+    "eyebrow": "Your place",
+    "heading": "My Alapon",
+    "hello": "Welcome, {name}",
+    "guest": "Welcome, guest",
+    "signInPrompt": "Sign in to save scores and join the leaderboard",
+    "openPassport": "Full passport",
+    "totalDiscoveries": "{count} discoveries in all",
+    "today": "Today",
+    "dailyProgress": "Today's 5: {count}/{total}",
+    "goToday": "Today's page",
+    "withBengal": "{days} days in a row with Bengal",
+    "savedWords": "Saved words",
+    "noSavedWords": "No saved words yet. Press \"Save this word\" on any word page.",
+    "removeWord": "Remove {word}",
+    "games": "Games",
+    "gamesSummary": "You've played the daily challenge {count} times - best score {best}",
+    "points": "{score} points",
+    "learning": "Learning",
+    "learningSummary": "{done} of {total} lessons done - {xp} XP",
+    "continueLearning": "Continue learning",
+    "history": "Your history",
+    "historySummary": "You completed Today's 5 on {count} days",
+    "more": "More",
+    "settings": "Settings",
+    "account": "Account"
+  },
+  "settings": {
+    "heading": "Settings",
+    "language": "Language",
+    "languageHint": "View the whole site in Bengali or English.",
+    "motion": "Animation",
+    "motionHint": "If \"reduce motion\" is on in your device, Alapon calms its animations too.",
+    "data": "This device's data",
+    "dataHint": "Your passport, saved words, learning progress and game results live in this browser. You can clear them.",
+    "clear": "Clear this device's data",
+    "confirmTitle": "Clear it for good?",
+    "confirmBody": "Your passport, saved words and progress will be deleted permanently. Scores saved to your account are not affected.",
+    "confirmYes": "Yes, clear it",
+    "confirmNo": "No, keep it",
+    "cleared": "Cleared.",
+    "account": "Account settings",
+    "signIn": "Sign in"
+  },
+  "festival": {
+    "back": "Festival calendar",
+    "eyebrow": "Festival",
+    "ended": "Ended",
+    "now": "Happening now",
+    "inDays": "{count} days to go",
+    "lunisolar": "This festival follows the lunar tithi, so the date can differ by a day depending on region and almanac.",
+    "days": "The days",
+    "explore": "More around this festival",
+    "pujaPassport": "Puja passport",
+    "discover": "Discover",
+    "play": "Today's ShobdoShakti",
+    "share": "Share",
+    "shareCopied": "Copied",
+    "shareText": "See this on Alapon: {name}"
   }
 }

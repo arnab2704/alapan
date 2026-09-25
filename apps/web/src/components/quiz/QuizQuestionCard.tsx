@@ -107,11 +107,7 @@ export function QuizQuestionCard({
               {locale === "bn" ? question.explanationBn : question.explanationEn}
             </p>
           ) : null}
-          <button
-            type="button"
-            onClick={onNext}
-            className="mt-3 min-h-11 inline-flex items-center justify-center rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white shadow-sm shadow-sindoor-900/20 transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600"
-          >
+          <button type="button" onClick={onNext} className="btn btn-primary mt-3">
             {isLastQuestion ? (finishLabel ?? t("resultHeading")) : t("next")}
           </button>
         </div>

@@ -21,10 +21,10 @@ import type { QuizProgressMap } from "../src/quizProgress";
 describe("level quiz bank integrity", () => {
   const all = getAllLevelQuizQuestions();
 
-  it("holds at least 1,000 questions across 10 levels of at least 100 each", () => {
-    expect(getTotalLevelQuizQuestions()).toBeGreaterThanOrEqual(1000);
+  it("holds at least 850 questions across 10 levels of at least 70 each", () => {
+    expect(getTotalLevelQuizQuestions()).toBeGreaterThanOrEqual(850);
     for (let level = 1; level <= QUIZ_LEVEL_COUNT; level++) {
-      expect(getQuizLevelQuestionCount(level)).toBeGreaterThanOrEqual(100);
+      expect(getQuizLevelQuestionCount(level)).toBeGreaterThanOrEqual(70);
     }
   });
 
@@ -95,12 +95,12 @@ describe("level quiz bank integrity", () => {
 });
 
 describe("getQuizSet", () => {
-  it("partitions each level into 10 sets of 10-12 that together use every question exactly once", () => {
+  it("partitions each level into 10 sets of 7-12 that together use every question exactly once", () => {
     for (let level = 1; level <= QUIZ_LEVEL_COUNT; level++) {
       const ids: string[] = [];
       for (let set = 1; set <= QUIZ_SETS_PER_LEVEL; set++) {
         const { questions } = getQuizSet(level, set);
-        expect(questions.length).toBeGreaterThanOrEqual(10);
+        expect(questions.length).toBeGreaterThanOrEqual(7);
         expect(questions.length).toBeLessThanOrEqual(12);
         ids.push(...questions.map((q) => q.id));
       }

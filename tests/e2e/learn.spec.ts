@@ -149,3 +149,31 @@ test("no screen of a long-word lesson overflows a 320px phone", async ({ page })
     }
   }
 });
+
+test("Learn is organised by what you want to learn and every lesson ends by sending you to play", async ({
+  page
+}) => {
+  test.setTimeout(90_000);
+  await gotoWithoutWelcomeBanner(page, "/bn/learn");
+  const categories = page.getByRole("navigation", { name: "শেখার বিষয়" });
+  await expect(categories.getByRole("link", { name: /বাংলা বর্ণমালা/ })).toHaveAttribute(
+    "href",
+    "/bn/learn#unit-vowels"
+  );
+  await expect(categories.getByRole("link", { name: /উচ্চারণ/ })).toHaveAttribute(
+    "href",
+    "/bn/learn/alphabet"
+  );
+  await expect(categories.getByRole("link", { name: /শব্দের গঠন/ })).toBeVisible();
+
+  await gotoWithoutWelcomeBanner(page, "/bn/learn/words-2");
+  await finishLesson(page);
+  const wordsSection = page.getByText("এই পাঠের শব্দ - চাপ দিয়ে গল্প জানুন");
+  await expect(wordsSection).toBeVisible();
+  await expect(page.getByRole("link", { name: "এবার খেলুন" })).toHaveAttribute(
+    "href",
+    "/bn/play/shobdoshakti"
+  );
+  await page.getByRole("link", { name: "মা", exact: true }).click();
+  await expect(page).toHaveURL(new RegExp(`/bn/word/${encodeURIComponent("মা")}$`));
+});

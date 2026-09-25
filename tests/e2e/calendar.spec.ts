@@ -1,21 +1,19 @@
 import { expect, test } from "@playwright/test";
 import { gotoWithoutWelcomeBanner } from "./helpers";
 
-test("homepage shows today's Bengali date and a festival glimpse", async ({ page }) => {
+test("the Today page and homepage show today's Bengali date and the next festival", async ({ page }) => {
   await page.clock.install({ time: new Date(2026, 8, 23, 12, 0) });
   await gotoWithoutWelcomeBanner(page, "/bn");
-
-  await expect(page.getByText("আজকের বাংলা তারিখ").first()).toBeVisible();
   // The session's fixed "today" (23 September 2026) converts to 7 Ashwin 1433.
-  await expect(page.getByText("৭ আশ্বিন ১৪৩৩", { exact: false })).toBeVisible();
-  await expect(page.getByText("ইংরেজি তারিখ: ২৩ সেপ্টেম্বর, ২০২৬")).toBeVisible();
+  await expect(page.getByText("৭ আশ্বিন ১৪৩৩", { exact: false }).first()).toBeVisible();
+  await expect(page.getByRole("link", { name: /দুর্গাপূজা - আর ১৭ দিন/ })).toBeVisible();
 
-  // Durga Puja is the nearest upcoming festival as of this session's "today" - it should get the spotlight.
-  await expect(page.getByRole("heading", { name: "শারদীয়া দুর্গাপূজা আসছে" })).toBeVisible();
-  await expect(page.getByText("১৭ দিন বাকি")).toBeVisible();
-
-  await page.getByRole("link", { name: "সম্পূর্ণ উৎসব ক্যালেন্ডার দেখুন" }).click();
+  await gotoWithoutWelcomeBanner(page, "/bn/today");
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("৭ আশ্বিন ১৪৩৩");
+  await expect(page.getByText("২৩ সেপ্টেম্বর, ২০২৬")).toBeVisible();
+  await page.getByRole("link", { name: /দুর্গাপূজা - আর ১৭ দিন/ }).click();
   await expect(page).toHaveURL(/\/bn\/calendar$/);
+  await expect(page.getByRole("heading", { name: "শারদীয়া দুর্গাপূজা আসছে" })).toBeVisible();
 });
 
 test("calendar page lists a full year of festivals in chronological order with Durga Puja's day schedule", async ({

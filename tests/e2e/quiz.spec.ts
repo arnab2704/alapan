@@ -3,10 +3,7 @@ import { gotoWithoutWelcomeBanner } from "./helpers";
 
 test("homepage links to the daily quiz", async ({ page }) => {
   await gotoWithoutWelcomeBanner(page, "/bn");
-  await page
-    .locator("main")
-    .getByRole("link", { name: /দৈনিক কুইজ/ })
-    .click();
+  await page.locator("main").getByRole("link", { name: /^কুইজ/ }).click();
   await expect(page).toHaveURL(/\/bn\/quiz$/);
   await expect(page.getByRole("heading", { name: "কুইজ", exact: true })).toBeVisible();
   await page.getByRole("link", { name: "আজকের কুইজ খেলুন" }).click();
@@ -107,30 +104,4 @@ test("the quiz page produces no console errors across a full play sequence", asy
   await page.getByRole("button", { name: "আবার চেষ্টা করুন" }).click();
 
   expect(errors).toEqual([]);
-});
-
-test("the homepage highlights today's quiz with a question teaser and tracks today's progress", async ({
-  page
-}) => {
-  await gotoWithoutWelcomeBanner(page, "/bn");
-
-  const spotlight = page
-    .locator("section")
-    .filter({ has: page.getByRole("heading", { name: "আজকের কুইজ", level: 2 }) });
-  await expect(spotlight).toBeVisible();
-  await expect(spotlight.getByText("আজকের একটি প্রশ্ন")).toBeVisible();
-  await expect(spotlight.getByRole("link", { name: "কুইজ শুরু করুন" })).toHaveAttribute(
-    "href",
-    "/bn/quiz/daily"
-  );
-
-  await page.goto("/bn/quiz/daily");
-  for (let i = 0; i < 5; i++) {
-    await page.getByRole("radio").first().click();
-    await page.getByRole("button", { name: /পরের প্রশ্ন|আজকের ফলাফল/ }).click();
-  }
-
-  await page.goto("/bn");
-  await expect(spotlight.getByRole("status")).toContainText(/আজ আপনার স্কোর [০-৯]+\/৫/);
-  await expect(spotlight.getByRole("link", { name: "ফলাফল দেখুন" })).toBeVisible();
 });

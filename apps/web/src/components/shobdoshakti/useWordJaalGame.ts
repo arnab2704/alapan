@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { markDaily5Item } from "@/lib/daily5";
 import { checkWordJaalGuess } from "@alapon/game-engine";
 import type { WordJaalCombination, WordJaalLevel } from "@/lib/wordJaalLevels";
 import type { WordJaalGuessStatus, WordJaalLetterTile, WordJaalProgressData } from "./wordJaalTypes";
@@ -121,6 +122,10 @@ export function useWordJaalGame(): UseWordJaalGameResult {
   const combination = level?.combinations[combinationIndex] ?? null;
 
   // Deal a fresh letter palette whenever the combination changes.
+  useEffect(() => {
+    if (foundWords.length > 0) markDaily5Item("game");
+  }, [foundWords.length]);
+
   useEffect(() => {
     if (advanceTimeoutRef.current) {
       clearTimeout(advanceTimeoutRef.current);

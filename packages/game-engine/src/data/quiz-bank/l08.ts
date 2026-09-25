@@ -5,7 +5,7 @@ export const L08: Row[] = [
   ["hi", "প্রাচীন গ্রিক বিবরণে বাংলার কোন শক্তিশালী রাজ্যের উল্লেখ আছে?", "Which powerful Bengal kingdom appears in ancient Greek accounts?", ["গঙ্গারিডাই", "Gangaridai"], ["গান্ধার", "Gandhara"], ["কলিঙ্গ", "Kalinga"], ["মগধ", "Magadha"]],
   ["hi", "মহাস্থানগড়ে প্রাপ্ত প্রাচীন ব্রাহ্মী লিপিটি কোন যুগের?", "The Brahmi inscription found at Mahasthan belongs to which era?", ["মৌর্য যুগ", "The Mauryan era"], ["পাল যুগ", "The Pala era"], ["মুঘল যুগ", "The Mughal era"], ["ব্রিটিশ যুগ", "The British era"]],
   ["hi", "কোন চীনা পরিব্রাজক সপ্তম শতকে বাংলা ভ্রমণ করেন?", "Which Chinese pilgrim visited Bengal in the 7th century?", ["হিউয়েন সাং", "Xuanzang"], ["ফা-হিয়েন", "Faxian"], ["মার্কো পোলো", "Marco Polo"], ["ইবনে বতুতা", "Ibn Battuta"]],
-  ["hi", "ইবনে বতুতা বাংলার কোন সুলতানের আমলে সিলেট আসেন?", "Under which sultan did Ibn Battuta visit Sylhet?", ["ফখরুদ্দিন মুবারক শাহ", "Fakhruddin Mubarak Shah"], ["হুসেন শাহ", "Hussain Shah"], ["শেরশাহ", "Sher Shah"], ["ইলিয়াস শাহ", "Ilyas Shah"]],
+  
   ["hi", "বিক্রমপুরের বিখ্যাত বৌদ্ধ পণ্ডিত অতীশ দীপঙ্কর কোথায় গিয়ে ধর্ম প্রচার করেন?", "Where did the Bengali Buddhist scholar Atisha Dipankara go to teach?", ["তিব্বত", "Tibet"], ["জাপান", "Japan"], ["শ্রীলঙ্কা", "Sri Lanka"], ["ইরান", "Iran"]],
   ["hi", "অতীশ দীপঙ্করের জন্মস্থান কোন অঞ্চল বলে মনে করা হয়?", "Atisha Dipankara is believed to have been born in which region?", ["বিক্রমপুর", "Bikrampur"], ["সিলেট", "Sylhet"], ["মালদহ", "Malda"], ["বরিশাল", "Barishal"]],
   ["hi", "\"রামচরিত\" কাব্যের রচয়িতা কে?", "Who wrote the historical poem \"Ramacharita\"?", ["সন্ধ্যাকর নন্দী", "Sandhyakar Nandi"], ["জয়দেব", "Jayadeva"], ["কৃত্তিবাস", "Krittibas"], ["চণ্ডীদাস", "Chandidas"]],
@@ -19,25 +19,25 @@ export const L08: Row[] = [
   ["hi", "ছিয়াত্তরের মন্বন্তর কোন সালে হয়?", "In which year did the Great Bengal Famine \"Chhiyattorer Manwantar\" occur?", "1770", "1757", "1943", "1905"],
   ["hi", "ম্যাকলে-র ইংরেজি শিক্ষা নীতি কোন সালে গৃহীত হয়?", "In which year was Macaulay's English education policy adopted?", "1835", "1800", "1857", "1905"],
   ["hi", "বাংলা প্রেসিডেন্সি থেকে বিহার-ওড়িশা আলাদা হয় কোন সালে?", "In which year were Bihar and Orissa separated from Bengal?", "1912", "1905", "1947", "1874"],
-  ["hi", "১৯৪৭ সালের গণভোটে সিলেট কোন দেশে যোগ দেয়?", "Which country did Sylhet join after the 1947 referendum?", ["পূর্ব পাকিস্তান", "East Pakistan"], ["ভারত", "India"], ["নেপাল", "Nepal"], ["ভুটান", "Bhutan"]],
+  
   ["hi", "আওয়ামী মুসলিম লীগ কোন সালে প্রতিষ্ঠিত হয়?", "In which year was the Awami Muslim League founded?", "1949", "1906", "1952", "1966"],
   ["hi", "শিক্ষা আন্দোলন (আইয়ুবের বিরুদ্ধে) কোন সালে?", "In which year was the anti-Ayub Education Movement?", "1962", "1952", "1971", "1947"],
   ["hi", "ছয় দফা ঘোষণা কোথায় হয়?", "Where were the Six Points first announced?", ["লাহোর", "Lahore"], ["ঢাকা", "Dhaka"], ["করাচি", "Karachi"], ["দিল্লি", "Delhi"]],
   ["hi", "১৯৭০-এর সাধারণ নির্বাচন কোন তারিখে অনুষ্ঠিত হয়?", "On which date was the 1970 general election held?", ["৭ ডিসেম্বর ১৯৭০", "7 December 1970"], ["২৬ মার্চ ১৯৭১", "26 March 1971"], ["২১ ফেব্রুয়ারি ১৯৫২", "21 February 1952"], ["১৬ ডিসেম্বর ১৯৭১", "16 December 1971"]],
   ["hi", "কলকাতার \"বঙ্গীয় সাহিত্য পরিষদ\" কোন সালে প্রতিষ্ঠিত হয়?", "In which year was the Bangiya Sahitya Parishad founded?", "1893", "1857", "1911", "1921"],
   ["hi", "\"বিশ্বভারতী\" প্রতিষ্ঠার সময় রবীন্দ্রনাথের সহযোগী ইংরেজ শিক্ষাবিদ কে?", "Which English educator collaborated with Tagore at Santiniketan?", ["সি এফ অ্যান্ড্রুজ", "C. F. Andrews"], ["রোনাল্ড রস", "Ronald Ross"], ["উইলিয়াম জোন্স", "William Jones"], ["ডেভিড হেয়ার", "David Hare"]],
-  ["ge", "বাংলাদেশের বৃহত্তম বিভাগ জনসংখ্যায় কোনটি?", "Which is Bangladesh's most populous division?", ["ঢাকা", "Dhaka"], ["সিলেট", "Sylhet"], ["বরিশাল", "Barishal"], ["রংপুর", "Rangpur"]],
-  ["ge", "বাংলাদেশের কোন জেলায় ঐতিহাসিক মধুমতী নদী প্রবাহিত?", "In which region does the Madhumati river flow?", ["গোপালগঞ্জ-ফরিদপুর অঞ্চল", "The Gopalganj-Faridpur region"], ["সিলেট", "Sylhet"], ["দিনাজপুর", "Dinajpur"], ["কক্সবাজার", "Cox's Bazar"]],
-  ["ge", "ধানমন্ডি ৩২ কোথায়?", "Where is Dhanmondi 32?", ["ঢাকা", "Dhaka"], ["চট্টগ্রাম", "Chattogram"], ["খুলনা", "Khulna"], ["রাজশাহী", "Rajshahi"]],
-  ["ge", "বাংলাদেশে সর্বাধিক কয়লা পাওয়া যায় কোন এলাকায়?", "Where in Bangladesh are coal fields found?", ["বড়পুকুরিয়া, দিনাজপুর", "Barapukuria, Dinajpur"], ["সিলেট শহর", "Sylhet town"], ["সুন্দরবন", "Sundarbans"], ["কক্সবাজার", "Cox's Bazar"]],
-  ["ge", "বাংলাদেশের প্রধান প্রাকৃতিক গ্যাস অঞ্চল কোন বিভাগে?", "Which division holds most of Bangladesh's natural gas fields?", ["সিলেট", "Sylhet"], ["রংপুর", "Rangpur"], ["বরিশাল", "Barishal"], ["খুলনা", "Khulna"]],
-  ["ge", "কক্সবাজারের ইনানী বিচ কীসের জন্য বিখ্যাত?", "Inani Beach is famous for what?", ["প্রবালযুক্ত পাথুরে সৈকত", "Coral-stone shoreline"], ["তুষার", "Snow"], ["মরুভূমি", "Desert"], ["আগ্নেয়গিরি", "Volcano"]],
-  ["ge", "বাংলাদেশের ঘূর্ণিঝড়-প্রবণ উপকূলীয় জেলা কোনটি?", "Which coastal district is highly cyclone-prone?", ["ভোলা", "Bhola"], ["দিনাজপুর", "Dinajpur"], ["সিলেট", "Sylhet"], ["রংপুর", "Rangpur"]],
+  
+  
+  
+  
+  
+  
+  
   ["ge", "নিঝুম দ্বীপ কোথায়?", "Where is Nijhum Dwip?", ["মেঘনা মোহনায় (হাতিয়া)", "In the Meghna estuary (near Hatiya)"], ["দার্জিলিংয়ে", "In Darjeeling"], ["সিলেটে", "In Sylhet"], ["যমুনার উজানে", "Upstream of the Jamuna"]],
-  ["ge", "ময়নামতি প্রত্নস্থল কোন জেলায়?", "In which district is Mainamati?", ["কুমিল্লা", "Cumilla"], ["নওগাঁ", "Naogaon"], ["বগুড়া", "Bogura"], ["যশোর", "Jashore"]],
-  ["ge", "শালবন বিহার কোন প্রত্নস্থলের অংশ?", "Shalban Vihara belongs to which archaeological site?", ["ময়নামতি", "Mainamati"], ["পাহাড়পুর", "Paharpur"], ["মহাস্থান", "Mahasthan"], ["গৌড়", "Gaur"]],
+  
+  
   ["ge", "জাতীয় উদ্যান লাউয়াছড়া কোন জেলায়?", "In which district is Lawachara National Park?", ["মৌলভীবাজার", "Moulvibazar"], ["নওগাঁ", "Naogaon"], ["খুলনা", "Khulna"], ["পটুয়াখালী", "Patuakhali"]],
-  ["ge", "বাংলাদেশে চা বাগানের সর্বাধিক জেলা কোনটি?", "Which district has the most tea gardens in Bangladesh?", ["মৌলভীবাজার", "Moulvibazar"], ["যশোর", "Jashore"], ["ভোলা", "Bhola"], ["নড়াইল", "Narail"]],
+  
   ["ge", "ভারতের সবচেয়ে পুরনো পাটকল অঞ্চল কোথায়?", "Where is the historic cluster of Indian jute mills?", ["হুগলি নদীর দুই তীর", "Both banks of the Hooghly"], ["সিলেট", "Sylhet"], ["দার্জিলিং", "Darjeeling"], ["সুন্দরবন", "Sundarbans"]],
   ["ge", "কোন শহর ভারতের ইস্পাত নগরী এবং পশ্চিমবঙ্গে?", "Which West Bengal city is called a steel city?", ["দুর্গাপুর", "Durgapur"], ["দার্জিলিং", "Darjeeling"], ["কৃষ্ণনগর", "Krishnanagar"], ["মালদহ", "Malda"]],
   ["ge", "রানীগঞ্জ কীসের জন্য বিখ্যাত?", "Raniganj is known for which resource?", ["কয়লা", "Coal"], ["চা", "Tea"], ["রেশম", "Silk"], ["মুক্তো", "Pearls"]],
@@ -75,7 +75,7 @@ export const L08: Row[] = [
   ["la", "কোন লিপি থেকে বাংলা ও অসমিয়া লিপির উৎপত্তি (পূর্বী নাগরী)?", "From which script family did Bengali and Assamese scripts develop?", ["পূর্ব নাগরী", "Eastern Nagari"], ["আরবি", "Arabic"], ["গ্রিক", "Greek"], ["তামিল-গ্রন্থ", "Tamil-Grantha"]],
   ["la", "বাংলা ভাষার প্রথম অভিধান-প্রণেতাদের একজন কে?", "Who is credited with an early Bengali-Portuguese dictionary?", ["মনোএল দা আসসুম্পসাঁও", "Manuel da Assumpcao"], ["বিদ্যাসাগর", "Vidyasagar"], ["রামমোহন", "Ram Mohan"], ["উইলিয়াম জোন্স", "William Jones"]],
   ["la", "\"বাংলা একাডেমি\" প্রতিষ্ঠিত হয় কোন সালে?", "In which year was the Bangla Academy founded?", "1955", "1952", "1971", "1921"],
-  ["la", "\"ঢাকা বিশ্ববিদ্যালয়ের বাংলা বিভাগ\" প্রতিষ্ঠা কোন সালে?", "The Bengali department of Dhaka University was founded in which year?", "1921", "1905", "1952", "1971"],
+  
   ["la", "\"বাংলা ভাষার অভিধান\" প্রণেতা জ্ঞানেন্দ্রমোহন দাস কোন গ্রন্থের জন্য পরিচিত?", "For which reference work is Jnanendramohan Das known?", ["বাঙ্গালা ভাষার অভিধান", "Bangala Bhashar Abhidhan"], ["গীতাঞ্জলি", "Gitanjali"], ["গোরা", "Gora"], ["আনন্দমঠ", "Anandamath"]],
   ["la", "বাংলা ভাষায় \"ফোঁটা\", \"ঢিল\" শব্দ কোন শ্রেণির?", "What class of words are \"phonta\" and \"dhil\"?", ["দেশি শব্দ", "Native (deshi) words"], ["আরবি শব্দ", "Arabic words"], ["ইংরেজি শব্দ", "English words"], ["ফরাসি শব্দ", "French words"]],
   ["re", "কলকাতার ঐতিহাসিক \"পার্সি অগ্নিমন্দির\" কোন সম্প্রদায়ের?", "Whose community worships at Kolkata's fire temple?", ["পার্সি", "The Parsis"], ["ইহুদি", "The Jews"], ["জৈন", "The Jains"], ["বৌদ্ধ", "The Buddhists"]],
@@ -83,7 +83,7 @@ export const L08: Row[] = [
   ["re", "কলকাতার সিনাগগগুলো কোন সম্প্রদায়ের ইতিহাস বহন করে?", "Whose history do Kolkata's synagogues preserve?", ["বাগদাদি ইহুদি", "Baghdadi Jews"], ["চীনা বৌদ্ধ", "Chinese Buddhists"], ["পর্তুগিজ", "The Portuguese"], ["আর্মেনীয়", "The Armenians"]],
   ["re", "দ্বারকানাথ ঠাকুর কোন সমাজ-সংস্কারকের ঘনিষ্ঠ বন্ধু ছিলেন?", "Dwarkanath Tagore was a close associate of which reformer?", ["রাজা রামমোহন রায়", "Raja Ram Mohan Roy"], ["বিবেকানন্দ", "Vivekananda"], ["শ্রীচৈতন্য", "Sri Chaitanya"], ["লালন", "Lalon"]],
   ["re", "নবদ্বীপ কোন সাধকের জন্মভূমি ও বৈষ্ণব তীর্থ?", "Nabadwip is a Vaishnava pilgrimage town for whom?", ["শ্রীচৈতন্য", "Sri Chaitanya"], ["রামকৃষ্ণ", "Ramakrishna"], ["বিবেকানন্দ", "Vivekananda"], ["লালন", "Lalon"]],
-  ["re", "সাত গম্বুজ মসজিদ কোথায় অবস্থিত?", "Where is the Saat Gambuj Mosque?", ["ঢাকা (মোহাম্মদপুর)", "Dhaka (Mohammadpur)"], ["সিলেট", "Sylhet"], ["বগুড়া", "Bogura"], ["খুলনা", "Khulna"]],
+  
   ["re", "বিষ্ণুপুরের জোড়বাংলা মন্দির কোন ধরনের?", "Jor Bangla temple at Bishnupur is of which type?", ["পোড়ামাটির চালা মন্দির", "Terracotta chala temple"], ["গুহা মন্দির", "Cave temple"], ["মার্বেলের মসজিদ", "Marble mosque"], ["বরফের গম্বুজ", "Ice dome"]],
   ["re", "বিষ্ণুপুর টেরাকোটা মন্দির কোন রাজবংশের আমলে?", "Bishnupur's terracotta temples belong to which dynasty?", ["মল্ল রাজবংশ", "The Malla kings"], ["পাল বংশ", "The Palas"], ["সেন বংশ", "The Senas"], ["গুপ্ত বংশ", "The Guptas"]],
   ["fe", "ঈদুল আজহায় কোন কাজ প্রধান আচার?", "What is the central rite of Eid-ul-Adha?", ["কোরবানি", "Qurbani (sacrifice)"], ["হালখাতা", "Halkhata"], ["উপনয়ন", "Upanayan"], ["বিজয়া", "Bijoya"]],
@@ -99,8 +99,8 @@ export const L08: Row[] = [
   ["ar", "\"কোমল গান্ধার\" ছবির পরিচালক কে?", "Who directed \"Komal Gandhar\"?", ["ঋত্বিক ঘটক", "Ritwik Ghatak"], ["সত্যজিৎ", "Satyajit"], ["মৃণাল সেন", "Mrinal Sen"], ["অসিত সেন", "Asit Sen"]],
   ["ar", "\"কলকাতা ৭১\" ছবির পরিচালক কে?", "Who directed \"Calcutta 71\"?", ["মৃণাল সেন", "Mrinal Sen"], ["সত্যজিৎ", "Satyajit"], ["ঋত্বিক", "Ritwik"], ["গৌতম ঘোষ", "Goutam Ghose"]],
   ["ar", "\"সূর্য দীঘল বাড়ী\" চলচ্চিত্রের পরিচালক কে?", "Who directed the film \"Surjo Dighol Bari\"?", ["মসিহউদ্দিন শাকের ও শেখ নিয়ামত আলী", "Masihuddin Shaker and Sheikh Niamat Ali"], ["জহির রায়হান", "Zahir Raihan"], ["তারেক মাসুদ", "Tareque Masud"], ["সত্যজিৎ", "Satyajit"]],
-  ["ar", "শিল্পী কামরুল হাসান কোন বিখ্যাত পোস্টারের জন্য পরিচিত?", "For which famous 1971 poster is Quamrul Hassan known?", ["\"এই জানোয়ারদের হত্যা করতে হবে\"", "\"Annihilate These Demons\""], ["ভাষা শহীদ মিনার", "Shaheed Minar design"], ["তিতাস", "Titas"], ["জাহাজ", "Ship"]],
-  ["ar", "ঢাকার চারুকলা ইনস্টিটিউট কে প্রতিষ্ঠা করেন?", "Who founded the Dhaka Art Institute (1948)?", ["জয়নুল আবেদিন", "Zainul Abedin"], ["এস এম সুলতান", "S. M. Sultan"], ["কামরুল হাসান", "Quamrul Hassan"], ["নন্দলাল বসু", "Nandalal Bose"]],
+  
+  
   ["ar", "চিত্রশিল্পী যামিনী রায় কোন শৈলীতে বিখ্যাত?", "Jamini Roy drew inspiration from which tradition?", ["কালীঘাট পট ও লোকশিল্প", "Kalighat pat and folk art"], ["কিউবিজম", "Cubism"], ["পপ আর্ট", "Pop art"], ["ডাডাইজম", "Dadaism"]],
   ["pe", "রামমোহন রায়ের প্রথম সংবাদপত্র কোনটি?", "Which was Ram Mohan Roy's Bengali periodical?", ["সংবাদ কৌমুদী", "Sambad Kaumudi"], ["সমাচার দর্পণ", "Samachar Darpan"], ["বঙ্গদর্শন", "Bangadarshan"], ["তত্ত্ববোধিনী", "Tattwabodhini"]],
   ["pe", "অক্ষয়কুমার দত্ত কোন পত্রিকা সম্পাদনা করেন?", "Which periodical did Akshay Kumar Datta edit?", ["তত্ত্ববোধিনী পত্রিকা", "Tattwabodhini Patrika"], ["সংবাদ প্রভাকর", "Sambad Prabhakar"], ["ভারতী", "Bharati"], ["সবুজপত্র", "Sabujpatra"]],

@@ -3,7 +3,9 @@
 import { Spinner } from "@/components/Spinner";
 import { useCallback, useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { toBengaliDigits } from "@alapon/bengali";
+import { getAddaPrompt, toBengaliDigits } from "@alapon/bengali";
+import { track } from "@/lib/analytics";
+import { useToday } from "@/components/calendar/useToday";
 import { Card, Container, SectionHeading } from "@alapon/ui";
 import { Link, useRouter } from "@/i18n/navigation";
 import { useAuth } from "@/components/auth/AuthProvider";
@@ -36,6 +38,13 @@ export function AddaHome() {
   const [body, setBody] = useState("");
   const [postCategory, setPostCategory] = useState("aajker-adda");
   const [busy, setBusy] = useState(false);
+  const today = useToday();
+  const prompt = today ? getAddaPrompt(today) : null;
+  const promptText = prompt ? (locale === "bn" ? prompt.bn : prompt.en) : "";
+  const [prefilled, setPrefilled] = useState(false);
+  useEffect(() => {
+    track("adda_opened", {});
+  }, []);
   const [formError, setFormError] = useState<string | null>(null);
 
   const load = useCallback(async () => {
@@ -54,6 +63,15 @@ export function AddaHome() {
       if (wanted && data.some((c) => c.slug === wanted)) setCategory(wanted);
     });
   }, []);
+
+  useEffect(() => {
+    if (prefilled || !promptText) return;
+    if (new URLSearchParams(window.location.search).get("prompt") === "today") {
+      setTitle(promptText.slice(0, 140));
+      setPostCategory("aajker-adda");
+    }
+    setPrefilled(true);
+  }, [prefilled, promptText]);
 
   // Editorial is staff-only; everyone else can read it but not post into it.
   const composerCategories = categories.filter((c) => c.slug !== EDITORIAL_SLUG || isModerator);
@@ -103,7 +121,31 @@ export function AddaHome() {
         {t("guidelines")}
       </p>
 
-      <Card className="mb-6 border-t-4 border-t-sindoor-400">
+      {promptText ? (
+        <section aria-labelledby="adda-today" className="card-discovery mb-6">
+          <p id="adda-today" className="eyebrow">
+            {t("todayPrompt")}
+          </p>
+          <p className="display reading mt-2 max-w-2xl text-2xl">{promptText}</p>
+          <p className="mt-4">
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={() => {
+                setTitle(promptText.slice(0, 140));
+                setPostCategory("aajker-adda");
+                document
+                  .getElementById("adda-composer")
+                  ?.scrollIntoView({ behavior: "smooth", block: "center" });
+              }}
+            >
+              {t("answerPrompt")}
+            </button>
+          </p>
+        </section>
+      ) : null}
+
+      <Card id="adda-composer" className="mb-6 border-t-4 border-t-sindoor-400">
         {canParticipate ? (
           <form onSubmit={submit} className="flex flex-col gap-3">
             <h2 className="font-bengaliDisplay text-lg font-bold">{t("newPost")}</h2>

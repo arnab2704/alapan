@@ -1,7 +1,11 @@
+import { ADDA_PROMPTS } from "./data/adda-prompts";
+import type { AddaPrompt } from "./data/adda-prompts";
+import { FESTIVE_ADDA_PROMPTS, FESTIVE_DAILY_WORDS } from "./data/festive-daily";
+import { FESTIVE_ADDA_PROMPTS_2, FESTIVE_DAILY_WORDS_2 } from "./data/festive-daily-2";
 import { CULTURE_PEOPLE, DAILY_WORDS, HISTORY_EVENTS } from "./data/culture";
 import type { CulturePerson, DailyWord, HistoryEvent } from "./data/culture";
 
-export type { CulturePerson, DailyWord, HistoryEvent };
+export type { AddaPrompt, CulturePerson, DailyWord, HistoryEvent };
 
 /** Whole days since 2026-01-01 (DST-safe), the shared seed for daily rotations. */
 function dayIndex(date: Date): number {
@@ -15,9 +19,15 @@ function rotate<T>(items: T[], date: Date, offset: number): T {
   return items[i];
 }
 
-/** Same word all day for everyone; changes at local midnight. */
+function isoOf(date: Date): string {
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+/** Same word all day for everyone; changes at local midnight. Festival dates use a targeted word. */
 export function getDailyWord(date: Date): DailyWord {
-  return rotate(DAILY_WORDS, date, 0);
+  return (
+    FESTIVE_DAILY_WORDS[isoOf(date)] ?? FESTIVE_DAILY_WORDS_2[isoOf(date)] ?? rotate(DAILY_WORDS, date, 0)
+  );
 }
 
 /** Offset so word and person don't advance in lockstep through their lists. */
@@ -52,4 +62,23 @@ export function getHistoryForDate(date: Date): HistoryForDate {
     if (!best || daysAway < best.daysAway) best = { event, daysAway, yearsAgo: year - event.year };
   }
   return best as HistoryForDate;
+}
+
+export function getAllDailyWords(): DailyWord[] {
+  return [...DAILY_WORDS];
+}
+
+export function getAllCulturePeople(): CulturePerson[] {
+  return [...CULTURE_PEOPLE];
+}
+
+/** Today's Adda conversation starter: the same for everyone on a given day. */
+export function getAllAddaPromptsCount(): number {
+  return ADDA_PROMPTS.length;
+}
+
+export function getAddaPrompt(date: Date): AddaPrompt {
+  return (
+    FESTIVE_ADDA_PROMPTS[isoOf(date)] ?? FESTIVE_ADDA_PROMPTS_2[isoOf(date)] ?? rotate(ADDA_PROMPTS, date, 3)
+  );
 }

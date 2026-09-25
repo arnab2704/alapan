@@ -1,6 +1,7 @@
 import { tokenizeToTiles } from "@alapon/bengali";
 import { LEARN_UNITS } from "./data/learn-curriculum";
 import type { LearnItem, LearnKind, LearnLesson, LearnUnit } from "./data/learn-curriculum";
+import { mulberry32 } from "./quiz";
 import { shuffle } from "./tileBag";
 
 export type { LearnItem, LearnKind, LearnLesson, LearnUnit };
@@ -296,4 +297,50 @@ export function generateExercises(
   const match = makeMatch(items, kind, rng);
   const middle = Math.ceil(trimmed.length / 2);
   return [...flash, ...trimmed.slice(0, middle), match, ...trimmed.slice(middle)];
+}
+
+export interface DailyLearnMoment {
+  lessonId: string;
+  unitId: string;
+  item: LearnItem;
+  /** A tiny "how is this pronounced?" check. */
+  options: string[];
+  correctIndex: number;
+}
+
+function learnDayIndex(date: Date): number {
+  const from = Date.UTC(2026, 0, 1);
+  const to = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+  return Math.round((to - from) / 86_400_000);
+}
+
+/**
+ * One small thing to learn today, the same for everyone: an item from the letters, signs, numbers
+ * or conjuncts courses (words are left to the word of the day) with a three-option pronunciation check.
+ */
+export function getDailyLearnMoment(date: Date): DailyLearnMoment {
+  const candidates: Array<{ unit: LearnUnit; lesson: LearnLesson; item: LearnItem }> = [];
+  for (const unit of LEARN_UNITS) {
+    for (const lesson of unit.lessons) {
+      if (lesson.review || lesson.kind === "word") continue;
+      for (const item of lesson.items) candidates.push({ unit, lesson, item });
+    }
+  }
+  const day = learnDayIndex(date);
+  const pick = candidates[((day % candidates.length) + candidates.length) % candidates.length];
+  const pool = getDistractorPool(pick.unit, pick.lesson.kind).filter((i) => i.id !== pick.item.id);
+  const rng = mulberry32(day * 2654435761);
+  const wrong: string[] = [];
+  for (const candidate of shuffle(pool, rng)) {
+    if (candidate.roman !== pick.item.roman && !wrong.includes(candidate.roman)) wrong.push(candidate.roman);
+    if (wrong.length === 2) break;
+  }
+  const options = shuffle([pick.item.roman, ...wrong], rng);
+  return {
+    lessonId: pick.lesson.id,
+    unitId: pick.unit.id,
+    item: pick.item,
+    options,
+    correctIndex: options.indexOf(pick.item.roman)
+  };
 }

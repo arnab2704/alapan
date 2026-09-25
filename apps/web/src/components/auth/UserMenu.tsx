@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, useRouter } from "@/i18n/navigation";
+import { ProfileIcon } from "@/components/nav/NavIcons";
 import { useAuth } from "./AuthProvider";
 
 const pillClass =
@@ -54,13 +55,29 @@ export function UserMenu({ variant }: { variant: "dropdown" | "list" }) {
   if (!enabled) return null;
 
   if (!user) {
+    if (variant === "list") {
+      return (
+        <Link href="/login" className={pillClass}>
+          {t("signIn")}
+        </Link>
+      );
+    }
     return (
-      <Link
-        href="/login"
-        className={`${pillClass} ${variant === "dropdown" ? "border border-ink-200 dark:border-ink-600" : ""}`}
-      >
-        {t("signIn")}
-      </Link>
+      <div className="flex items-center gap-1">
+        <Link
+          href="/profile"
+          aria-label={t("profile")}
+          className="flex h-11 w-11 items-center justify-center rounded-full text-ink-700 hover:bg-sindoor-50 hover:text-sindoor-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sindoor-500 dark:text-ink-100 dark:hover:bg-ink-800"
+        >
+          <ProfileIcon />
+        </Link>
+        <Link
+          href="/login"
+          className={`${pillClass} hidden border border-ink-200 dark:border-ink-600 sm:flex`}
+        >
+          {t("signIn")}
+        </Link>
+      </div>
     );
   }
 
@@ -75,6 +92,12 @@ export function UserMenu({ variant }: { variant: "dropdown" | "list" }) {
 
   const actions = (
     <>
+      <Link href="/profile" onClick={() => setOpen(false)} className={itemClass}>
+        {t("profile")}
+      </Link>
+      <Link href="/passport" onClick={() => setOpen(false)} className={itemClass}>
+        {t("passport")}
+      </Link>
       <Link href="/account" onClick={() => setOpen(false)} className={itemClass}>
         {t("myAccount")}
       </Link>

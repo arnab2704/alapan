@@ -6,6 +6,105 @@
   color-scheme: light dark;
 }
 
+/*
+ * Alapon design tokens. Colours mirror the Tailwind palette in packages/config/tailwind-tokens.js
+ * (sindoor = Bengal red, marigold = muted gold, cream = ivory, ink = warm charcoal/grey) so both
+ * can be used; the variables are for semantic use in custom CSS and documentation.
+ * Spacing follows a 4/8px scale (Tailwind's default step). See docs/ALAPON_DESIGN_SYSTEM.md.
+ */
+:root {
+  --alapon-bg: #fffaf2;
+  --alapon-surface: #fffdf8;
+  --alapon-text: #1c1518;
+  --alapon-muted: #766d6a;
+  --alapon-primary: #bf2f3a;
+  --alapon-primary-strong: #a02530;
+  --alapon-accent: #d9a02b;
+  --alapon-success: #17795a;
+  --alapon-line: #ede6de;
+  --alapon-radius-sm: 0.5rem;
+  --alapon-radius-md: 0.875rem;
+  --alapon-radius-lg: 1.25rem;
+  --alapon-reading-line-height: 1.75;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --alapon-bg: #1c1518;
+    --alapon-surface: #2a2126;
+    --alapon-text: #f9f5f1;
+    --alapon-muted: #c0b3a8;
+    --alapon-line: #3a2f34;
+  }
+}
+
+/* Bengali needs more line height than Latin text to keep conjuncts and vowel signs from colliding. */
+body {
+  line-height: 1.65;
+}
+
+@layer components {
+  /* ---- Buttons: one family, four variants, three sizes ---- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+    min-height: 2.75rem;
+    padding-inline: 1.5rem;
+  }
+  .btn-sm {
+    min-height: 2.25rem;
+    padding-inline: 1rem;
+  }
+  .btn-lg {
+    @apply text-base;
+    min-height: 3rem;
+    padding-inline: 2rem;
+  }
+  .btn-primary {
+    @apply bg-sindoor-500 text-white shadow-sm shadow-sindoor-900/20 hover:bg-sindoor-600 focus-visible:outline-sindoor-600;
+  }
+  .btn-secondary {
+    @apply border border-ink-300 bg-cream-50 text-ink-700 hover:bg-ink-100 focus-visible:outline-ink-400 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-100 dark:hover:bg-ink-700;
+  }
+  .btn-gold {
+    @apply bg-marigold-400 text-ink-900 hover:bg-marigold-300 focus-visible:outline-marigold-600;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-ink-800 hover:bg-ink-100 focus-visible:outline-ink-400 dark:text-ink-100 dark:hover:bg-ink-800;
+  }
+  .btn-text {
+    @apply min-h-0 rounded-none px-0 text-sindoor-600 underline decoration-dotted underline-offset-4 hover:text-sindoor-700 focus-visible:outline-sindoor-500 dark:text-sindoor-300;
+    min-height: 2.75rem;
+    padding-inline: 0;
+  }
+
+  /* ---- Card family: hierarchy instead of a wall of identical bordered boxes ---- */
+  .card-editorial {
+    @apply border-t-2 border-t-sindoor-500 py-5 dark:border-t-sindoor-300;
+  }
+  .card-game {
+    @apply rounded-alpona border border-ink-100 bg-cream-100 p-5 shadow-md shadow-ink-900/5 dark:border-ink-700 dark:bg-ink-800;
+  }
+  .card-discovery {
+    @apply rounded-alpona border border-ink-100 border-t-4 border-t-marigold-400 bg-cream-100 p-5 transition-shadow hover:shadow-md dark:border-ink-700 dark:bg-ink-800;
+  }
+  .card-learning {
+    @apply rounded-alpona border border-shapla-200 bg-shapla-50 p-5 dark:border-ink-600 dark:bg-ink-800;
+  }
+  .card-result {
+    @apply rounded-alpona border-2 border-sindoor-200 bg-cream-50 p-6 text-center shadow-lg shadow-sindoor-900/10 dark:border-sindoor-800 dark:bg-ink-800;
+  }
+
+  /* ---- Type helpers ---- */
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-wider text-sindoor-600 dark:text-sindoor-300;
+  }
+  .display {
+    @apply font-bengaliDisplay font-extrabold text-ink-900 dark:text-ink-50;
+  }
+  .reading {
+    line-height: var(--alapon-reading-line-height);
+  }
+}
+
 /* Base background/text colors are set on <body> in [locale]/layout.tsx via Tailwind classes. */
 
 @media (prefers-reduced-motion: reduce) {

@@ -27,5 +27,25 @@ export {
   daysUntil
 } from "./festivals";
 export type { Festival, FestivalCategory, FestivalDay, FestivalStatus } from "./festivals";
-export { getDailyWord, getPersonOfTheDay, getHistoryForDate, getAllHistoryEvents } from "./culture";
-export type { DailyWord, CulturePerson, HistoryEvent, HistoryForDate } from "./culture";
+export {
+  getDailyWord,
+  getPersonOfTheDay,
+  getHistoryForDate,
+  getAllHistoryEvents,
+  getAllDailyWords,
+  getAllCulturePeople,
+  getAddaPrompt,
+  getAllAddaPromptsCount
+} from "./culture";
+export type { DailyWord, CulturePerson, HistoryEvent, HistoryForDate, AddaPrompt } from "./culture";
+export { estimateDifficulty, getAllWordEntries, getWordDNA, getWordEntry, hasWordEntry } from "./words";
+export type { WordCategory, WordDNA, WordEntry } from "./words";
+export {
+  DISCOVERY_CATEGORIES,
+  getAllDiscoveries,
+  getDailyDiscovery,
+  getDiscoveriesByCategory,
+  getDiscovery,
+  getRelatedDiscoveries
+} from "./discover";
+export type { Discovery, DiscoveryCategory } from "./discover";

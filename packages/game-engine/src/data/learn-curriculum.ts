@@ -176,7 +176,7 @@ const J2 = letters("jj", [
 const W = {
   hello: words("w1-", [
     ["নমস্কার", "nomoshkar", "hello (common in West Bengal)"],
-    ["আদাব", "adab", "hello (common in Bangladesh)"],
+    ["আদাব", "adab", "a courteous hello"],
     ["ধন্যবাদ", "dhonnobad", "thank you"],
     ["হ্যাঁ", "hyan", "yes"],
     ["না", "na", "no"],

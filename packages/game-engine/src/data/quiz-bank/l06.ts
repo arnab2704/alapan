@@ -10,23 +10,23 @@ export const L06: Row[] = [
   ["hi", "গৌড়ের রাজা শশাঙ্ক কোন সম্রাটের সমসাময়িক ও প্রতিদ্বন্দ্বী?", "Shashanka of Gauda was a rival of which emperor?", ["হর্ষবর্ধন", "Harshavardhana"], ["অশোক", "Ashoka"], ["আকবর", "Akbar"], ["চন্দ্রগুপ্ত", "Chandragupta"]],
   ["hi", "\"মাৎস্যন্যায়\" কী?", "What does \"Matsyanyaya\" describe?", ["শশাঙ্কোত্তর বাংলার অরাজকতা", "The anarchy in Bengal after Shashanka"], ["একটি মৎস্য উৎসব", "A fish festival"], ["একটি নদী", "A river"], ["একটি মন্দির", "A temple"]],
   ["hi", "গৌড়-বঙ্গের সুলতান গিয়াসউদ্দিন আজম শাহ কোন চীনা যোগাযোগের জন্য বিখ্যাত?", "Which court did Sultan Ghiyasuddin Azam Shah exchange envoys with?", ["চীনের মিং দরবার", "The Ming court of China"], ["রোমান সাম্রাজ্য", "The Roman Empire"], ["জাপানের শোগুন", "The Shogun of Japan"], ["মিশরের ফারাও", "The Pharaohs"]],
-  ["hi", "ঢাকায় লালবাগ কেল্লা নির্মাণ শুরু করেন কে?", "Who began building Lalbagh Fort in Dhaka?", ["শাহজাদা মুহাম্মদ আজম", "Prince Muhammad Azam"], ["শায়েস্তা খান", "Shaista Khan"], ["ইসলাম খান", "Islam Khan"], ["আওরঙ্গজেব", "Aurangzeb"]],
+  
   ["hi", "লালবাগ কেল্লার বিখ্যাত সমাধি কার?", "Whose tomb is famous inside Lalbagh Fort?", ["বিবি পরী", "Bibi Pari"], ["শায়েস্তা খান", "Shaista Khan"], ["ঈশা খাঁ", "Isa Khan"], ["মীর জুমলা", "Mir Jumla"]],
-  ["hi", "ঢাকার আহসান মঞ্জিল কোন জমিদার/নবাব পরিবারের?", "Ahsan Manzil belonged to which family?", ["ঢাকার নবাব পরিবার", "The Nawab family of Dhaka"], ["রানি ভবানী পরিবার", "The Rani Bhabani family"], ["ঠাকুর পরিবার", "The Tagore family"], ["মল্লিক পরিবার", "The Mullick family"]],
-  ["hi", "ঢাকার ছোট কাটরা ও বড় কাটরা কার আমলে নির্মিত?", "Under whom were Dhaka's Bara and Chhota Katra built?", ["শাহ সুজা ও শায়েস্তা খান", "Shah Shuja and Shaista Khan"], ["সিরাজউদ্দৌলা", "Siraj ud-Daulah"], ["ইংরেজ কোম্পানি", "The East India Company"], ["ঈশা খাঁ", "Isa Khan"]],
-  ["hi", "স্বাধীন বাংলাদেশের প্রথম প্রধান বিচারপতি কে ছিলেন?", "Who was independent Bangladesh's first Chief Justice?", ["আবু সাদাত মোহাম্মদ সায়েম", "Abu Sadat Mohammad Sayem"], ["খায়রুল হক", "Khairul Haque"], ["মুস্তাফা কামাল", "Mustafa Kamal"], ["বদরুল হায়দার চৌধুরী", "Badrul Haider Chowdhury"]],
-  ["hi", "বাংলাদেশের ১৯৭২ সংবিধানের চার মূলনীতি কী ছিল?", "What were the four fundamental principles of the 1972 Constitution?", ["জাতীয়তাবাদ, সমাজতন্ত্র, গণতন্ত্র, ধর্মনিরপেক্ষতা", "Nationalism, socialism, democracy, secularism"], ["রাজতন্ত্র, সামন্তবাদ, সাম্রাজ্যবাদ, ধর্মতন্ত্র", "Monarchy, feudalism, imperialism, theocracy"], ["ন্যায়, শান্তি, ঐক্য, ভালোবাসা", "Justice, peace, unity, love"], ["শিক্ষা, স্বাস্থ্য, খাদ্য, বাসস্থান", "Education, health, food, shelter"]],
-  ["hi", "বাংলাদেশ কমনওয়েলথে যোগ দেয় কোন সালে?", "In which year did Bangladesh join the Commonwealth?", "1972", "1971", "1974", "1980"],
-  ["hi", "বাংলাদেশ ওআইসিতে সদস্যপদ পায় কোন সালে?", "In which year did Bangladesh join the OIC?", "1974", "1972", "1980", "1990"],
-  ["hi", "স্বাধীন বাংলাদেশের প্রথম মুদ্রা-ব্যবস্থায় কোন মুদ্রা চালু হয় (১৯৭২)?", "Which currency did Bangladesh introduce in 1972?", ["টাকা", "Taka"], ["রুপি", "Rupee"], ["পাউন্ড", "Pound"], ["ডলার", "Dollar"]],
+  
+  
+  
+  
+  
+  
+  
   ["hi", "পাণ্ডুয়ার আদিনা মসজিদ কোন সুলতান নির্মাণ করেন?", "Which sultan built the Adina Mosque at Pandua?", ["সিকান্দার শাহ", "Sikandar Shah"], ["হুসেন শাহ", "Hussain Shah"], ["শেরশাহ", "Sher Shah"], ["ঈশা খাঁ", "Isa Khan"]],
   ["hi", "গৌড়ের ছোট সোনা মসজিদ ও বড় সোনা মসজিদ কোন সুলতানি আমলের?", "To which sultanate period do the Chhota and Bara Sona Mosques of Gaur belong?", ["হুসেন শাহি আমল", "The Hussain Shahi period"], ["পাল আমল", "The Pala period"], ["ব্রিটিশ আমল", "The British period"], ["গুপ্ত আমল", "The Gupta period"]],
   ["hi", "নবদ্বীপের কোন পণ্ডিত শ্রীচৈতন্য নামে খ্যাত হন?", "By what earlier name was Sri Chaitanya known at Nabadwip?", ["বিশ্বম্ভর / নিমাই", "Vishvambhar / Nimai"], ["গদাধর", "Gadadhar"], ["নরেন", "Naren"], ["সুরেন", "Suren"]],
   ["ge", "গঙ্গার দুটি প্রধান শাখা বাংলায় কোনগুলো?", "Which are the two main distributaries of the Ganga in Bengal?", ["ভাগীরথী-হুগলি ও পদ্মা", "Bhagirathi-Hooghly and Padma"], ["তিস্তা ও মহানন্দা", "Teesta and Mahananda"], ["সুরমা ও কুশিয়ারা", "Surma and Kushiyara"], ["কর্ণফুলী ও সাঙ্গু", "Karnaphuli and Sangu"]],
   ["ge", "মহানন্দা নদী কোন শহরের পাশ দিয়ে বয়েছে?", "The Mahananda flows past which city?", ["শিলিগুড়ি", "Siliguri"], ["কলকাতা", "Kolkata"], ["হাওড়া", "Howrah"], ["বরিশাল", "Barishal"]],
   ["ge", "সাঙ্গু নদী কোন জেলার?", "In which district does the Sangu river flow?", ["বান্দরবান", "Bandarban"], ["সিলেট", "Sylhet"], ["যশোর", "Jashore"], ["দিনাজপুর", "Dinajpur"]],
-  ["ge", "মাতামুহুরী নদী কোন জেলায়?", "In which district does the Matamuhuri flow?", ["কক্সবাজার-বান্দরবান অঞ্চলে", "The Cox's Bazar-Bandarban area"], ["সিলেট", "Sylhet"], ["রংপুর", "Rangpur"], ["ঢাকা", "Dhaka"]],
-  ["ge", "বাংলাদেশের দীর্ঘতম সেতুর মধ্যে পদ্মা সেতুর দৈর্ঘ্য প্রায় কত?", "How long is the Padma Bridge (approx.)?", ["প্রায় ৬.১৫ কিমি", "About 6.15 km"], ["প্রায় ১ কিমি", "About 1 km"], ["প্রায় ২০ কিমি", "About 20 km"], ["প্রায় ৩০০ মিটার", "About 300 m"]],
+  
+  
   ["ge", "কর্ণফুলী টানেল কোন নদীর নিচে?", "Under which river does the Karnaphuli Tunnel run?", ["কর্ণফুলী", "Karnaphuli"], ["পদ্মা", "Padma"], ["মেঘনা", "Meghna"], ["যমুনা", "Jamuna"]],
   ["ge", "বিদ্যাসাগর সেতু কত সালে চালু হয়?", "In which year was the Vidyasagar Setu opened?", "1992", "1943", "1971", "2005"],
   ["ge", "কোন সেতু কলকাতা ও হাওড়াকে জোড়ে, ১৯৪৩ সালে চালু?", "Which bridge, opened in 1943, links Kolkata and Howrah?", ["হাওড়া ব্রিজ", "Howrah Bridge"], ["বিদ্যাসাগর সেতু", "Vidyasagar Setu"], ["নিবেদিতা সেতু", "Nivedita Setu"], ["বালি ব্রিজ", "Bally Bridge"]],
@@ -35,18 +35,18 @@ export const L06: Row[] = [
   ["ge", "কলকাতার ভারতীয় জাদুঘর কোন সালে প্রতিষ্ঠিত?", "In which year was the Indian Museum, Kolkata, founded?", "1814", "1911", "1857", "1947"],
   ["ge", "কলকাতার ন্যাশনাল লাইব্রেরি কোথায়?", "Where is the National Library of India in Kolkata?", ["আলিপুর (বেলভেডিয়ার)", "Alipore (Belvedere)"], ["সল্টলেক", "Salt Lake"], ["শিয়ালদহ", "Sealdah"], ["দমদম", "Dum Dum"]],
   ["ge", "কলকাতার প্রাচীনতম গির্জাগুলির একটি কোনটি?", "Which is among Kolkata's oldest churches?", ["সেন্ট জন্স চার্চ", "St John's Church"], ["বেলুড় মঠ", "Belur Math"], ["নাখোদা মসজিদ", "Nakhoda Mosque"], ["কালীঘাট", "Kalighat"]],
-  ["ge", "চট্টগ্রামের ঐতিহাসিক 'পাহাড়তলী' কোন ধরনের এলাকা?", "Pahartali in Chattogram is best known as what?", ["রেল ও শিল্পাঞ্চল", "A railway and industrial area"], ["সমুদ্র সৈকত", "A beach"], ["চা বাগান", "A tea garden"], ["ম্যানগ্রোভ", "A mangrove"]],
+  
   ["ge", "হাকালুকি হাওর কোন জেলায় অবস্থিত?", "In which district is Hakaluki Haor?", ["মৌলভীবাজার", "Moulvibazar"], ["সুনামগঞ্জ", "Sunamganj"], ["খুলনা", "Khulna"], ["বরিশাল", "Barishal"]],
   ["ge", "টাঙ্গুয়ার হাওর কোন জেলায়?", "In which district is Tanguar Haor?", ["সুনামগঞ্জ", "Sunamganj"], ["ঢাকা", "Dhaka"], ["যশোর", "Jashore"], ["বরগুনা", "Barguna"]],
   ["ge", "ছেঁড়াদ্বীপ ও সেন্ট মার্টিন কোন সাগরে?", "In which sea are Chhera Dwip and St Martin's?", ["বঙ্গোপসাগর", "Bay of Bengal"], ["আরব সাগর", "Arabian Sea"], ["জাপান সাগর", "Sea of Japan"], ["লোহিত সাগর", "Red Sea"]],
-  ["ge", "বাংলাদেশের কোথায় প্রবাল দেখা যায়?", "Where in Bangladesh are corals found?", ["সেন্ট মার্টিন দ্বীপ", "St Martin's Island"], ["কুয়াকাটা", "Kuakata"], ["সুন্দরবন", "Sundarbans"], ["মহেশখালী", "Maheshkhali"]],
+  
   ["ge", "দিনাজপুরের কান্তজিউ মন্দির কোন ধরনের স্থাপত্য?", "The Kantajew Temple is famed for which decoration?", ["পোড়ামাটির ফলক", "Terracotta plaques"], ["মার্বেল নকশা", "Marble inlay"], ["কাঠের খোদাই", "Wood carving"], ["রঙিন কাচ", "Stained glass"]],
   ["ge", "উত্তরবঙ্গের বিখ্যাত ডুয়ার্স অরণ্যে কোন প্রাণী বিখ্যাত?", "Which animal is famed in the North Bengal Dooars forests?", ["একশৃঙ্গ গণ্ডার", "One-horned rhinoceros"], ["সিংহ", "Lion"], ["জিরাফ", "Giraffe"], ["উট", "Camel"]],
   ["ge", "বক্সা টাইগার রিজার্ভ কোন রাজ্যে?", "In which state is the Buxa Tiger Reserve?", ["পশ্চিমবঙ্গ", "West Bengal"], ["ওড়িশা", "Odisha"], ["বিহার", "Bihar"], ["ত্রিপুরা", "Tripura"]],
   ["ge", "সজনেখালি কোথায়?", "Where is Sajnekhali?", ["ভারতীয় সুন্দরবন", "The Indian Sundarbans"], ["দার্জিলিং", "Darjeeling"], ["পুরুলিয়া", "Purulia"], ["বাঁকুড়া", "Bankura"]],
   ["cu", "কাঁথা-স্টিচ ও চিকনকারি বাংলার কোন শিল্পের সঙ্গে যুক্ত?", "Kantha stitch belongs to which craft tradition?", ["সুই-সুতোর কারুশিল্প", "Needlework"], ["মৃৎশিল্প", "Pottery"], ["ধাতুশিল্প", "Metalwork"], ["কাষ্ঠশিল্প", "Woodwork"]],
   ["cu", "মৃৎশিল্পের জন্য বিখ্যাত পশ্চিমবঙ্গের কুমোরটুলি কোথায়?", "Where is Kumartuli, the idol-makers' quarter?", ["কলকাতা", "Kolkata"], ["ঢাকা", "Dhaka"], ["দার্জিলিং", "Darjeeling"], ["বীরভূম", "Birbhum"]],
-  ["cu", "ঢাকার শাঁখারীবাজার কীসের জন্য বিখ্যাত?", "For what is Shankhari Bazar in Old Dhaka famous?", ["শাঁখা শিল্প", "Conch-shell craft"], ["মসলা", "Spices"], ["মাছ", "Fish"], ["বই", "Books"]],
+  
   ["cu", "কোন খেলা বাংলার গ্রামে \"ষোলগুটি\" নামে পরিচিত?", "Which traditional game is known as \"Sholo Guti\"?", ["গুটি ফেলার বোর্ড খেলা", "A traditional board game with pieces"], ["ঘুড়ি ওড়ানো", "Kite flying"], ["নৌকাবাইচ", "Boat race"], ["ফুটবল", "Football"]],
   ["cu", "\"বউচি\" ও \"গোল্লাছুট\" কী?", "What are \"Boichi\" and \"Gollachut\"?", ["গ্রামবাংলার ঐতিহ্যবাহী খেলা", "Traditional village games"], ["মিষ্টি", "Sweets"], ["নদীর নাম", "River names"], ["গান", "Songs"]],
   ["cu", "বাংলার ঐতিহ্যবাহী মাছধরা জাল কোনটি?", "Which is a traditional Bengali fishing net?", ["ঝাঁকি জাল/খেপলা জাল", "Jhaki/khepla cast net"], ["রেললাইন", "Railway line"], ["ধানের গোলা", "Grain store"], ["গরুর গাড়ি", "Bullock cart"]],
@@ -61,8 +61,8 @@ export const L06: Row[] = [
   ["li", "\"মনসামঙ্গল\" কাব্যের প্রাচীনতম কবি কে?", "Which poet is counted among the oldest of Manasamangal?", ["কানা হরিদত্ত/বিজয় গুপ্ত", "Kana Haridatta / Bijay Gupta"], ["আলাওল", "Alaol"], ["রামপ্রসাদ", "Ramprasad"], ["মধুসূদন", "Madhusudan"]],
   ["li", "\"গীতগোবিন্দ\" কোন ভাষার কাব্য?", "In which language is the \"Gita Govinda\" composed?", ["সংস্কৃত", "Sanskrit"], ["বাংলা", "Bengali"], ["হিন্দি", "Hindi"], ["উর্দু", "Urdu"]],
   ["li", "শাক্তপদাবলির প্রসিদ্ধ সাধককবি কে?", "Which mystic poet is celebrated for Shakta padavali (Shyama Sangeet)?", ["রামপ্রসাদ সেন", "Ramprasad Sen"], ["কবীর", "Kabir"], ["তুলসীদাস", "Tulsidas"], ["সুরদাস", "Surdas"]],
-  ["li", "\"ময়মনসিংহ গীতিকা\" কে সংগ্রহ করেন?", "Who collected the \"Mymensingh Gitika\"?", ["চন্দ্রকুমার দে", "Chandra Kumar De"], ["দীনেশচন্দ্র সেন", "Dinesh Chandra Sen"], ["জসীমউদ্দীন", "Jasimuddin"], ["নজরুল", "Nazrul"]],
-  ["li", "\"মহুয়া\" পালা কোন সংকলনের অংশ?", "The ballad \"Mahua\" belongs to which collection?", ["ময়মনসিংহ গীতিকা", "Mymensingh Gitika"], ["গল্পগুচ্ছ", "Galpaguchchha"], ["সঞ্চিতা", "Sanchita"], ["চর্যাপদ", "Charyapada"]],
+  
+  
   ["li", "\"বাংলা সাহিত্যের ইতিহাস\" গ্রন্থের লেখক কে?", "Who wrote the pioneering \"History of Bengali Language and Literature\"?", ["দীনেশচন্দ্র সেন", "Dinesh Chandra Sen"], ["সুকুমার সেন", "Sukumar Sen"], ["রবীন্দ্রনাথ", "Rabindranath"], ["হরপ্রসাদ", "Haraprasad"]],
   ["li", "\"শেষের কবিতা\" কার উপন্যাস?", "Whose novel is \"Sesher Kobita\"?", ["রবীন্দ্রনাথ ঠাকুর", "Rabindranath Tagore"], ["শরৎচন্দ্র", "Sarat Chandra"], ["বঙ্কিমচন্দ্র", "Bankim Chandra"], ["মানিক", "Manik"]],
   ["li", "\"বিষবৃক্ষ\" উপন্যাসের রচয়িতা কে?", "Who wrote the novel \"Bishabriksha\" (The Poison Tree)?", ["বঙ্কিমচন্দ্র চট্টোপাধ্যায়", "Bankim Chandra Chattopadhyay"], ["রবীন্দ্রনাথ", "Rabindranath"], ["শরৎচন্দ্র", "Sarat Chandra"], ["তারাশঙ্কর", "Tarashankar"]],
@@ -80,12 +80,12 @@ export const L06: Row[] = [
   ["re", "বৈষ্ণব পদকর্তা চণ্ডীদাস কোন জেলার বলে মনে করা হয় (নানুর)?", "Which district's Nanur is linked with poet Chandidas?", ["বীরভূম", "Birbhum"], ["নদিয়া", "Nadia"], ["হুগলি", "Hooghly"], ["হাওড়া", "Howrah"]],
   ["re", "কেন্দুলি মেলা কোন কবির স্মরণে?", "The Kenduli fair honours which poet?", ["জয়দেব", "Jayadeva"], ["চণ্ডীদাস", "Chandidas"], ["লালন", "Lalon"], ["কবীর", "Kabir"]],
   ["re", "জয়দেব কেন্দুলি কোন জেলায়?", "In which district is Joydeb Kenduli?", ["বীরভূম", "Birbhum"], ["বাঁকুড়া", "Bankura"], ["হুগলি", "Hooghly"], ["মালদহ", "Malda"]],
-  ["re", "ঢাকার লক্ষ্মীবাজারে কোন উপাসনালয় বিখ্যাত?", "Which temple is a famed landmark in Old Dhaka?", ["ঢাকেশ্বরী মন্দির", "Dhakeshwari Temple"], ["বায়তুল মোকাররম", "Baitul Mukarram"], ["আহসান মঞ্জিল", "Ahsan Manzil"], ["লালবাগ", "Lalbagh"]],
-  ["re", "ঢাকার আর্মেনিয়ান চার্চ কোন সম্প্রদায়ের?", "Whose community built Dhaka's Armenian Church?", ["আর্মেনীয়দের", "The Armenians"], ["ইহুদিদের", "The Jews"], ["চীনাদের", "The Chinese"], ["জাপানিদের", "The Japanese"]],
+  
+  
   ["re", "রাঙামাটির কোন বিহার বিখ্যাত?", "Which Buddhist vihara is famed in Rangamati?", ["রাজবন বিহার", "Rajban Vihara"], ["ঢাকেশ্বরী", "Dhakeshwari"], ["কালীঘাট", "Kalighat"], ["দক্ষিণেশ্বর", "Dakshineswar"]],
   ["re", "কলকাতার ইহুদি উপাসনালয় (সিনাগগ) কোনটি?", "Which is a famous synagogue in Kolkata?", ["মাগেন ডেভিড", "Maghen David"], ["নাখোদা", "Nakhoda"], ["সেন্ট পল্‌স", "St Paul's"], ["জৈন মন্দির", "Jain Temple"]],
-  ["fe", "মহররমের তাজিয়া মিছিল বাংলায় কোথায় বিখ্যাত?", "Where in Bengal is the Muharram tazia procession famed?", ["পুরনো ঢাকা", "Old Dhaka"], ["দার্জিলিং", "Darjeeling"], ["সুন্দরবন", "Sundarbans"], ["কুয়াকাটা", "Kuakata"]],
-  ["fe", "মাঘী পূর্ণিমা বাংলাদেশে কোন সম্প্রদায়ের উৎসব?", "Magha Purnima is especially observed by which community?", ["বৌদ্ধ সম্প্রদায়", "Buddhists"], ["খ্রিস্টান", "Christians"], ["ইহুদি", "Jews"], ["পার্সি", "Parsis"]],
+  
+  
   ["fe", "পাহাড়ি জনগোষ্ঠীর \"বিজু\" কোন সময়ে?", "When is the hill peoples' Biju festival celebrated?", ["চৈত্র সংক্রান্তি", "Choitro Sankranti"], ["আশ্বিন", "Ashwin"], ["পৌষ", "Poush"], ["শ্রাবণ", "Shrabon"]],
   ["fe", "শ্রীপঞ্চমী তিথিতে কোন ফুল-রঙ ব্যবহার হয়?", "Which colour dominates Saraswati Puja attire?", ["হলুদ/বাসন্তী", "Yellow"], ["কালো", "Black"], ["নীল", "Blue"], ["ধূসর", "Grey"]],
   ["fe", "দোলযাত্রায় কোন রঙ ছোড়া হয়?", "What is thrown on Dol Jatra?", ["আবির", "Abir (coloured powder)"], ["জল", "Plain water"], ["কাদা শুধু", "Mud"], ["ধুলো", "Dust"]],
@@ -105,6 +105,5 @@ export const L06: Row[] = [
   ["pe", "\"ইকোনমিক হিস্ট্রি অব ইন্ডিয়া\" রচয়িতা কোন বাঙালি?", "Which Bengali wrote \"The Economic History of India\"?", ["রমেশচন্দ্র দত্ত", "Romesh Chunder Dutt"], ["সত্যজিৎ", "Satyajit"], ["আশুতোষ", "Ashutosh"], ["বঙ্কিম", "Bankim"]],
   ["pe", "কাজী আবদুল ওদুদ কোন আন্দোলনের সঙ্গে যুক্ত?", "Kazi Abdul Wadud was linked with which cultural movement?", ["বুদ্ধির মুক্তি আন্দোলন", "The Buddhir Mukti (Freedom of Intellect) movement"], ["স্বদেশি", "Swadeshi"], ["নীল বিদ্রোহ", "Indigo Revolt"], ["সাঁওতাল হুল", "Santhal Hool"]],
   ["pe", "ড. মুহম্মদ শহীদুল্লাহ কোন বিষয়ে বিখ্যাত?", "In which field is Dr Muhammad Shahidullah celebrated?", ["ভাষাতত্ত্ব", "Linguistics"], ["পদার্থবিদ্যা", "Physics"], ["চিকিৎসা", "Medicine"], ["স্থাপত্য", "Architecture"]],
-  ["pe", "ড. মুহম্মদ শহীদুল্লাহ কোন গ্রন্থের জন্য পরিচিত?", "Which work is Shahidullah known for?", ["বাংলা ভাষার ইতিবৃত্ত", "History of the Bengali language"], ["গীতাঞ্জলি", "Gitanjali"], ["দেবদাস", "Devdas"], ["আনন্দমঠ", "Anandamath"]],
-  ["pe", "২১ ফেব্রুয়ারিকে আন্তর্জাতিক মাতৃভাষা দিবসের স্বীকৃতি দেওয়ার প্রস্তাব কোন দেশ পেশ করে?", "Which country proposed at UNESCO that 21 February be recognised as International Mother Language Day?", ["বাংলাদেশ", "Bangladesh"], ["জাপান", "Japan"], ["ফ্রান্স", "France"], ["ব্রাজিল", "Brazil"]]
+  ["pe", "ড. মুহম্মদ শহীদুল্লাহ কোন গ্রন্থের জন্য পরিচিত?", "Which work is Shahidullah known for?", ["বাংলা ভাষার ইতিবৃত্ত", "History of the Bengali language"], ["গীতাঞ্জলি", "Gitanjali"], ["দেবদাস", "Devdas"], ["আনন্দমঠ", "Anandamath"]]
 ];

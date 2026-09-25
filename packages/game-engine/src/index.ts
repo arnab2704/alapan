@@ -87,9 +87,11 @@ export {
   getLearnLesson,
   getDistractorPool,
   generateExercises,
+  getDailyLearnMoment,
   MAX_PRACTICE_EXERCISES
 } from "./learn";
 export type {
+  DailyLearnMoment,
   LearnItem,
   LearnKind,
   LearnLesson,
@@ -123,3 +125,22 @@ export {
   compareToChallenge
 } from "./quizShare";
 export type { QuizChallenge, ChallengeOutcome } from "./quizShare";
+export { participationStreak } from "./participation";
+export {
+  DAILY_ROUNDS,
+  difficultyForLevel,
+  getDailyChallengeSpec,
+  isRoundAvailable,
+  isValidChallengeDate,
+  resolveDailyChallenge,
+  summarizeDailyResult
+} from "./dailyChallenge";
+export type {
+  DailyChallengeContent,
+  DailyChallengeOverride,
+  DailyChallengeSpec,
+  DailyDifficulty,
+  DailyRoundContent,
+  DailyResultSummary,
+  DailyRoundSpec
+} from "./dailyChallenge";

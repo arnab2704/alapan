@@ -2,8 +2,8 @@ import type { Row } from "./types";
 
 /** Level 2 (Traveller) - part B. */
 export const L02B: Row[] = [
-  ["cu", "ঢাকাই জামদানি কী?", "What is Dhakai Jamdani?", ["সূক্ষ্ম বুননের শাড়ি", "A finely woven saree"], ["একটি মিষ্টি", "A sweet"], ["একটি নৌকা", "A boat"], ["একটি বাদ্যযন্ত্র", "A musical instrument"]],
-  ["cu", "ঐতিহাসিক মসলিন কোন অঞ্চলের সূক্ষ্ম সুতি কাপড়?", "Historic muslin was a fine cotton cloth of which region?", ["ঢাকা অঞ্চল", "The Dhaka region"], ["কাশ্মীর", "Kashmir"], ["গুজরাট", "Gujarat"], ["পাঞ্জাব", "Punjab"]],
+  
+  
   ["cu", "খেজুরের রস থেকে তৈরি বাংলার শীতকালীন গুড়ের নাম কী?", "What is Bengal's winter jaggery made from date-palm sap called?", ["নলেন গুড়", "Nolen gur"], ["আখের গুড়", "Sugarcane jaggery"], ["মধু", "Honey"], ["মিছরি", "Rock sugar"]],
   ["cu", "বাঙালি ভোজের প্রথম পদ হিসেবে কোন তেতো পদ পরিচিত?", "Which bitter dish traditionally opens a Bengali meal?", ["শুক্তো", "Shukto"], ["পায়েস", "Payesh"], ["চাটনি", "Chutney"], ["দই", "Doi"]],
   ["cu", "সরষে ইলিশ বা ইলিশ পাতুরিতে প্রধান মশলা কোনটি?", "Which spice is central to sorshe ilish and ilish paturi?", ["সরষে", "Mustard"], ["জাফরান", "Saffron"], ["দারুচিনি", "Cinnamon"], ["এলাচ", "Cardamom"]],
@@ -12,7 +12,7 @@ export const L02B: Row[] = [
   ["cu", "সিঁদুর খেলা কোন উৎসবের শেষ দিনের রীতি?", "Sindoor khela is a ritual on the last day of which festival?", ["দুর্গাপূজা", "Durga Puja"], ["দোলযাত্রা", "Dol Jatra"], ["ঈদ", "Eid"], ["নবান্ন", "Nabanna"]],
   ["cu", "বিয়েতে বাঙালি হিন্দু নারীরা কোন শঙ্খনির্মিত চুড়ি পরেন?", "Which conch-shell bangles do Bengali Hindu brides wear?", ["শাঁখা", "Shakha"], ["লোহা", "Iron bangle"], ["সোনার চুড়ি", "Gold bangle"], ["রূপার নূপুর", "Silver anklet"]],
   ["cu", "উলুধ্বনি কখন দেওয়া হয়?", "When is ululation (uludhwani) traditionally sounded?", ["শুভ অনুষ্ঠানে", "At auspicious occasions"], ["শোকসভায়", "At mourning"], ["পরীক্ষার হলে", "In exam halls"], ["খেলার মাঠে শুধু", "Only in stadiums"]],
-  ["cu", "রাজশাহী অঞ্চল কোন ফলের জন্য বিখ্যাত?", "Which fruit is Rajshahi region famous for?", ["আম", "Mango"], ["আপেল", "Apple"], ["কমলা", "Orange"], ["আঙুর", "Grape"]],
+  
   ["cu", "মালদহের কোন আম বিখ্যাত?", "Which mango is Malda famous for?", ["ফজলি", "Fazli"], ["আলফোনসো", "Alphonso"], ["দশেরি", "Dasheri"], ["কেসর", "Kesar"]],
   ["li", "\"সোনার তরী\" কার কাব্যগ্রন্থ?", "Whose poetry collection is \"Sonar Tari\"?", ["রবীন্দ্রনাথ ঠাকুর", "Rabindranath Tagore"], ["জীবনানন্দ দাশ", "Jibanananda Das"], ["সুধীন্দ্রনাথ দত্ত", "Sudhindranath Datta"], ["নজরুল ইসলাম", "Nazrul Islam"]],
   ["li", "\"আনন্দমঠ\" উপন্যাস কার লেখা?", "Who wrote the novel \"Anandamath\"?", ["বঙ্কিমচন্দ্র চট্টোপাধ্যায়", "Bankim Chandra Chattopadhyay"], ["শরৎচন্দ্র", "Sarat Chandra"], ["রবীন্দ্রনাথ", "Rabindranath"], ["তারাশঙ্কর", "Tarashankar"]],
@@ -42,14 +42,14 @@ export const L02B: Row[] = [
   ["fe", "নবান্ন উৎসব কীসের উৎসব?", "Nabanna is a festival of what?", ["নতুন ধান কাটার", "The new rice harvest"], ["বর্ষার", "Monsoon rains"], ["শীতের", "Winter"], ["বিদ্যার", "Learning"]],
   ["fe", "চড়ক পূজা বাংলা বছরের কোন সময় পালিত হয়?", "When in the Bengali year is Charak Puja observed?", ["চৈত্র সংক্রান্তি", "Choitro Sankranti"], ["পৌষ সংক্রান্তি", "Poush Sankranti"], ["শ্রাবণ", "Shrabon"], ["আশ্বিন", "Ashwin"]],
   ["fe", "শান্তিনিকেতনে বসন্ত উৎসব কার প্রবর্তিত?", "Whose innovation is the Basanta Utsav at Santiniketan?", ["রবীন্দ্রনাথ ঠাকুর", "Rabindranath Tagore"], ["নজরুল", "Nazrul"], ["সুভাষচন্দ্র", "Subhas Chandra"], ["বিদ্যাসাগর", "Vidyasagar"]],
-  ["fe", "অমর একুশে গ্রন্থমেলা কোন মাসে অনুষ্ঠিত হয়?", "In which month is the Amar Ekushey Book Fair held?", ["ফেব্রুয়ারি", "February"], ["জুলাই", "July"], ["ডিসেম্বর", "December"], ["এপ্রিল", "April"]],
+  
   ["fe", "ঈদুল আজহা কী উপলক্ষে পালিত হয়?", "What does Eid-ul-Adha commemorate?", ["ইব্রাহিম (আ.)-এর ত্যাগ", "Prophet Ibrahim's sacrifice"], ["নববর্ষ", "The new year"], ["ফসল কাটা", "Harvest"], ["বসন্ত", "Spring"]],
-  ["fe", "বৈসাবি উৎসব কোন অঞ্চলের পাহাড়ি জনগোষ্ঠীর?", "Boisabi is a festival of hill peoples of which region?", ["পার্বত্য চট্টগ্রাম", "Chattogram Hill Tracts"], ["সুন্দরবন", "Sundarbans"], ["বরেন্দ্র", "Barind"], ["হাওর", "Haor"]],
+  
   ["ar", "সত্যজিৎ রায়ের প্রথম চলচ্চিত্র কোনটি?", "Which was Satyajit Ray's first film?", ["পথের পাঁচালী", "Pather Panchali"], ["চারুলতা", "Charulata"], ["অপরাজিত", "Aparajito"], ["গুপী গাইন বাঘা বাইন", "Goopy Gyne Bagha Byne"]],
-  ["ar", "\"মেঘে ঢাকা তারা\" ছবির পরিচালক কে?", "Who directed \"Meghe Dhaka Tara\"?", ["ঋত্বিক ঘটক", "Ritwik Ghatak"], ["সত্যজিৎ রায়", "Satyajit Ray"], ["মৃণাল সেন", "Mrinal Sen"], ["তপন সিংহ", "Tapan Sinha"]],
+  
   ["ar", "\"জীবন থেকে নেয়া\" ছবির পরিচালক কে?", "Who directed \"Jibon Theke Neya\"?", ["জহির রায়হান", "Zahir Raihan"], ["সত্যজিৎ রায়", "Satyajit Ray"], ["আলমগীর কবির", "Alamgir Kabir"], ["ঋত্বিক ঘটক", "Ritwik Ghatak"]],
   ["ar", "\"মহানায়িকা\" নামে খ্যাত বাংলা চলচ্চিত্রের অভিনেত্রী কে?", "Which actress is hailed as \"Mahanayika\" of Bengali cinema?", ["সুচিত্রা সেন", "Suchitra Sen"], ["সাবিত্রী চট্টোপাধ্যায়", "Sabitri Chatterjee"], ["শর্মিলা ঠাকুর", "Sharmila Tagore"], ["কাননদেবী", "Kanan Devi"]],
-  ["ar", "ভাওয়াইয়া গান কোন অঞ্চলের লোকসংগীত?", "Bhawaiya is folk music of which region?", ["উত্তরবঙ্গ ও রংপুর অঞ্চল", "North Bengal and the Rangpur region"], ["সুন্দরবন", "Sundarbans"], ["সিলেট হাওর", "Sylhet haors"], ["চট্টগ্রাম উপকূল", "Chattogram coast"]],
+  
   ["ar", "শিল্পাচার্য জয়নুল আবেদিন কোন ছবির সিরিজ এঁকে বিখ্যাত?", "Zainul Abedin is famed for his sketches of which event?", ["১৯৪৩ সালের দুর্ভিক্ষ", "The 1943 famine"], ["পলাশীর যুদ্ধ", "Battle of Plassey"], ["বঙ্গভঙ্গ", "Partition of Bengal"], ["ছয় দফা", "Six-Point movement"]],
   ["ar", "নন্দলাল বসু কোন শিল্পধারার বিশিষ্ট চিত্রশিল্পী?", "Nandalal Bose was a leading painter of which school?", ["বেঙ্গল স্কুল", "Bengal School"], ["ইমপ্রেশনিজম", "Impressionism"], ["কিউবিজম", "Cubism"], ["পপ আর্ট", "Pop Art"]],
   ["pe", "বোস-আইনস্টাইন পরিসংখ্যানের কোন বাঙালি বিজ্ঞানীর নামে?", "Bose-Einstein statistics is named for which Bengali scientist?", ["সত্যেন্দ্রনাথ বসু", "Satyendra Nath Bose"], ["জগদীশচন্দ্র বসু", "Jagadish Chandra Bose"], ["মেঘনাদ সাহা", "Meghnad Saha"], ["সি ভি রমন", "C. V. Raman"]],

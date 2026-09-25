@@ -1,104 +1,96 @@
 "use client";
 
+import { useEffect } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import {
-  getDailyWord,
-  getHistoryForDate,
-  getPersonOfTheDay,
+  daysUntil,
+  formatBengaliDate,
   getUpcomingFestivals,
+  gregorianToBengali,
   toBengaliDigits
 } from "@alapon/bengali";
-import { Card, Container, SectionHeading } from "@alapon/ui";
-import { BengaliDateCard } from "@/components/calendar/BengaliDateCard";
-import { FestivalSpotlight } from "@/components/calendar/FestivalSpotlight";
+import { Container } from "@alapon/ui";
 import { useToday } from "@/components/calendar/useToday";
+import { Daily5Tracker } from "@/components/daily5/Daily5Tracker";
 import { Link } from "@/i18n/navigation";
+import { formatGregorianDate, toLocalIsoDate } from "@/lib/formatDate";
+import { LeafSprig } from "@/components/brand/LeafSprig";
+import { track } from "@/lib/analytics";
+import { TodayAdda, TodayDiscovery, TodayLearn, TodayQuestion, TodayWord } from "./TodaySections";
 
-const linkClass =
-  "inline-flex min-h-11 items-center rounded-full bg-sindoor-500 px-5 text-sm font-semibold text-white transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
-
-/** The "what is happening in the Bengali world today" page. All content is derived client-side from today's date. */
+/**
+ * The primary entry point: today's date and festival, then the Daily 5, then each of the five moments
+ * in an editorial rhythm (sections and whitespace, not a wall of boxes).
+ */
 export function TodayPageContent() {
-  const t = useTranslations("today");
+  const t = useTranslations("todayPage");
   const locale = useLocale() as "bn" | "en";
   const bn = locale === "bn";
   const toDigits = bn ? toBengaliDigits : (n: number) => String(n);
   const today = useToday();
 
-  const word = today ? getDailyWord(today) : null;
-  const person = today ? getPersonOfTheDay(today) : null;
-  const history = today ? getHistoryForDate(today) : null;
+  useEffect(() => {
+    track("today_view");
+  }, []);
+
   const festival = today ? getUpcomingFestivals(today, 1)[0] : undefined;
+  const festivalDays = today && festival ? Math.max(daysUntil(today, festival), 0) : null;
 
   return (
-    <Container className="py-10 sm:py-14">
-      <SectionHeading title={t("heading")} description={t("description")} />
+    <Container className="max-w-3xl py-10 sm:py-14">
+      <header className="relative">
+        <LeafSprig className="absolute right-0 top-0 hidden h-36 w-28 sm:block" />
+        <p className="eyebrow">{t("eyebrow")}</p>
+        <h1 className="display mt-2 text-4xl leading-tight sm:text-5xl">
+          {today ? formatBengaliDate(gregorianToBengali(today), locale, toDigits) : " "}
+        </h1>
+        <p className="mt-2 text-lg text-ink-600 dark:text-ink-200">
+          {today ? formatGregorianDate(toLocalIsoDate(today), locale, toDigits) : " "}
+        </p>
+        {festival && festivalDays !== null ? (
+          <p className="mt-3">
+            <Link
+              href="/calendar"
+              className="inline-flex min-h-11 items-center gap-2 text-base font-semibold text-sindoor-700 hover:underline dark:text-sindoor-300"
+            >
+              <span aria-hidden="true">{festival.emoji}</span>
+              {festivalDays === 0
+                ? t("festivalToday", { name: bn ? festival.nameBn : festival.nameEn })
+                : t("festivalIn", {
+                    name: bn ? festival.nameBn : festival.nameEn,
+                    days: toDigits(festivalDays)
+                  })}
+            </Link>
+          </p>
+        ) : null}
+      </header>
 
-      <div className="grid gap-4 lg:grid-cols-[minmax(0,320px)_1fr]">
-        <BengaliDateCard />
-        {today && festival ? <FestivalSpotlight festival={festival} today={today} /> : null}
+      <div className="mt-10">
+        <Daily5Tracker variant="today" />
       </div>
 
-      {today && word && person && history ? (
-        <div className="mt-6 grid gap-4 md:grid-cols-2">
-          <Card className="border-t-4 border-t-marigold-400">
-            <h2 className="text-sm font-semibold text-marigold-700 dark:text-marigold-300">
-              {t("wordTitle")}
-            </h2>
-            <p className="font-bengaliDisplay mt-2 text-4xl font-extrabold text-ink-900 dark:text-ink-50">
-              {word.word}
-            </p>
-            <p className="text-sm text-ink-500">{word.roman}</p>
-            <p className="mt-3 text-ink-700 dark:text-ink-100">{bn ? word.meaningBn : word.meaningEn}</p>
-            <p className="mt-3 text-sm text-ink-600 dark:text-ink-200">
-              <span className="font-semibold">{t("wordExample")}: </span>
-              {word.exampleBn}
-            </p>
-          </Card>
+      <div className="mt-12 flex flex-col gap-12">
+        <TodayWord />
+        <TodayQuestion />
+        <TodayDiscovery />
+        <TodayLearn />
+        <TodayAdda />
+      </div>
 
-          <Card className="border-t-4 border-t-sindoor-400">
-            <h2 className="text-sm font-semibold text-sindoor-700 dark:text-sindoor-300">
-              {t("personTitle")}
-            </h2>
-            <p className="font-bengaliDisplay mt-2 text-2xl font-extrabold text-ink-900 dark:text-ink-50">
-              {bn ? person.nameBn : person.nameEn}
-            </p>
-            <p className="text-sm text-ink-500">
-              {bn ? person.fieldBn : person.fieldEn} · {bn ? person.lifeBn : person.lifeEn}
-            </p>
-            <p className="mt-3 text-ink-700 dark:text-ink-100">{bn ? person.blurbBn : person.blurbEn}</p>
-          </Card>
-
-          <Card className="border-t-4 border-t-shapla-400">
-            <h2 className="text-sm font-semibold text-shapla-700 dark:text-shapla-300">
-              {t("historyTitle")}
-            </h2>
-            <p className="font-bengaliDisplay mt-2 text-xl font-bold text-ink-900 dark:text-ink-50">
-              {bn ? history.event.titleBn : history.event.titleEn}
-            </p>
-            <p className="text-sm text-ink-500">
-              {history.daysAway === 0
-                ? t("historyToday")
-                : t("historyIn", { days: toDigits(history.daysAway) })}
-              {" · "}
-              {t("historyYears", { years: toDigits(history.yearsAgo), year: toDigits(history.event.year) })}
-            </p>
-            <p className="mt-3 text-ink-700 dark:text-ink-100">
-              {bn ? history.event.detailBn : history.event.detailEn}
-            </p>
-          </Card>
-
-          <Card className="flex flex-col items-start gap-3 border-t-4 border-t-alpona-400">
-            <h2 className="text-sm font-semibold text-alpona-700 dark:text-alpona-300">{t("quizTitle")}</h2>
-            <Link href="/quiz/daily" className={linkClass}>
-              {t("quizCta")}
-            </Link>
-            <Link href="/puja" className="text-sm font-semibold text-sindoor-600 underline decoration-dotted">
-              {t("pujaCta")}
-            </Link>
-          </Card>
-        </div>
-      ) : null}
+      <nav
+        aria-label={t("more")}
+        className="mt-14 flex flex-wrap gap-x-6 border-t border-ink-100 pt-6 dark:border-ink-700"
+      >
+        <Link href="/calendar" className="btn btn-text">
+          {t("calendar")}
+        </Link>
+        <Link href="/puja" className="btn btn-text">
+          {t("puja")}
+        </Link>
+        <Link href="/quiz" className="btn btn-text">
+          {t("quiz")}
+        </Link>
+      </nav>
     </Container>
   );
 }

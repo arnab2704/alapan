@@ -12,8 +12,16 @@ import { Card, Container, SectionHeading } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
 import { useLearnProgress } from "./useLearnProgress";
 
-const primary =
-  "inline-flex min-h-12 items-center justify-center rounded-full bg-sindoor-500 px-8 text-base font-semibold text-white transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
+const primary = "btn btn-primary btn-lg";
+
+const CATEGORIES: Array<{ id: string; href: string }> = [
+  { id: "alphabet", href: "/learn#unit-vowels" },
+  { id: "vocabulary", href: "/learn#unit-words" },
+  { id: "everyday", href: "/learn/words-1" },
+  { id: "pronunciation", href: "/learn/alphabet" },
+  { id: "structure", href: "/learn#unit-conjuncts" },
+  { id: "culture", href: "/today#word" }
+];
 
 export function LearnHome() {
   const t = useTranslations("learn");
@@ -58,6 +66,26 @@ export function LearnHome() {
         </Link>
       </Card>
 
+      <nav aria-label={t("categoriesLabel")} className="mb-8">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {CATEGORIES.map((category) => (
+            <li key={category.id}>
+              <Link
+                href={category.href}
+                className="card-learning flex min-h-16 flex-col justify-center transition-shadow hover:shadow-md"
+              >
+                <span className="font-bengaliDisplay text-lg font-bold">
+                  {t(`categories.${category.id}.title`)}
+                </span>
+                <span className="text-xs text-ink-600 dark:text-ink-200">
+                  {t(`categories.${category.id}.hint`)}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
       <div className="mb-8 flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-ink-600 dark:text-ink-200">{t("pathHint")}</p>
         <Link
@@ -70,7 +98,7 @@ export function LearnHome() {
 
       <ol className="flex flex-col gap-6">
         {units.map((unit, unitIndex) => (
-          <li key={unit.id}>
+          <li key={unit.id} id={`unit-${unit.id}`} className="scroll-mt-24">
             <Card>
               <div className="flex items-start gap-4">
                 <span

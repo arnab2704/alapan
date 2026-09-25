@@ -18,10 +18,10 @@ describe("daily culture rotation", () => {
   });
 
   it("finds the event on its anniversary", () => {
-    const r = getHistoryForDate(new Date(2027, 1, 21));
-    expect(r.event.slug).toBe("language-movement");
+    const r = getHistoryForDate(new Date(2027, 0, 23));
+    expect(r.event.slug).toBe("netaji-born");
     expect(r.daysAway).toBe(0);
-    expect(r.yearsAgo).toBe(75);
+    expect(r.yearsAgo).toBe(130);
   });
 
   it("otherwise finds the nearest upcoming anniversary, wrapping the year", () => {
@@ -36,5 +36,17 @@ describe("daily culture rotation", () => {
       expect(e.month).toBeLessThanOrEqual(12);
       expect(new Date(2024, e.month - 1, e.day).getDate()).toBe(e.day);
     }
+  });
+});
+
+describe("Today's Adda prompt", () => {
+  it("is the same all day and changes by day", async () => {
+    const { getAddaPrompt } = await import("../src");
+    const a = getAddaPrompt(new Date(2026, 8, 24, 2));
+    const b = getAddaPrompt(new Date(2026, 8, 24, 22));
+    expect(a).toEqual(b);
+    expect(getAddaPrompt(new Date(2026, 8, 25)).bn).not.toBe(a.bn);
+    expect(a.bn.length).toBeGreaterThan(10);
+    expect(a.en.length).toBeGreaterThan(10);
   });
 });

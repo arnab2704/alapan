@@ -36,11 +36,7 @@ export function QuizResult({ score, total, results, dateIso, onRestart }: QuizRe
       <p className="max-w-sm text-sm text-ink-600 dark:text-ink-200">{message}</p>
       <p className="text-xs text-ink-400">{t("comeBackTomorrow")}</p>
       <ShareResultButton score={score} total={total} results={results} dateIso={dateIso ?? undefined} />
-      <button
-        type="button"
-        onClick={onRestart}
-        className="mt-3 min-h-11 inline-flex items-center justify-center rounded-full border border-ink-300 bg-cream-50 px-6 text-sm font-semibold text-ink-700 transition-colors hover:bg-ink-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-400 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-100"
-      >
+      <button type="button" onClick={onRestart} className="btn btn-secondary mt-3">
         {t("restart")}
       </button>
     </Card>

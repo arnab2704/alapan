@@ -94,11 +94,7 @@ export function WelcomeBanner() {
               ))}
             </div>
 
-            <button
-              type="button"
-              onClick={close}
-              className="mt-6 min-h-11 inline-flex w-full items-center justify-center rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white shadow-sm shadow-sindoor-900/20 transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600 sm:w-auto"
-            >
+            <button type="button" onClick={close} className="btn btn-primary mt-6 w-full sm:w-auto">
               {t("cta")}
             </button>
           </motion.div>

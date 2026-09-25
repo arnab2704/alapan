@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { toBengaliDigits } from "@alapon/bengali";
+import { hasWordEntry, toBengaliDigits } from "@alapon/bengali";
 import { Card, Container } from "@alapon/ui";
 import {
   generateExercises,
@@ -24,13 +24,14 @@ import type {
   MatchExercise
 } from "@alapon/game-engine";
 import { Link } from "@/i18n/navigation";
+import { track } from "@/lib/analytics";
+import { recordDiscovery } from "@/lib/passport";
+import { wordHref } from "@/lib/wordLinks";
 import { useLearnProgress } from "./useLearnProgress";
 import { useSpeech } from "./useSpeech";
 
-const primary =
-  "inline-flex min-h-12 items-center justify-center rounded-full bg-sindoor-500 px-8 text-base font-semibold text-white transition-colors hover:bg-sindoor-600 disabled:opacity-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
-const secondary =
-  "inline-flex min-h-12 items-center justify-center rounded-full border border-ink-300 bg-cream-50 px-6 text-base font-semibold text-ink-700 transition-colors hover:bg-ink-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-400 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-100";
+const primary = "btn btn-primary btn-lg";
+const secondary = "btn btn-secondary btn-lg";
 const optionBase =
   "min-h-14 rounded-alpona border-2 px-4 py-3 text-xl font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-500";
 
@@ -399,6 +400,11 @@ function Complete({
   const all = getAllLearnLessons();
   const idx = all.findIndex((l) => l.lesson.id === lessonId);
   const next = all[idx + 1];
+  const lessonWords = (
+    getLearnLesson(lessonId)?.lesson.kind === "word" ? getLearnLesson(lessonId)!.lesson.items : []
+  )
+    .map((item) => item.bn)
+    .filter((word) => hasWordEntry(word));
   return (
     <Card className="mx-auto flex max-w-md flex-col items-center gap-3 py-10 text-center">
       <p aria-hidden="true" className="text-5xl">
@@ -415,6 +421,30 @@ function Complete({
       {streak > 1 ? (
         <p className="text-sm text-sindoor-600">{t("streakDays", { days: toDigits(streak) })}</p>
       ) : null}
+      {lessonWords.length > 0 ? (
+        <div className="mt-2 w-full">
+          <p className="eyebrow">{t("lessonWords")}</p>
+          <ul className="mt-2 flex flex-wrap justify-center gap-2">
+            {lessonWords.map((word) => (
+              <li key={word}>
+                <Link
+                  href={wordHref(word)}
+                  lang="bn"
+                  className="font-bengaliDisplay inline-flex min-h-11 items-center rounded-full border border-ink-200 bg-cream-100 px-4 text-lg font-bold hover:border-sindoor-300 dark:border-ink-600 dark:bg-ink-800"
+                >
+                  {word}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
+      <div className="card-learning mt-3 w-full text-center">
+        <p className="font-semibold">{t("playPrompt")}</p>
+        <Link href="/play/shobdoshakti" className="btn btn-gold mt-3">
+          {t("playNow")}
+        </Link>
+      </div>
       <div className="mt-3 flex flex-wrap items-center justify-center gap-3">
         {next ? (
           <Link href={`/learn/${next.lesson.id}`} className={primary}>
@@ -470,6 +500,8 @@ export function LessonPlayer({ lessonId }: { lessonId: string }) {
     if (!done || saved.current) return;
     saved.current = true;
     setStreak(record(lessonId, correctFirst, scoredTotal).streak);
+    recordDiscovery("lessons", lessonId);
+    track("lesson_completed", { lessonId });
   }, [done, record, lessonId, correctFirst, scoredTotal]);
 
   if (!found) {

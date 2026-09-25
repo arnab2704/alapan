@@ -20,10 +20,8 @@ import { QuizQuestionCard } from "./QuizQuestionCard";
 import { useQuizLevelProgress } from "./useQuizLevelProgress";
 import { useQuizRun } from "./useQuizRun";
 
-const primaryLink =
-  "inline-flex min-h-11 items-center justify-center rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white shadow-sm shadow-sindoor-900/20 transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
-const ghostButton =
-  "inline-flex min-h-11 items-center justify-center rounded-full border border-ink-300 bg-cream-50 px-6 text-sm font-semibold text-ink-700 transition-colors hover:bg-ink-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink-400 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-100";
+const primaryLink = "btn btn-primary";
+const ghostButton = "btn btn-secondary";
 
 export interface SetPlayerProps {
   level: number;

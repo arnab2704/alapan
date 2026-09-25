@@ -7,6 +7,7 @@ import { Badge, Card, Container, SectionHeading } from "@alapon/ui";
 import { useToday } from "@/components/calendar/useToday";
 import { Link } from "@/i18n/navigation";
 import { formatGregorianDate, toLocalIsoDate } from "@/lib/formatDate";
+import { recordDiscovery } from "@/lib/passport";
 import { readPassport, stampPassport } from "@/lib/pujaPassport";
 
 const SLUG = "durga-puja-2026";
@@ -22,6 +23,7 @@ export function PujaHub() {
 
   useEffect(() => {
     setStamps(readPassport(SLUG));
+    recordDiscovery("festivals", SLUG);
   }, []);
 
   const festival = getFestivalBySlug(SLUG);
@@ -108,7 +110,7 @@ export function PujaHub() {
                 <button
                   type="button"
                   onClick={() => setStamps(stampPassport(SLUG, day.date))}
-                  className="min-h-11 rounded-full bg-sindoor-500 px-4 text-sm font-semibold text-white hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600"
+                  className="btn btn-primary"
                 >
                   {t("stamp")}
                 </button>
@@ -131,10 +133,7 @@ export function PujaHub() {
           {t("challengeTitle")}
         </h2>
         <p className="text-sm text-ink-600 dark:text-ink-200">{t("challengeDescription")}</p>
-        <Link
-          href="/quiz/daily"
-          className="inline-flex min-h-11 items-center rounded-full bg-sindoor-500 px-5 text-sm font-semibold text-white hover:bg-sindoor-600"
-        >
+        <Link href="/quiz/daily" className="btn btn-primary">
           {t("challengeCta")}
         </Link>
       </Card>

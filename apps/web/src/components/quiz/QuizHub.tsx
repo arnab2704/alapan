@@ -13,8 +13,7 @@ import { Badge, Card, Container, SectionHeading } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
 import { useQuizLevelProgress } from "./useQuizLevelProgress";
 
-const primaryLink =
-  "mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-sindoor-500 px-6 text-sm font-semibold text-white shadow-sm shadow-sindoor-900/20 transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
+const primaryLink = "btn btn-primary mt-4";
 
 export function QuizHub() {
   const t = useTranslations("quiz");

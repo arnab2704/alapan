@@ -19,24 +19,24 @@ export const L05: Row[] = [
   ["hi", "ভাওয়াল সন্ন্যাসী মামলা কোন সম্পত্তি নিয়ে?", "The Bhawal Sannyasi case concerned which estate?", ["ভাওয়াল রাজ এস্টেট", "The Bhawal Raj estate"], ["পাইকপাড়া রাজবাড়ী", "Paikpara Rajbari"], ["জোড়াসাঁকো ঠাকুরবাড়ি", "Jorasanko Thakurbari"], ["নাটোর রাজ এস্টেট", "Natore Raj estate"]],
   ["hi", "নাটোরের রানি ভবানী কীসের জন্য বিখ্যাত?", "For what is Rani Bhabani of Natore famed?", ["দান ও জনহিতকর কাজ", "Charity and public works"], ["সেনাপতিত্ব", "Military command"], ["জাহাজ নির্মাণ", "Shipbuilding"], ["মুদ্রা ছাপা", "Minting coins"]],
   ["hi", "কলকাতার জানবাজারের রানি রাসমণি কোন আন্দোলনে সাহসী ভূমিকা নেন?", "Rani Rashmoni is remembered for her stand on which issue?", ["জেলেদের মাছ ধরার অধিকার (গঙ্গায় কর)", "Fishermen's rights on the Ganga (the fishing tax)"], ["সিপাহি বিদ্রোহ", "Sepoy Mutiny"], ["বঙ্গভঙ্গ", "Partition of Bengal"], ["ভাষা আন্দোলন", "Language Movement"]],
-  ["hi", "ঢাকার কার্জন হল কোন প্রতিষ্ঠানের অংশ?", "Curzon Hall in Dhaka belongs to which institution?", ["ঢাকা বিশ্ববিদ্যালয়", "University of Dhaka"], ["বাংলা একাডেমি", "Bangla Academy"], ["জাতীয় সংসদ", "Parliament"], ["হাইকোর্ট", "High Court"]],
+  
   ["hi", "জাতীয় সংসদ ভবন কে নকশা করেন?", "Who designed the Jatiya Sangsad Bhaban?", ["লুই কান", "Louis Kahn"], ["মাজহারুল ইসলাম", "Muzharul Islam"], ["হামিদুর রহমান", "Hamidur Rahman"], ["লে করবুজিয়ে", "Le Corbusier"]],
-  ["hi", "মুক্তিযুদ্ধের ঐতিহাসিক 'বয়রার যুদ্ধ' কোন জেলায়?", "In which district was the Battle of Boyra fought?", ["যশোর", "Jashore"], ["সিলেট", "Sylhet"], ["রংপুর", "Rangpur"], ["বরিশাল", "Barishal"]],
-  ["hi", "১৯৭১ সালে পাকিস্তানের পক্ষে আত্মসমর্পণ দলিলে সই করেন কে?", "Who signed the 1971 Instrument of Surrender for Pakistan?", ["লেঃ জেঃ এ এ কে নিয়াজী", "Lt Gen A. A. K. Niazi"], ["ইয়াহিয়া খান", "Yahya Khan"], ["টিক্কা খান", "Tikka Khan"], ["ভুট্টো", "Bhutto"]],
+  
+  
   ["hi", "আত্মসমর্পণ দলিল গ্রহণ করেন কোন ভারতীয় জেনারেল?", "Which Indian general accepted the surrender?", ["জগজিৎ সিং অরোরা", "Jagjit Singh Aurora"], ["মানেকশ", "Manekshaw"], ["জেনারেল কারিয়াপ্পা", "General Cariappa"], ["সগত সিং", "Sagat Singh"]],
-  ["hi", "বাংলাদেশের সংবিধান কার্যকর হয় কোন তারিখে?", "On which date did the Constitution of Bangladesh come into force?", ["১৬ ডিসেম্বর ১৯৭২", "16 December 1972"], ["২৬ মার্চ ১৯৭১", "26 March 1971"], ["১০ জানুয়ারি ১৯৭২", "10 January 1972"], ["২১ ফেব্রুয়ারি ১৯৫২", "21 February 1952"]],
-  ["ge", "বাংলাদেশের কোন অঞ্চল বরেন্দ্রভূমি নামে পরিচিত?", "Which region of Bangladesh is known as Barind?", ["উত্তরাঞ্চলের উঁচু লালমাটির অঞ্চল", "The elevated red-soil tract of the north-west"], ["সুন্দরবন", "Sundarbans"], ["সিলেটের হাওর", "Sylhet haors"], ["কক্সবাজার সৈকত", "Cox's Bazar coast"]],
+  
+  
   ["ge", "চলনবিল কোন কোন জেলা জুড়ে বিস্তৃত?", "Chalan Beel spreads mainly across which districts?", ["পাবনা, নাটোর, সিরাজগঞ্জ", "Pabna, Natore, Sirajganj"], ["সিলেট, সুনামগঞ্জ", "Sylhet, Sunamganj"], ["খুলনা, বাগেরহাট", "Khulna, Bagerhat"], ["ভোলা, পটুয়াখালী", "Bhola, Patuakhali"]],
   ["ge", "কাপ্তাই বাঁধ কোন নদীতে?", "On which river is the Kaptai Dam?", ["কর্ণফুলী", "Karnaphuli"], ["তিস্তা", "Teesta"], ["পদ্মা", "Padma"], ["সুরমা", "Surma"]],
   ["ge", "তিতাস গ্যাসক্ষেত্র কোন জেলায়?", "In which district is the Titas gas field?", ["ব্রাহ্মণবাড়িয়া", "Brahmanbaria"], ["সিলেট", "Sylhet"], ["ভোলা", "Bhola"], ["নরসিংদী", "Narsingdi"]],
   ["ge", "রূপপুর পারমাণবিক বিদ্যুৎকেন্দ্র কোন জেলায়?", "In which district is the Rooppur Nuclear Power Plant?", ["পাবনা", "Pabna"], ["খুলনা", "Khulna"], ["বরিশাল", "Barishal"], ["দিনাজপুর", "Dinajpur"]],
-  ["ge", "ভারত-বাংলাদেশের প্রধান স্থলবন্দর বেনাপোল কোন জেলায়?", "In which district is the Benapole land port?", ["যশোর", "Jashore"], ["সাতক্ষীরা", "Satkhira"], ["নওগাঁ", "Naogaon"], ["সিলেট", "Sylhet"]],
+  
   ["ge", "বেনাপোলের ভারতীয় পাশের সীমান্ত-শহর কোনটি?", "Which Indian border town faces Benapole?", ["পেট্রাপোল", "Petrapole"], ["সিলিগুড়ি", "Siliguri"], ["দমদম", "Dum Dum"], ["বারাসাত", "Barasat"]],
-  ["ge", "পায়রা বন্দর কোন বিভাগে?", "In which division is the Payra Port?", ["বরিশাল", "Barishal"], ["সিলেট", "Sylhet"], ["রাজশাহী", "Rajshahi"], ["রংপুর", "Rangpur"]],
+  
   ["ge", "দার্জিলিং হিমালয়ান রেলওয়ে ইউনেস্কো বিশ্ব ঐতিহ্য কোন সালে হয়?", "In which year did the Darjeeling Himalayan Railway get UNESCO World Heritage status?", "1999", "1857", "1984", "2010"],
   ["ge", "ভারতের প্রথম মেট্রো রেল কোন শহরে চালু হয়?", "In which city did India's first metro rail start?", ["কলকাতা", "Kolkata"], ["দিল্লি", "Delhi"], ["মুম্বাই", "Mumbai"], ["চেন্নাই", "Chennai"]],
   ["ge", "কলকাতায় ট্রাম কোন সালে প্রথম চালু হয় (ঘোড়ায় টানা)?", "In which year did trams (horse-drawn) first run in Kolkata?", "1873", "1757", "1911", "1984"],
-  ["ge", "২০০৭ সালে বাংলাদেশের উপকূলে আঘাত হানা ঘূর্ণিঝড়ের নাম কী?", "What was the cyclone that struck coastal Bangladesh in 2007?", ["সিডর", "Sidr"], ["আইলা", "Aila"], ["আমফান", "Amphan"], ["ফণী", "Fani"]],
+  
   ["ge", "২০২০ সালে পশ্চিমবঙ্গে আছড়ে পড়া ঘূর্ণিঝড়ের নাম কী?", "What was the 2020 cyclone that hit West Bengal?", ["আমফান", "Amphan"], ["সিডর", "Sidr"], ["ইয়াস", "Yaas"], ["মোখা", "Mocha"]],
   ["ge", "হাওড়া রেলস্টেশন কোন নদীর তীরে?", "Howrah Station stands beside which river?", ["হুগলি", "Hooghly"], ["দামোদর", "Damodar"], ["পদ্মা", "Padma"], ["মেঘনা", "Meghna"]],
   ["ge", "কলকাতার শিয়ালদহ স্টেশন কোন ধরনের রেলপথের প্রধান কেন্দ্র?", "Sealdah Station is a major hub for which network?", ["পূর্ব রেলের শহরতলি", "Eastern Railway suburban lines"], ["হিমালয়ান টয় ট্রেন", "Himalayan toy train"], ["জাহাজ", "Shipping"], ["বিমান", "Air travel"]],
@@ -45,17 +45,17 @@ export const L05: Row[] = [
   ["ge", "বর্ধমান শহর কোন রাজ্যে?", "Bardhaman (Burdwan) is in which state?", ["পশ্চিমবঙ্গ", "West Bengal"], ["বিহার", "Bihar"], ["ঝাড়খণ্ড", "Jharkhand"], ["ওড়িশা", "Odisha"]],
   ["ge", "দুর্গাপুর কোন শিল্পের জন্য বিখ্যাত?", "Durgapur is known chiefly for which industry?", ["ইস্পাত", "Steel"], ["চা", "Tea"], ["পাট", "Jute"], ["রেশম", "Silk"]],
   ["ge", "পশ্চিমবঙ্গের কোন জেলা রেশম শিল্পের জন্য বিখ্যাত?", "Which district is famous for its silk?", ["মুর্শিদাবাদ ও মালদহ", "Murshidabad and Malda"], ["দার্জিলিং", "Darjeeling"], ["পুরুলিয়া", "Purulia"], ["কোচবিহার", "Cooch Behar"]],
-  ["ge", "বাংলাদেশে পাট প্রধানত কোন অঞ্চলে জন্মে?", "Where in Bangladesh is jute chiefly grown?", ["ফরিদপুর-ময়মনসিংহ অঞ্চল", "The Faridpur-Mymensingh belt"], ["সিলেটের পাহাড়", "Sylhet hills"], ["কক্সবাজারের সৈকত", "Cox's Bazar coast"], ["সুন্দরবন", "Sundarbans"]],
+  
   ["ge", "\"সোনালি আঁশ\" বলতে কী বোঝায়?", "What is meant by the \"golden fibre\"?", ["পাট", "Jute"], ["তুলা", "Cotton"], ["রেশম", "Silk"], ["শণ", "Flax"]],
-  ["cu", "কাঁসার বাসনের জন্য বিখ্যাত বাংলাদেশের অঞ্চল কোনটি?", "Which Bangladeshi area is famous for bell-metal (kansa) ware?", ["ধামরাই", "Dhamrai"], ["সিলেট", "Sylhet"], ["কক্সবাজার", "Cox's Bazar"], ["দিনাজপুর", "Dinajpur"]],
-  ["cu", "মসলিন বয়নের ঐতিহ্যের কেন্দ্র বলে পরিচিত বাংলাদেশের কোন স্থান?", "Which Bangladeshi place is known as a historic centre of muslin weaving?", ["সোনারগাঁও", "Sonargaon"], ["কক্সবাজার", "Cox's Bazar"], ["বান্দরবান", "Bandarban"], ["পঞ্চগড়", "Panchagarh"]],
+  
+  
   ["cu", "জামদানি বয়ন ইউনেস্কো কোন সালে স্বীকৃতি পায়?", "In which year did UNESCO recognise Jamdani weaving?", "2013", "1999", "2021", "2005"],
-  ["cu", "কুমিল্লার কোন মিষ্টি বিখ্যাত?", "Which sweet is Cumilla famous for?", ["রসমালাই", "Rasmalai"], ["সন্দেশ", "Sandesh"], ["লাড্ডু", "Laddu"], ["বরফি", "Barfi"]],
+  
   ["cu", "নাটোরের কোন মিষ্টি বিখ্যাত?", "Which sweet is Natore famous for?", ["কাঁচাগোল্লা", "Kachagolla"], ["রসগোল্লা", "Rasgulla"], ["চমচম", "Chomchom"], ["জিলাপি", "Jalebi"]],
   ["cu", "টাঙ্গাইলের কোন মিষ্টি বিখ্যাত?", "Which sweet is Tangail famous for?", ["পোড়াবাড়ির চমচম", "Porabari chomchom"], ["সন্দেশ", "Sandesh"], ["লাড্ডু", "Laddu"], ["খাজা", "Khaja"]],
-  ["cu", "মুক্তাগাছার মণ্ডা কোন জেলার?", "Muktagachha's monda sweet belongs to which district?", ["ময়মনসিংহ", "Mymensingh"], ["সিলেট", "Sylhet"], ["বগুড়া", "Bogura"], ["খুলনা", "Khulna"]],
+  
   ["cu", "নলেন গুড়ের সন্দেশ কোন ঋতুর মিষ্টি?", "In which season is nolen-gur sandesh made?", ["শীত", "Winter"], ["গ্রীষ্ম", "Summer"], ["বর্ষা", "Monsoon"], ["শরৎ", "Autumn"]],
-  ["cu", "পুরনো ঢাকার বিখ্যাত ঐতিহ্যবাহী বিরিয়ানির নাম কী?", "Which biryani is Old Dhaka known for?", ["কাচ্চি বিরিয়ানি", "Kacchi biryani"], ["কলকাতা", "Kolkata biryani"], ["মালাবার", "Malabar"], ["লখনৌই", "Lucknowi"]],
+  
   ["cu", "কলকাতা বিরিয়ানির বিশেষত্ব কোন উপাদানে?", "What is Kolkata biryani famous for including?", ["আলু", "Potato"], ["আনারস", "Pineapple"], ["নারকেল দুধ", "Coconut milk"], ["ছোলা", "Chickpeas"]],
   ["cu", "চিতই পিঠা কোন ঋতুতে জনপ্রিয়?", "Chitoi pitha is popular in which season?", ["শীত", "Winter"], ["গ্রীষ্ম", "Summer"], ["বর্ষা", "Monsoon"], ["বসন্ত", "Spring"]],
   ["cu", "ভাপা পিঠার প্রধান উপাদান কী?", "What is the base of bhapa pitha?", ["চালের গুঁড়ো", "Rice flour"], ["ময়দা", "Refined flour"], ["ডাল", "Lentils"], ["ভুট্টা", "Maize"]],
@@ -86,7 +86,7 @@ export const L05: Row[] = [
   ["la", "ভাষাবিজ্ঞানী সুনীতিকুমার চট্টোপাধ্যায় কোন গ্রন্থের জন্য বিখ্যাত?", "Suniti Kumar Chatterji is famed for which work?", ["দ্য অরিজিন অ্যান্ড ডেভেলপমেন্ট অব দ্য বেঙ্গলি ল্যাঙ্গুয়েজ", "The Origin and Development of the Bengali Language"], ["গীতাঞ্জলি", "Gitanjali"], ["আনন্দমঠ", "Anandamath"], ["পথের পাঁচালী", "Pather Panchali"]],
   ["re", "মহাপ্রভু চৈতন্যের সংকীর্তন আন্দোলন কোন শতকে?", "In which century did Chaitanya's sankirtan movement flourish?", ["পঞ্চদশ-ষোড়শ শতক", "15th-16th century"], ["একাদশ শতক", "11th century"], ["উনবিংশ শতক", "19th century"], ["বিংশ শতক", "20th century"]],
   ["re", "বাংলার বাউল আন্দোলনের ঐতিহ্যবাহী সাধক কে?", "Which mystic is a towering figure of the Baul tradition?", ["লালন ফকির", "Lalon Fakir"], ["গুরু নানক", "Guru Nanak"], ["কবীর", "Kabir"], ["তুলসীদাস", "Tulsidas"]],
-  ["re", "হাসন রাজা কোন অঞ্চলের মরমি কবি?", "Hason Raja was a mystic poet of which region?", ["সিলেট", "Sylhet"], ["রংপুর", "Rangpur"], ["বরিশাল", "Barishal"], ["চট্টগ্রাম", "Chattogram"]],
+  
   ["re", "শাহ আবদুল করিম কোন গানের জন্য বিখ্যাত?", "Shah Abdul Karim is famous for which genre?", ["বাউল ও মরমি গান", "Baul and mystic songs"], ["পুঁথি", "Puthi"], ["যুদ্ধের গান", "War songs"], ["গজল", "Ghazal"]],
   ["re", "কলকাতার জোড়াসাঁকো ঠাকুরবাড়ি কোন পরিবারের?", "Jorasanko Thakurbari belonged to which family?", ["ঠাকুর পরিবার", "The Tagore family"], ["মল্লিক পরিবার", "The Mullick family"], ["দত্ত পরিবার", "The Datta family"], ["ঘোষ পরিবার", "The Ghosh family"]],
   ["re", "বেলুড় মঠের স্থাপত্যে কোন কোন ধর্মের সমন্বয় দেখা যায়?", "Belur Math's architecture blends motifs of which traditions?", ["হিন্দু, ইসলামি ও খ্রিস্টীয়", "Hindu, Islamic and Christian"], ["শুধু বৌদ্ধ", "Only Buddhist"], ["শুধু জৈন", "Only Jain"], ["শুধু শিখ", "Only Sikh"]],
@@ -107,7 +107,7 @@ export const L05: Row[] = [
   ["ar", "\"মদন মোহন তর্কালঙ্কারের\" বিখ্যাত ছড়া কোনটি?", "Which famous rhyme did Madan Mohan Tarkalankar write?", ["পাখি সব করে রব", "Pakhi Sab Kare Rab"], ["আয় আয় চাঁদ মামা", "Aay Aay Chand Mama"], ["খোকা ঘুমালো", "Khoka Ghumalo"], ["হাট্টিমা টিম টিম", "Hattimatim Tim"]],
   ["ar", "\"হাট্টিমা টিম টিম\" ছড়াটি কোন ধরনের?", "\"Hattima Tim Tim\" is what kind of rhyme?", ["শিশুতোষ কল্পনার ছড়া", "A whimsical nursery rhyme"], ["যুদ্ধের গান", "War song"], ["ধর্মীয় স্তোত্র", "Religious hymn"], ["রাজনৈতিক স্লোগান", "Political slogan"]],
   ["ar", "কলকাতা ফুটবলের প্রাচীন মাঠ কোনটি?", "Which ground is the historic home of Kolkata football?", ["ময়দান", "The Maidan"], ["ইডেন", "Eden"], ["রেড রোড", "Red Road"], ["ধর্মতলা", "Dharmatala"]],
-  ["ar", "ঢাকার ঐতিহাসিক স্টেডিয়াম কোনটি, যেখানে ১৯৭২ সালে ম্যাচ হয়?", "Which Dhaka stadium is the country's historic football venue?", ["বঙ্গবন্ধু জাতীয় স্টেডিয়াম", "Bangabandhu National Stadium"], ["ইডেন গার্ডেন্স", "Eden Gardens"], ["ওয়াংখেড়ে", "Wankhede"], ["ব্রাবোর্ন", "Brabourne"]],
+  
   ["pe", "বেগম রোকেয়ার প্রতিষ্ঠিত স্কুল কোনটি?", "Which school did Begum Rokeya found?", ["সাখাওয়াত মেমোরিয়াল গার্লস স্কুল", "Sakhawat Memorial Girls' School"], ["বেথুন স্কুল", "Bethune School"], ["লরেটো", "Loreto"], ["সেন্ট জেভিয়ার্স", "St Xavier's"]],
   ["pe", "বিধানচন্দ্র রায় কোন রাজ্যের মুখ্যমন্ত্রী ছিলেন?", "Bidhan Chandra Roy served as Chief Minister of which state?", ["পশ্চিমবঙ্গ", "West Bengal"], ["ওড়িশা", "Odisha"], ["অসম", "Assam"], ["বিহার", "Bihar"]],
   ["pe", "সুরেন্দ্রনাথ বন্দ্যোপাধ্যায় কী নামে পরিচিত ছিলেন?", "By what title was Surendranath Banerjea known?", ["রাষ্ট্রগুরু", "Rashtraguru"], ["দেশবন্ধু", "Deshbandhu"], ["নেতাজি", "Netaji"], ["শেরে বাংলা", "Sher-e-Bangla"]],

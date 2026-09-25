@@ -1,3 +1,4 @@
+import { PUJA_QUIZ } from "./data/puja-quiz";
 import { QUIZ_QUESTIONS } from "./data/quiz-questions";
 import type { QuizCategory, QuizOption, QuizQuestion } from "./data/quiz-questions";
 import { shuffle } from "./tileBag";
@@ -75,7 +76,8 @@ export function withShuffledOptions(question: QuizQuestion, seed: number): QuizQ
  * the whole (possibly short) bank if `size` exceeds it.
  */
 export function getDailyQuiz(date: Date, size: number = DAILY_QUIZ_SIZE): QuizQuestion[] {
-  const all = getAllQuizQuestions();
+  const iso = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  const all = PUJA_QUIZ[iso] ?? getAllQuizQuestions();
   const daySeed = daysSinceEpoch(date);
   const shuffled = shuffle(all, mulberry32(daySeed));
   const picked = shuffled.slice(0, Math.min(size, shuffled.length));

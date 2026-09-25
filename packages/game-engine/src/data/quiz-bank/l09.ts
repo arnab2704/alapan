@@ -2,8 +2,8 @@ import type { Row } from "./types";
 
 /** Level 9 (Master). */
 export const L09: Row[] = [
-  ["hi", "শেরশাহ সুরি গ্র্যান্ড ট্রাঙ্ক রোডের পূর্ব প্রান্ত কোথায় থেকে শুরু করান?", "From which Bengal town did Sher Shah's Grand Trunk Road begin in the east?", ["সোনারগাঁও", "Sonargaon"], ["ঢাকা", "Dhaka"], ["কলকাতা", "Kolkata"], ["মুর্শিদাবাদ", "Murshidabad"]],
-  ["hi", "মুঘল আমলে ঢাকার নাম কী রাখা হয়েছিল?", "By what name was Dhaka known under the Mughals from 1610?", ["জাহাঙ্গীরনগর", "Jahangirnagar"], ["শাহজাহানাবাদ", "Shahjahanabad"], ["আকবরাবাদ", "Akbarabad"], ["মুর্শিদাবাদ", "Murshidabad"]],
+  
+  
   ["hi", "মুর্শিদকুলি খানের আগের নাম কী ছিল?", "What was Murshid Quli Khan's earlier name?", ["মুহম্মদ হাদি", "Muhammad Hadi"], ["সিরাজ", "Siraj"], ["আলীবর্দি", "Alivardi"], ["কারতালাব", "Kartalab"]],
   ["hi", "মকসুদাবাদের নাম বদলে মুর্শিদাবাদ রাখা হয় কোন সালে?", "In which year was Maksudabad renamed Murshidabad?", "1704", "1610", "1757", "1770"],
   ["hi", "আলীবর্দি খান নবাব হন কোন যুদ্ধে সরফরাজ খানকে পরাজিত করে?", "Alivardi Khan became Nawab after defeating Sarfaraz Khan at which battle?", ["গিরিয়ার যুদ্ধ", "Battle of Giria"], ["পলাশী", "Plassey"], ["বক্সার", "Buxar"], ["উধুয়ানালা", "Udhua Nala"]],
@@ -19,11 +19,11 @@ export const L09: Row[] = [
   ["hi", "প্রথম বিধবা বিবাহ কোন সালে অনুষ্ঠিত হয়?", "In which year was the first Hindu widow remarriage held in Bengal?", "1856", "1829", "1857", "1911"],
   ["hi", "ডিরোজিও কত বছর বয়সে মারা যান?", "At what age did Henry Derozio die?", "22", "35", "45", "60"],
   ["hi", "নীল কমিশন কোন সালে গঠিত হয়?", "In which year was the Indigo Commission formed?", "1860", "1757", "1905", "1947"],
-  ["hi", "১৯০৫ সালের বঙ্গভঙ্গে পূর্ববঙ্গ ও আসাম প্রদেশের রাজধানী কোথায় ছিল?", "What was the capital of the new province of East Bengal and Assam in 1905?", ["ঢাকা", "Dhaka"], ["কলকাতা", "Kolkata"], ["শিলং", "Shillong"], ["চট্টগ্রাম", "Chattogram"]],
+  
   ["hi", "নতুন প্রদেশ পূর্ববঙ্গ ও আসামের প্রথম ছোটলাট কে?", "Who was the first Lieutenant-Governor of East Bengal and Assam?", ["ব্যামফিল্ড ফুলার", "Bampfylde Fuller"], ["লর্ড কার্জন", "Lord Curzon"], ["লর্ড মিন্টো", "Lord Minto"], ["লর্ড হার্ডিঞ্জ", "Lord Hardinge"]],
-  ["hi", "বরিশালে স্বদেশি আন্দোলনের নেতা কে ছিলেন?", "Who led the Swadeshi movement in Barisal?", ["অশ্বিনীকুমার দত্ত", "Ashwini Kumar Dutta"], ["বিপিনচন্দ্র পাল", "Bipin Chandra Pal"], ["সুরেন্দ্রনাথ", "Surendranath"], ["অরবিন্দ", "Aurobindo"]],
+  
   ["hi", "লাল-বাল-পাল ত্রয়ীর বাঙালি সদস্য কে?", "Who was the Bengali member of the Lal-Bal-Pal trio?", ["বিপিনচন্দ্র পাল", "Bipin Chandra Pal"], ["সুরেন্দ্রনাথ", "Surendranath"], ["অরবিন্দ ঘোষ", "Aurobindo Ghose"], ["চিত্তরঞ্জন দাশ", "Chittaranjan Das"]],
-  ["hi", "বিপিনচন্দ্র পাল কোন জেলার মানুষ ছিলেন?", "Which district was Bipin Chandra Pal from?", ["সিলেট", "Sylhet"], ["মালদহ", "Malda"], ["বরিশাল", "Barishal"], ["রংপুর", "Rangpur"]],
+  
   ["hi", "রাসবিহারী বসু কোথায় ভারতীয় জাতীয় সেনার সূচনায় ভূমিকা রাখেন?", "In which country did Rash Behari Bose help found the early Indian National Army?", ["জাপান/দক্ষিণ-পূর্ব এশিয়া", "Japan and South-East Asia"], ["রাশিয়া", "Russia"], ["ব্রাজিল", "Brazil"], ["মিশর", "Egypt"]],
   ["hi", "সুভাষচন্দ্র বসু কংগ্রেস সভাপতি হন কোন অধিবেশনে (১৯৩৮)?", "At which session did Subhas Bose become Congress President in 1938?", ["হরিপুরা", "Haripura"], ["ত্রিপুরী", "Tripuri"], ["লাহোর", "Lahore"], ["কলকাতা", "Calcutta"]],
   ["hi", "চিত্তরঞ্জন দাশ ও মতিলাল নেহরু কোন দল গঠন করেন (১৯২৩)?", "Which party did C. R. Das and Motilal Nehru form in 1923?", ["স্বরাজ্য দল", "The Swaraj Party"], ["ফরওয়ার্ড ব্লক", "Forward Bloc"], ["মুসলিম লীগ", "Muslim League"], ["ব্রাহ্ম সমাজ", "Brahmo Samaj"]],
@@ -34,15 +34,15 @@ export const L09: Row[] = [
   ["hi", "মাতঙ্গিনী হাজরা কোন আন্দোলনে শহিদ হন (১৯৪২)?", "In which movement did Matangini Hazra die in 1942?", ["ভারত ছাড়ো আন্দোলন", "Quit India Movement"], ["ভাষা আন্দোলন", "Language Movement"], ["স্বদেশি আন্দোলন", "Swadeshi"], ["নীল বিদ্রোহ", "Indigo Revolt"]],
   ["hi", "স্বাধীন ভারতের পশ্চিমবঙ্গের প্রথম রাজ্যপাল কে?", "Who was the first Governor of West Bengal after independence?", ["চক্রবর্তী রাজাগোপালাচারী", "C. Rajagopalachari"], ["বিধানচন্দ্র রায়", "Bidhan Chandra Roy"], ["প্রফুল্ল ঘোষ", "Prafulla Ghosh"], ["শ্যামাপ্রসাদ", "Syama Prasad"]],
   ["hi", "পশ্চিমবঙ্গের প্রথম মুখ্যমন্ত্রী কে?", "Who was the first Chief Minister of West Bengal?", ["প্রফুল্লচন্দ্র ঘোষ", "Prafulla Chandra Ghosh"], ["বিধানচন্দ্র রায়", "Bidhan Chandra Roy"], ["জ্যোতি বসু", "Jyoti Basu"], ["অজয় মুখোপাধ্যায়", "Ajoy Mukherjee"]],
-  ["hi", "স্বাধীনতার পর প্রথম রাষ্ট্রপতি হিসেবে (জানুয়ারি ১৯৭২) বাংলাদেশে কে শপথ নেন?", "Who took oath as Bangladesh's President in January 1972?", ["আবু সাঈদ চৌধুরী", "Abu Sayeed Chowdhury"], ["তাজউদ্দীন", "Tajuddin"], ["সৈয়দ নজরুল", "Syed Nazrul"], ["জিয়াউর রহমান", "Ziaur Rahman"]],
-  ["hi", "বঙ্গবন্ধু শেখ মুজিবুর রহমান কোন সালে জন্মগ্রহণ করেন?", "In which year was Sheikh Mujibur Rahman born?", "1920", "1899", "1861", "1947"],
-  ["hi", "বঙ্গবন্ধুর জন্মস্থান কোথায়?", "Where was Bangabandhu born?", ["টুঙ্গিপাড়া, গোপালগঞ্জ", "Tungipara, Gopalganj"], ["ঢাকা", "Dhaka"], ["বরিশাল", "Barishal"], ["সিরাজগঞ্জ", "Sirajganj"]],
+  
+  
+  
   ["hi", "এইচ এস সোহরাওয়ার্দী কোথায় জন্মগ্রহণ করেন?", "Where was H. S. Suhrawardy born?", ["মেদিনীপুর", "Midnapore"], ["ঢাকা", "Dhaka"], ["বরিশাল", "Barishal"], ["সিলেট", "Sylhet"]],
   ["ge", "পদ্মা ও মেঘনা নদী কোথায় মিলিত হয়?", "Where do the Padma and Meghna rivers meet?", ["চাঁদপুর", "Chandpur"], ["গোয়ালন্দ", "Goalundo"], ["ভৈরব", "Bhairab"], ["সিলেট", "Sylhet"]],
   ["ge", "যমুনা ও পদ্মা কোথায় মিলিত হয়?", "Where do the Jamuna and Padma meet?", ["গোয়ালন্দ", "Goalundo"], ["চাঁদপুর", "Chandpur"], ["ভৈরব", "Bhairab"], ["নারায়ণগঞ্জ", "Narayanganj"]],
-  ["ge", "তিস্তা নদী বাংলাদেশে কোন জেলা দিয়ে প্রবেশ করে?", "Through which district does the Teesta enter Bangladesh?", ["লালমনিরহাট", "Lalmonirhat"], ["সিলেট", "Sylhet"], ["যশোর", "Jashore"], ["পটুয়াখালী", "Patuakhali"]],
-  ["ge", "বাংলাদেশের বৃহত্তম দ্বীপ কোনটি?", "Which is Bangladesh's largest island?", ["ভোলা", "Bhola"], ["সন্দ্বীপ", "Sandwip"], ["হাতিয়া", "Hatiya"], ["মহেশখালী", "Maheshkhali"]],
-  ["ge", "বাংলাদেশের সুন্দরবন কোন সালে রামসার সাইট ঘোষিত হয়?", "In which year was the Bangladesh Sundarbans declared a Ramsar site?", "1992", "1971", "1997", "2013"],
+  
+  
+  
   ["ge", "সুন্দরবনের কোন স্থান হিরণ পয়েন্ট নামে পরিচিত?", "What is Hiron Point in the Sundarbans best known for?", ["বন্যপ্রাণী দর্শন ও নীলকমল", "Wildlife viewing (Nilkamal)"], ["মসজিদ", "A mosque"], ["বিমানবন্দর", "An airport"], ["রেলস্টেশন", "A railway station"]],
   ["ge", "ভারতীয় সুন্দরবন ইউনেস্কো বিশ্ব ঐতিহ্য কোন সালে হয়?", "In which year was the Indian Sundarbans National Park inscribed as World Heritage?", "1987", "1997", "1972", "2010"],
   ["ge", "আইআইটি খড়গপুর কোন সালে প্রতিষ্ঠিত হয় (ভারতের প্রথম আইআইটি)?", "In which year was IIT Kharagpur, India's first IIT, founded?", "1951", "1921", "1947", "1971"],
@@ -59,14 +59,14 @@ export const L09: Row[] = [
   ["cu", "গারো সম্প্রদায়ের বিখ্যাত ফসল উৎসব কোনটি?", "Which harvest festival is famous among the Garo people?", ["ওয়াংগালা", "Wangala"], ["বিজু", "Biju"], ["সোহরাই", "Sohrai"], ["কারম", "Karam"]],
   ["cu", "গারো সমাজের বৈশিষ্ট্য কী?", "What is a notable feature of Garo society?", ["মাতৃসূত্রীয় (মাতৃতান্ত্রিক) ধারা", "Matrilineal descent"], ["রাজতন্ত্র", "Monarchy"], ["যাযাবর জীবন", "Nomadic life"], ["শুধু জেলে সমাজ", "A fisher-only society"]],
   ["cu", "সাঁওতালদের প্রধান ফসল উৎসব কোনটি?", "Which is the principal Santhal harvest festival?", ["সোহরাই", "Sohrai"], ["ওয়াংগালা", "Wangala"], ["বিজু", "Biju"], ["রাস", "Rash"]],
-  ["cu", "মণিপুরি রাসলীলা বাংলাদেশের কোন অঞ্চলে বিশেষ জনপ্রিয়?", "Manipuri Raas Leela is especially popular in which region of Bangladesh?", ["সিলেট (মৌলভীবাজার)", "Sylhet (Moulvibazar)"], ["খুলনা", "Khulna"], ["বরিশাল", "Barishal"], ["রংপুর", "Rangpur"]],
-  ["cu", "চট্টগ্রামের জব্বারের বলীখেলা কী?", "What is Jabbarer Boli Khela?", ["ঐতিহ্যবাহী কুস্তি প্রতিযোগিতা", "A traditional wrestling contest"], ["নৌকাবাইচ", "A boat race"], ["ঘুড়ি উৎসব", "A kite festival"], ["মাছ ধরার প্রতিযোগিতা", "A fishing contest"]],
+  
+  
   ["cu", "কলকাতার সবচেয়ে পুরনো ফুটবল লিগ কোন সালে শুরু?", "In which year did the Calcutta Football League begin?", "1898", "1857", "1911", "1947"],
   ["cu", "মোহনবাগান ক্লাব কোন সালে প্রতিষ্ঠিত হয়?", "In which year was Mohun Bagan founded?", "1889", "1911", "1920", "1857"],
   ["cu", "ইস্টবেঙ্গল ক্লাব কোন সালে প্রতিষ্ঠিত হয়?", "In which year was East Bengal Club founded?", "1920", "1889", "1911", "1947"],
   ["cu", "আবাহনী ক্রীড়াচক্র কোন সালে প্রতিষ্ঠিত হয়?", "In which year was Abahani Limited founded?", "1972", "1952", "1947", "1990"],
-  ["cu", "বাংলাদেশ কোন সালে টেস্ট মর্যাদা পায়?", "In which year did Bangladesh gain Test status?", "2000", "1997", "1971", "2007"],
-  ["cu", "বাংলাদেশ আইসিসি ট্রফি (১৯৯৭) জেতে কোথায়?", "Bangladesh won the 1997 ICC Trophy in which country?", ["মালয়েশিয়া", "Malaysia"], ["ভারত", "India"], ["ইংল্যান্ড", "England"], ["শ্রীলঙ্কা", "Sri Lanka"]],
+  
+  
   ["li", "\"দুর্গেশনন্দিনী\" কোন সালে প্রকাশিত হয়?", "In which year was \"Durgeshnandini\" published?", "1865", "1882", "1905", "1857"],
   ["li", "\"আনন্দমঠ\" কোন সালে প্রকাশিত হয়?", "In which year was \"Anandamath\" published?", "1882", "1865", "1905", "1861"],
   ["li", "\"মেঘনাদবধ কাব্য\" কোন সালে প্রকাশিত হয়?", "In which year was \"Meghnad Badh Kavya\" published?", "1861", "1857", "1882", "1913"],
@@ -100,7 +100,7 @@ export const L09: Row[] = [
   ["re", "খান জাহান আলী কত সালে মারা যান বলে ধরা হয়?", "In which year is Khan Jahan Ali believed to have died?", "1459", "1757", "1204", "1610"],
   ["re", "ষাট গম্বুজ মসজিদে আসলে কয়টি গম্বুজ আছে?", "How many domes does the \"Sixty Dome Mosque\" actually have?", "77", "60", "100", "40"],
   ["re", "গৌড়ের কদম রসুল মসজিদ কোন জেলায়?", "In which district is the Qadam Rasul Mosque of Gaur?", ["মালদহ", "Malda"], ["সিলেট", "Sylhet"], ["ঢাকা", "Dhaka"], ["যশোর", "Jashore"]],
-  ["re", "সিলেটে হযরত শাহপরান (রহ.) কোন এলাকায়?", "Hazrat Shah Paran's shrine is near which town?", ["সিলেট শহরের কাছে", "Near Sylhet city"], ["রংপুর", "Rangpur"], ["বরিশাল", "Barishal"], ["দিনাজপুর", "Dinajpur"]],
+  
   ["re", "দক্ষিণেশ্বর কালী মন্দির কোন সালে প্রতিষ্ঠিত হয়?", "In which year was the Dakshineswar Kali Temple consecrated?", "1855", "1757", "1905", "1857"],
   ["re", "শ্রীরামকৃষ্ণ কোন সালে জন্মগ্রহণ করেন?", "In which year was Sri Ramakrishna born?", "1836", "1861", "1863", "1820"],
   ["re", "স্বামী বিবেকানন্দ কোন সালে দেহত্যাগ করেন?", "In which year did Swami Vivekananda pass away?", "1902", "1893", "1911", "1921"],
@@ -111,6 +111,5 @@ export const L09: Row[] = [
   ["fe", "ভাদু উৎসব কোন মাসে?", "In which month is the Bhadu festival held?", ["ভাদ্র", "Bhadro"], ["পৌষ", "Poush"], ["চৈত্র", "Choitro"], ["মাঘ", "Magh"]],
   ["fe", "৩০ জুন কোন দিবস হিসেবে পালিত হয়?", "Which day is observed on 30 June by Santhals?", ["হুল দিবস", "Hul Diwas"], ["শহীদ দিবস", "Shaheed Diwas"], ["বিজয় দিবস", "Victory Day"], ["শিক্ষক দিবস", "Teachers' Day"]],
   ["fe", "মাহেশের রথযাত্রা প্রায় কত সালে শুরু বলে ধরা হয়?", "Around which year is Mahesh's Rath Yatra believed to have begun?", "1396", "1757", "1857", "1905"],
-  ["fe", "কল্পতরু উৎসব কোন তারিখে পালিত হয়?", "On which date is the Kalpataru Utsav observed?", ["১ জানুয়ারি", "1 January"], ["১৪ এপ্রিল", "14 April"], ["২১ ফেব্রুয়ারি", "21 February"], ["১৬ ডিসেম্বর", "16 December"]],
-  ["fe", "বাংলাদেশে পহেলা বৈশাখ কোন ইংরেজি তারিখে পালিত হয়?", "On which date is Pohela Boishakh observed in Bangladesh?", ["১৪ এপ্রিল", "14 April"], ["১৫ এপ্রিল", "15 April"], ["১ জানুয়ারি", "1 January"], ["২১ ফেব্রুয়ারি", "21 February"]]
+  ["fe", "কল্পতরু উৎসব কোন তারিখে পালিত হয়?", "On which date is the Kalpataru Utsav observed?", ["১ জানুয়ারি", "1 January"], ["১৪ এপ্রিল", "14 April"], ["২১ ফেব্রুয়ারি", "21 February"], ["১৬ ডিসেম্বর", "16 December"]]
 ];

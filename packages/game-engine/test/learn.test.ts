@@ -177,3 +177,23 @@ describe("learn progress", () => {
     expect(getNextLessonId(p, ["l1"])).toBeNull();
   });
 });
+
+describe("getDailyLearnMoment", () => {
+  it("is stable for a day and moves on the next", async () => {
+    const { getDailyLearnMoment } = await import("../src");
+    const a = getDailyLearnMoment(new Date(2026, 8, 24, 3));
+    const b = getDailyLearnMoment(new Date(2026, 8, 24, 21));
+    expect(a).toEqual(b);
+    expect(getDailyLearnMoment(new Date(2026, 8, 25)).item.id).not.toBe(a.item.id);
+  });
+
+  it("always has a valid answer among unique options", async () => {
+    const { getDailyLearnMoment } = await import("../src");
+    for (let day = 0; day < 120; day++) {
+      const m = getDailyLearnMoment(new Date(2026, 0, 1 + day));
+      expect(m.options.length).toBeGreaterThanOrEqual(2);
+      expect(new Set(m.options).size).toBe(m.options.length);
+      expect(m.options[m.correctIndex]).toBe(m.item.roman);
+    }
+  });
+});

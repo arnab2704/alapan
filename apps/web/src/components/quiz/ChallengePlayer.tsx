@@ -11,8 +11,7 @@ import { ShareResultButton } from "@/components/ShareResultButton";
 import { formatGregorianDate } from "@/lib/formatDate";
 import { QuizQuestionCard } from "./QuizQuestionCard";
 
-const primary =
-  "inline-flex min-h-12 items-center justify-center rounded-full bg-sindoor-500 px-8 text-base font-semibold text-white transition-colors hover:bg-sindoor-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sindoor-600";
+const primary = "btn btn-primary btn-lg";
 
 function dateFromIso(iso: string): Date {
   const [y, m, d] = iso.split("-").map(Number);

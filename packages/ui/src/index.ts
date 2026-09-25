@@ -1,7 +1,7 @@
-export { Button } from "./Button";
+export { Button, buttonClasses } from "./Button";
 export type { ButtonProps, ButtonVariant, ButtonSize } from "./Button";
 export { Card } from "./Card";
-export type { CardProps } from "./Card";
+export type { CardProps, CardVariant } from "./Card";
 export { Container } from "./Container";
 export type { ContainerProps } from "./Container";
 export { Badge } from "./Badge";

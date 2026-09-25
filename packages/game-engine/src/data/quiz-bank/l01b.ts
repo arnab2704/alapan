@@ -2,17 +2,17 @@ import type { Row } from "./types";
 
 /** Level 1 (Novice) - part B. */
 export const L01B: Row[] = [
-  ["ge", "বাংলাদেশের সীমান্তে কোন দুটি দেশ আছে?", "Which two countries share a border with Bangladesh?", ["ভারত ও মিয়ানমার", "India and Myanmar"], ["চীন ও নেপাল", "China and Nepal"], ["পাকিস্তান ও ভুটান", "Pakistan and Bhutan"], ["শ্রীলঙ্কা ও মালদ্বীপ", "Sri Lanka and Maldives"]],
-  ["ge", "ঢাকা শহর কোন নদীর তীরে অবস্থিত?", "On the banks of which river is Dhaka situated?", ["বুড়িগঙ্গা", "Buriganga"], ["হুগলি", "Hooghly"], ["কর্ণফুলী", "Karnaphuli"], ["তিস্তা", "Teesta"]],
+  
+  
   ["ge", "কলকাতা কোন নদীর তীরে অবস্থিত?", "Kolkata lies on the banks of which river?", ["হুগলি", "Hooghly"], ["মেঘনা", "Meghna"], ["সুরমা", "Surma"], ["যমুনা", "Jamuna"]],
-  ["ge", "চা-বাগানের জন্য বিখ্যাত শ্রীমঙ্গল কোন দেশে?", "In which country is the tea-growing town of Srimangal?", ["বাংলাদেশ", "Bangladesh"], ["ভুটান", "Bhutan"], ["নেপাল", "Nepal"], ["শ্রীলঙ্কা", "Sri Lanka"]],
-  ["ge", "কাপ্তাই হ্রদ বাংলাদেশের কোন জেলায়?", "In which district of Bangladesh is Kaptai Lake?", ["রাঙামাটি", "Rangamati"], ["সিলেট", "Sylhet"], ["যশোর", "Jashore"], ["নোয়াখালী", "Noakhali"]],
-  ["ge", "বাংলাদেশে প্রশাসনিক বিভাগ কয়টি?", "How many administrative divisions does Bangladesh have?", "8", "6", "7", "10"],
+  
+  
+  
   ["ge", "বাংলার দক্ষিণে কোন সাগর?", "Which sea lies to the south of Bengal?", ["বঙ্গোপসাগর", "Bay of Bengal"], ["আরব সাগর", "Arabian Sea"], ["লোহিত সাগর", "Red Sea"], ["কাস্পিয়ান সাগর", "Caspian Sea"]],
   ["ge", "কুয়াকাটা সৈকতের বিশেষত্ব কী?", "What is special about Kuakata beach?", ["একই জায়গা থেকে সূর্যোদয় ও সূর্যাস্ত দেখা যায়", "Both sunrise and sunset can be seen over the sea"], ["এখানে বরফ পড়ে", "Snow falls here"], ["এটি মরুভূমিতে", "It is in a desert"], ["এখানে আগ্নেয়গিরি আছে", "It has a volcano"]],
   ["ge", "শান্তিনিকেতন কোন জেলায় অবস্থিত?", "In which district is Santiniketan?", ["বীরভূম", "Birbhum"], ["বাঁকুড়া", "Bankura"], ["মালদহ", "Malda"], ["পুরুলিয়া", "Purulia"]],
   ["ge", "কলকাতার ভিক্টোরিয়া মেমোরিয়াল কোন পাথরে তৈরি?", "Kolkata's Victoria Memorial is built mainly of which stone?", ["সাদা মার্বেল", "White marble"], ["লাল বেলেপাথর", "Red sandstone"], ["কালো গ্রানাইট", "Black granite"], ["চুনাপাথর", "Limestone"]],
-  ["cu", "পয়লা বৈশাখে বাংলাদেশে বহুল প্রচলিত ঐতিহ্যবাহী খাবার কোনটি?", "Which traditional meal is widely eaten on Poila Boishakh in Bangladesh?", ["পান্তা-ইলিশ", "Panta-ilish"], ["পিৎজা", "Pizza"], ["স্যান্ডউইচ", "Sandwich"], ["বার্গার", "Burger"]],
+  
   ["cu", "নৌকাবাইচ বাংলার কোন ঋতুতে বেশি হয়?", "In which season are boat races most common in Bengal?", ["বর্ষা", "Monsoon"], ["শীত", "Winter"], ["গ্রীষ্ম", "Summer"], ["বসন্ত", "Spring"]],
   ["cu", "রসগোল্লা ও সন্দেশের প্রধান উপাদান কী?", "What is the main ingredient of rasgulla and sandesh?", ["ছানা", "Chhena (cottage cheese)"], ["বেসন", "Gram flour"], ["সুজি", "Semolina"], ["চালের গুঁড়ো", "Rice flour"]],
   ["cu", "লুচি কী দিয়ে তৈরি হয়?", "What is luchi made of?", ["ময়দা", "Refined flour"], ["ডাল", "Lentils"], ["সাবুদানা", "Sago"], ["আলু", "Potato"]],
@@ -30,14 +30,14 @@ export const L01B: Row[] = [
   ["li", "\"দুর্গেশনন্দিনী\" কার রচিত উপন্যাস?", "Who wrote the novel \"Durgeshnandini\"?", ["বঙ্কিমচন্দ্র চট্টোপাধ্যায়", "Bankim Chandra Chattopadhyay"], ["রবীন্দ্রনাথ ঠাকুর", "Rabindranath Tagore"], ["শরৎচন্দ্র চট্টোপাধ্যায়", "Sarat Chandra Chattopadhyay"], ["মীর মশাররফ হোসেন", "Mir Mosharraf Hossain"]],
   ["li", "\"লালসালু\" উপন্যাসের লেখক কে?", "Who wrote the novel \"Lalsalu\"?", ["সৈয়দ ওয়ালীউল্লাহ", "Syed Waliullah"], ["হুমায়ূন আহমেদ", "Humayun Ahmed"], ["শওকত ওসমান", "Shaukat Osman"], ["আবু ইসহাক", "Abu Ishaque"]],
   ["la", "\"পানি\" শব্দের সমার্থক কোনটি?", "Which word is a synonym of \"pani\" (water)?", ["জল", "Jol"], ["আগুন", "Agun"], ["হাওয়া", "Hawa"], ["মাটি", "Mati"]],
-  ["hi", "বাংলাদেশের জাতীয় সংগীত কোনটি?", "Which is the national anthem of Bangladesh?", ["আমার সোনার বাংলা", "Amar Shonar Bangla"], ["বন্দে মাতরম", "Vande Mataram"], ["ধনধান্য পুষ্পে ভরা", "Dhono Dhanno Pushpe Bhora"], ["চল চল চল", "Chal Chal Chal"]],
-  ["hi", "ঢাকার কেন্দ্রীয় শহীদ মিনার কোন আন্দোলনের স্মৃতিতে নির্মিত?", "Dhaka's Central Shaheed Minar commemorates which movement?", ["ভাষা আন্দোলন", "The Language Movement"], ["নীল বিদ্রোহ", "Indigo Revolt"], ["স্বদেশি আন্দোলন", "Swadeshi Movement"], ["সাঁওতাল বিদ্রোহ", "Santhal Rebellion"]],
-  ["hi", "জাতীয় স্মৃতিসৌধ কোথায় অবস্থিত?", "Where is the National Martyrs' Memorial of Bangladesh?", ["সাভার", "Savar"], ["কক্সবাজার", "Cox's Bazar"], ["রংপুর", "Rangpur"], ["বরিশাল", "Barishal"]],
-  ["hi", "মুক্তিযুদ্ধে বাংলাদেশের মুক্তিবাহিনীর বিরুদ্ধে কোন দেশের সেনাবাহিনী লড়েছিল?", "Whose army fought against the Mukti Bahini in 1971?", ["পাকিস্তান", "Pakistan"], ["নেপাল", "Nepal"], ["শ্রীলঙ্কা", "Sri Lanka"], ["ভুটান", "Bhutan"]],
+  
+  
+  
+  
   ["fe", "পৌষ সংক্রান্তিতে বাংলায় কোন খাবার বেশি তৈরি হয়?", "Which food is widely made on Poush Sankranti in Bengal?", ["পিঠে-পুলি", "Pithe-puli"], ["কেক", "Cake"], ["বিরিয়ানি", "Biryani"], ["সুপ", "Soup"]],
   ["fe", "বড়দিন কবে পালিত হয়?", "On which date is Christmas celebrated?", ["২৫ ডিসেম্বর", "25 December"], ["১ জানুয়ারি", "1 January"], ["১৪ এপ্রিল", "14 April"], ["৩১ অক্টোবর", "31 October"]],
   ["fe", "বুদ্ধপূর্ণিমা কার জন্মদিন স্মরণে পালিত হয়?", "Buddha Purnima marks the birth of whom?", ["গৌতম বুদ্ধ", "Gautama Buddha"], ["শ্রীকৃষ্ণ", "Sri Krishna"], ["শ্রীচৈতন্য", "Sri Chaitanya"], ["মহাবীর", "Mahavira"]],
-  ["re", "ঢাকার জাতীয় মসজিদ কোনটি?", "Which is the National Mosque of Bangladesh in Dhaka?", ["বায়তুল মোকাররম", "Baitul Mukarram"], ["তারা মসজিদ", "Star Mosque"], ["আদিনা মসজিদ", "Adina Mosque"], ["ষাট গম্বুজ মসজিদ", "Sixty Dome Mosque"]],
+  
   ["re", "বেলুড় মঠ কে প্রতিষ্ঠা করেন?", "Who founded Belur Math?", ["স্বামী বিবেকানন্দ", "Swami Vivekananda"], ["রামমোহন রায়", "Ram Mohan Roy"], ["শ্রীচৈতন্য", "Sri Chaitanya"], ["লালন ফকির", "Lalon Fakir"]],
   ["re", "গঙ্গাসাগর মেলা কোন উপলক্ষে হয়?", "On which occasion is the Gangasagar Mela held?", ["মকর সংক্রান্তি", "Makar Sankranti"], ["দোলযাত্রা", "Dol Jatra"], ["রথযাত্রা", "Rath Yatra"], ["ঈদুল আজহা", "Eid-ul-Adha"]],
   ["re", "বাংলার পঞ্চদশ শতকের বৈষ্ণব ধর্মগুরু কে?", "Who was the famed Vaishnava saint of Bengal in the 15th-16th century?", ["শ্রীচৈতন্যদেব", "Sri Chaitanya Deb"], ["শ্রীরামকৃষ্ণ", "Sri Ramakrishna"], ["রাজা রামমোহন রায়", "Raja Ram Mohan Roy"], ["কবীর", "Kabir"]],
