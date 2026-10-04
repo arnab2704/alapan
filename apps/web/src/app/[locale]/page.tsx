@@ -1,10 +1,11 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AlponaDivider, Container } from "@alapon/ui";
-import Image from "next/image";
 import { Daily5Tracker } from "@/components/daily5/Daily5Tracker";
 import { HomeContinue } from "@/components/home/HomeContinue";
 import { HomeWordAndDiscover } from "@/components/home/HomeDiscover";
+import { FestiveCta } from "@/components/home/FestiveCta";
 import { HomeEditorial } from "@/components/home/HomeEditorial";
+import { HomeHeroMedia } from "@/components/home/HomeHeroMedia";
 import { HomeToday } from "@/components/home/HomeToday";
 import { TodayAdda } from "@/components/today/TodaySections";
 import { Link } from "@/i18n/navigation";
@@ -15,21 +16,14 @@ export default async function HomePage({ params: { locale } }: { params: { local
 
   return (
     <div>
-      <section className="relative overflow-hidden py-16 sm:py-24 lg:py-28">
-        <Image
-          src="/images/homepage-banner.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-[75%_center]"
-        />
+      <section className="relative overflow-hidden py-16 sm:py-24 lg:py-28 md:min-h-[480px] lg:min-h-[560px] xl:min-h-[640px]">
+        <HomeHeroMedia />
         <div
           aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-r from-cream-50 via-cream-50/85 to-cream-50/10 dark:from-ink-900 dark:via-ink-900/85 dark:to-ink-900/30"
+          className="absolute inset-0 hidden bg-gradient-to-r from-cream-50 via-cream-50/85 to-cream-50/10 dark:from-ink-900 dark:via-ink-900/85 dark:to-ink-900/30 md:block"
         />
         <Container className="relative">
-          <p className="font-latin text-sm font-semibold tracking-[0.3em] text-alpona-700 dark:text-alpona-300">
+          <p className="font-latin text-sm font-semibold tracking-[0.3em] text-alpona-700 dark:text-alpona-300 md:block">
             ALAPON
           </p>
           <p className="font-bengaliDisplay mt-1 text-2xl font-bold text-ink-500 dark:text-ink-300">আলাপন</p>
@@ -44,9 +38,10 @@ export default async function HomePage({ params: { locale } }: { params: { local
             <Link href="/play/shobdoshakti" className="btn btn-secondary btn-lg">
               {t("ctaPlay")}
             </Link>
+            <FestiveCta />
           </p>
         </Container>
-        <AlponaDivider className="absolute inset-x-0 bottom-0 h-3 w-full text-alpona-300/60 dark:text-ink-700" />
+        <AlponaDivider className="absolute inset-x-0 bottom-0 hidden h-3 w-full text-alpona-300/60 dark:text-ink-700 md:block" />
       </section>
 
       <HomeToday />

@@ -1,4 +1,5 @@
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import { Container, AlponaDivider } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
 
@@ -58,6 +59,20 @@ export function SiteFooter() {
     <footer className="mt-8 border-t border-ink-100 pt-2 text-sm text-ink-500 dark:border-ink-700">
       <AlponaDivider className="mx-auto h-3 w-full max-w-xs text-alpona-200 dark:text-ink-700" />
       <Container className="py-8">
+        <Image
+          src="/images/brand/logo-horizontal.png"
+          alt="আলাপন Alapon"
+          width={724}
+          height={241}
+          className="mb-8 h-8 w-auto dark:hidden"
+        />
+        <Image
+          src="/images/brand/logo-dark.png"
+          alt="আলাপন Alapon"
+          width={724}
+          height={241}
+          className="mb-8 hidden h-8 w-auto dark:block"
+        />
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {COLUMNS.map((column) => (
             <nav key={column.heading} aria-label={nav(column.heading)}>

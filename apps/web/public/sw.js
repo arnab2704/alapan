@@ -1,7 +1,15 @@
 /* Alapon service worker: network first, falling back to pages the visitor already opened. */
-const CACHE = "alapon-v1";
+const CACHE = "alapon-v2";
+const PRECACHE = ["/offline.html", "/images/empty/offline.webp"];
 
-self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches
+      .open(CACHE)
+      .then((cache) => cache.addAll(PRECACHE))
+      .then(() => self.skipWaiting())
+  );
+});
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
@@ -20,7 +28,14 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(request)
       .then((response) => {
-        if (response.ok && (request.mode === "navigate" || url.pathname.startsWith("/_next/static/"))) {
+        if (
+          response.ok &&
+          (request.mode === "navigate" ||
+            url.pathname.startsWith("/_next/static/") ||
+            url.pathname.startsWith("/images/") ||
+            url.pathname.startsWith("/icons/") ||
+            url.pathname.startsWith("/og/"))
+        ) {
           const copy = response.clone();
           caches.open(CACHE).then((cache) => cache.put(request, copy));
         }
@@ -32,6 +47,8 @@ self.addEventListener("fetch", (event) => {
         if (request.mode === "navigate") {
           const home = await caches.match("/bn");
           if (home) return home;
+          const offline = await caches.match("/offline.html");
+          if (offline) return offline;
         }
         return new Response("Offline", { status: 503, headers: { "Content-Type": "text/plain" } });
       })

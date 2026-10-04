@@ -7,6 +7,7 @@ import { Card, Container, SectionHeading } from "@alapon/ui";
 import { Link, useRouter } from "@/i18n/navigation";
 import { getSupabase } from "@/lib/supabase/client";
 import { AccountDataControls } from "./AccountDataControls";
+import { ChangePasswordCard } from "./ChangePasswordCard";
 import { useAuth } from "./AuthProvider";
 
 const inputClass =
@@ -159,6 +160,7 @@ export function AccountPage() {
           </button>
         </div>
       </Card>
+      <ChangePasswordCard />
       <AccountDataControls />
     </Container>
   );

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import { daysUntil, getFestivalBySlug, toBengaliDigits } from "@alapon/bengali";
 import { Badge, Card, Container, SectionHeading } from "@alapon/ui";
 import { useToday } from "@/components/calendar/useToday";
@@ -49,6 +50,14 @@ export function PujaHub() {
 
   return (
     <Container className="py-10 sm:py-14">
+      <Image
+        src="/images/hero-puja.webp"
+        alt=""
+        width={2048}
+        height={768}
+        priority
+        className="mb-8 h-auto w-full rounded-alpona object-cover"
+      />
       <SectionHeading title={t("heading")} description={t("description")} />
 
       <Card className="border-t-4 border-t-sindoor-400 text-center">

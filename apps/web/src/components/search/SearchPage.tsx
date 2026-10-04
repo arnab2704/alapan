@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 import { Container, SectionHeading } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
 import { searchIndex, type SearchKind } from "@/lib/searchIndex";
@@ -43,9 +44,16 @@ export function SearchPage() {
         {query.trim() === "" ? (
           <p className="text-ink-500">{t("hint")}</p>
         ) : results.length === 0 ? (
-          <p role="status" className="text-ink-600 dark:text-ink-200">
-            {t("none", { query })}
-          </p>
+          <div role="status" className="flex flex-col items-center py-6 text-center">
+            <Image
+              src="/images/empty/no-results.webp"
+              alt=""
+              width={640}
+              height={480}
+              className="h-40 w-auto"
+            />
+            <p className="mt-3 text-ink-600 dark:text-ink-200">{t("none", { query })}</p>
+          </div>
         ) : (
           <div className="flex flex-col gap-6">
             {grouped.map((group) => (

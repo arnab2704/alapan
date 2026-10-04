@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>অফলাইন | আলাপন</title>
+    <style>
+      :root {
+        color-scheme: light;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 2rem 1.25rem;
+        background: #fffaf2;
+        color: #2e2a26;
+        font-family:
+          "Noto Sans Bengali",
+          "Hind Siliguri",
+          system-ui,
+          sans-serif;
+        text-align: center;
+      }
+      img {
+        width: min(80vw, 320px);
+        height: auto;
+      }
+      h1 {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+        color: #766d6a;
+        max-width: 28rem;
+      }
+      button {
+        margin-top: 0.5rem;
+        min-height: 44px;
+        padding: 0 1.5rem;
+        border: 0;
+        border-radius: 999px;
+        background: #bf2f3a;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="/images/empty/offline.webp" alt="" />
+    <h1>আপনি এখন অফলাইনে আছেন</h1>
+    <p>You are offline. Connect to the internet and try again.</p>
+    <button type="button" onclick="location.reload()">আবার চেষ্টা করুন / Try again</button>
+  </body>
+</html>

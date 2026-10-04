@@ -27,8 +27,12 @@ export const metadata: Metadata = {
   },
   description: "Our roots. Always with us. A Bengali-first digital home for culture, play and language.",
   applicationName: "Alapon",
-  openGraph: { siteName: "Alapon | আলাপন", type: "website" },
-  twitter: { card: "summary_large_image" }
+  openGraph: {
+    siteName: "Alapon | আলাপন",
+    type: "website",
+    images: [{ url: "/og/default.jpg", width: 1200, height: 630 }]
+  },
+  twitter: { card: "summary_large_image", images: ["/og/default.jpg"] }
 };
 
 export const viewport: Viewport = { themeColor: "#bf2f3a", width: "device-width", initialScale: 1 };

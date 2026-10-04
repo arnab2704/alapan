@@ -89,3 +89,15 @@ test("language switcher navigates between Bengali and English", async ({ page })
     "A few minutes with Bengal, every day."
   );
 });
+
+test("shows the Durga Puja hero art and a Puja CTA in the lead-up to Sharodiya", async ({ page }) => {
+  await gotoWithoutWelcomeBanner(page, "/bn");
+  await expect(
+    page
+      .locator("main section")
+      .first()
+      .getByRole("link", { name: /শারদোৎসব/ })
+  ).toBeVisible();
+  const heroImages = page.locator("main img[src*='hero-puja.webp']");
+  await expect(heroImages.first()).toBeVisible();
+});

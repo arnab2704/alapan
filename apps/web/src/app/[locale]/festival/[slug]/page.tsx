@@ -19,9 +19,13 @@ export async function generateMetadata({
   const festival = getFestivalBySlug(slug);
   if (!festival) return {};
   const bn = locale === "bn";
+  const title = bn ? festival.nameBn : festival.nameEn;
+  const description = bn ? festival.descriptionBn : festival.descriptionEn;
+  const image = festival.slug.startsWith("durga-puja") ? "/og/puja.jpg" : "/og/default.jpg";
   return {
-    title: bn ? festival.nameBn : festival.nameEn,
-    description: bn ? festival.descriptionBn : festival.descriptionEn
+    title,
+    description,
+    openGraph: { title, description, images: [{ url: image, width: 1200, height: 630 }] }
   };
 }
 

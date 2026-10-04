@@ -39,8 +39,26 @@ const PAGES = {
   quiz: ["কুইজ", "Quiz", "বাংলা সংস্কৃতির কুইজ।", "Bengali culture quizzes."]
 } as const;
 
+const OG_IMAGE: Partial<Record<keyof typeof PAGES, string>> = {
+  play: "/og/game.jpg",
+  daily: "/og/game.jpg",
+  free: "/og/game.jpg",
+  levels: "/og/game.jpg",
+  quiz: "/og/game.jpg",
+  puja: "/og/puja.jpg"
+};
+
 export function metaFor(key: keyof typeof PAGES, locale: string): Metadata {
   const [tb, te, db, de] = PAGES[key];
   const bn = locale === "bn";
-  return { title: bn ? tb : te, description: bn ? db : de };
+  const title = bn ? tb : te;
+  const description = bn ? db : de;
+  const image = OG_IMAGE[key];
+  return {
+    title,
+    description,
+    ...(image
+      ? { openGraph: { title, description, images: [{ url: image, width: 1200, height: 630 }] } }
+      : {})
+  };
 }

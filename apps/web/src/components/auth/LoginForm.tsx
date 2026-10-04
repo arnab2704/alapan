@@ -8,7 +8,7 @@ import { useRouter } from "@/i18n/navigation";
 import { getSupabase } from "@/lib/supabase/client";
 import { useAuth } from "./AuthProvider";
 
-type Mode = "signin" | "signup";
+type Mode = "signin" | "signup" | "forgot";
 
 const inputClass =
   "mt-1 min-h-11 w-full rounded-lg border border-ink-200 bg-cream-100 px-3 text-base text-ink-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sindoor-500 dark:border-ink-600 dark:bg-ink-800 dark:text-ink-50";
@@ -52,6 +52,22 @@ export function LoginForm() {
     setBusy(false);
   }
 
+  async function sendResetLink() {
+    const supabase = getSupabase();
+    if (!supabase || !email) {
+      setError(t("emailRequired"));
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    setNotice(null);
+    const redirectTo = `${window.location.origin}${window.location.pathname.replace(/\/login$/, "/reset-password")}`;
+    const { error: err } = await supabase.auth.resetPasswordForEmail(email, { redirectTo });
+    if (err) setError(err.message);
+    else setNotice(t("checkEmailReset"));
+    setBusy(false);
+  }
+
   async function magicLink() {
     const supabase = getSupabase();
     if (!supabase || !email) {
@@ -74,12 +90,61 @@ export function LoginForm() {
   return (
     <Container className="max-w-md py-10 sm:py-14">
       <SectionHeading
-        title={mode === "signin" ? t("signInTitle") : t("signUpTitle")}
-        description={t("description")}
+        title={mode === "signin" ? t("signInTitle") : mode === "signup" ? t("signUpTitle") : t("forgotTitle")}
+        description={mode === "forgot" ? t("forgotDescription") : t("description")}
       />
       {!enabled && ready ? (
         <Card>
           <p role="alert">{t("unavailable")}</p>
+        </Card>
+      ) : mode === "forgot" ? (
+        <Card>
+          <form
+            onSubmit={(event) => {
+              event.preventDefault();
+              void sendResetLink();
+            }}
+            className="flex flex-col gap-4"
+          >
+            <label className="block text-sm font-medium">
+              {t("email")}
+              <input
+                type="email"
+                required
+                autoComplete="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className={inputClass}
+              />
+            </label>
+            {error ? (
+              <p role="alert" className="text-sm font-medium text-sindoor-700 dark:text-sindoor-300">
+                {error}
+              </p>
+            ) : null}
+            {notice ? (
+              <p role="status" className="text-sm font-medium text-shapla-700 dark:text-shapla-300">
+                {notice}
+              </p>
+            ) : null}
+            <button type="submit" disabled={busy} aria-busy={busy} className={`${primaryClass} gap-2`}>
+              {busy ? <Spinner /> : null}
+              {t("sendResetLink")}
+            </button>
+          </form>
+          <p className="mt-4 text-center text-sm text-ink-600 dark:text-ink-200">
+            <button
+              type="button"
+              onClick={() => {
+                setMode("signin");
+                setError(null);
+                setNotice(null);
+              }}
+              className="font-semibold text-sindoor-600 underline"
+            >
+              {t("backToSignIn")}
+            </button>
+          </p>
         </Card>
       ) : (
         <Card>
@@ -107,6 +172,19 @@ export function LoginForm() {
                 className={inputClass}
               />
             </label>
+            {mode === "signin" ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setMode("forgot");
+                  setError(null);
+                  setNotice(null);
+                }}
+                className="self-end text-sm font-semibold text-sindoor-600 underline decoration-dotted"
+              >
+                {t("forgotPassword")}
+              </button>
+            ) : null}
             {error ? (
               <p role="alert" className="text-sm font-medium text-sindoor-700 dark:text-sindoor-300">
                 {error}
