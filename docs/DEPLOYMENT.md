@@ -24,6 +24,10 @@ Confirm RLS is enabled on every table:
 select tablename, rowsecurity from pg_tables where schemaname = 'public';
 ```
 
+## Hosting notes
+
+The GitHub repository is public. On Vercel's free Hobby plan, a private repo only deploys when the pushing commit's author email is verified on the GitHub account connected to the Vercel project ("Deployment Blocked: commit author did not have contributing access"); a public repo has no such restriction. If the repo is made private again later, either upgrade to Vercel Pro or make sure commit authors use a verified email on that GitHub account.
+
 ## Build and run
 
 `npm ci && npm run build -w apps/web && npm run start -w apps/web` (Node 20+). Host on Vercel, Cloudflare or any Node host. Locally, build into an isolated folder with `NEXT_DIST_DIR=.next-verify` so a running dev server is not disturbed.
