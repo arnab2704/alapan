@@ -16,6 +16,7 @@ export interface PostRow {
   body: string;
   created_at: string;
   comment_count: number;
+  view_count: number;
 }
 
 export interface CommentRow {
@@ -88,6 +89,17 @@ export async function fetchPost(id: string): Promise<Result<PostRow | null>> {
   if (!supabase) return fail("unavailable");
   const { data, error } = await supabase.from("post_feed").select("*").eq("id", id).maybeSingle();
   return error ? fail("failed") : { data: (data as PostRow | null) ?? null, error: null };
+}
+
+/**
+ * Bumps a post's view count. Fire-and-forget by design: a missed increment (offline, Supabase
+ * unavailable) must never block or error out the reading experience, so this has no error
+ * channel - call it and move on.
+ */
+export async function incrementPostView(postId: string): Promise<void> {
+  const supabase = getSupabase();
+  if (!supabase) return;
+  await supabase.rpc("increment_post_view", { p_post_id: postId });
 }
 
 export async function fetchComments(postId: string): Promise<Result<CommentRow[]>> {

@@ -398,7 +398,8 @@
     "todayPrompt": "Today's Adda",
     "answerPrompt": "Write your answer",
     "muteAuthor": "Mute",
-    "muted": "Muted. You will no longer see this person's posts."
+    "muted": "Muted. You will no longer see this person's posts.",
+    "views": "{count} views"
   },
   "footer": {
     "rights": "All rights reserved.",

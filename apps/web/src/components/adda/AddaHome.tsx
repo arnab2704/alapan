@@ -265,7 +265,8 @@ export function AddaHome() {
                   <p className="mt-1 line-clamp-2 text-sm text-ink-600 dark:text-ink-200">{post.body}</p>
                   <p className="mt-2 text-xs text-ink-500">
                     {post.author_display_name} · {formatDate(post.created_at)} ·{" "}
-                    {t("comments", { count: toDigits(post.comment_count) })}
+                    {t("comments", { count: toDigits(post.comment_count) })} ·{" "}
+                    {t("views", { count: toDigits(post.view_count) })}
                   </p>
                 </Card>
               </Link>

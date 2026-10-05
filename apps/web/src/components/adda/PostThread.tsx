@@ -2,7 +2,8 @@
 
 import { Spinner } from "@/components/Spinner";
 import { useCallback, useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { toBengaliDigits } from "@alapon/bengali";
 import { Card, Container } from "@alapon/ui";
 import { Link } from "@/i18n/navigation";
 import { recordDiscovery } from "@/lib/passport";
@@ -12,6 +13,7 @@ import {
   fetchComments,
   fetchLikes,
   fetchPost,
+  incrementPostView,
   type CommentRow,
   type PostRow
 } from "@/lib/supabase/adda";
@@ -30,6 +32,8 @@ type Likes = Record<string, { count: number; mine: boolean }>;
 
 export function PostThread({ postId }: { postId: string }) {
   const t = useTranslations("adda");
+  const locale = useLocale();
+  const toDigits = locale === "bn" ? toBengaliDigits : (n: number) => String(n);
   const errorText = useAddaError();
   const formatDate = useFormatDate();
   const { ready, userId, signedIn, canParticipate } = useParticipation();
@@ -52,6 +56,18 @@ export function PostThread({ postId }: { postId: string }) {
     setPost(postResult.data);
     if (postResult.data.category_slug === "editorial") recordDiscovery("stories", postResult.data.id);
     setComments(list);
+
+    // Once per tab per post, so a hot-reload or a quick back-and-forth doesn't inflate the count.
+    try {
+      const viewedKey = `alapon.adda.viewed.${postId}`;
+      if (!sessionStorage.getItem(viewedKey)) {
+        sessionStorage.setItem(viewedKey, "1");
+        void incrementPostView(postId);
+      }
+    } catch {
+      // Storage may be unavailable (private browsing); skip the view-dedupe, not worth failing over.
+      void incrementPostView(postId);
+    }
     const [postLikes, commentLikes] = await Promise.all([
       fetchLikes("post", [postId], userId),
       fetchLikes(
@@ -135,7 +151,8 @@ export function PostThread({ postId }: { postId: string }) {
           {post.title}
         </h1>
         <p className="mt-1 text-xs text-ink-500">
-          {post.author_display_name} · {formatDate(post.created_at)}
+          {post.author_display_name} · {formatDate(post.created_at)} ·{" "}
+          {t("views", { count: toDigits(post.view_count) })}
         </p>
         <p className="mt-3 whitespace-pre-wrap text-ink-800 dark:text-ink-100">{post.body}</p>
         <div className="mt-3 flex flex-wrap items-start gap-1">
